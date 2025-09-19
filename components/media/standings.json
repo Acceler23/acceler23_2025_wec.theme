@@ -1,0 +1,195 @@
+{
+  "ComponentName": "standings_table",
+  "BlockType": "stack",
+  "HorizontalAlignment": "Right",
+  "Width": "{TableWidth}",
+  "Height": "{TableHeight}",
+  "BackgroundImage": "Session/Session_bg.png",
+  "BackgroundImageOpacity": 60,
+  "ColorizeBackground": {
+    "Color": "{DarkBlue}"
+  },
+  "Orientation": "Vertical",
+  "Items": [
+    {
+      "BlockType": "stack",
+      "Orientation": "Vertical",
+      "HorizontalAlignment": "Center",
+      "Width": "{TableWidth}",
+      "Height": "{TableHeight}",
+      "BackgroundImage": "Session/table_shade.png",
+      "ColorizeBackground": {
+        "Color": "{LightBlue}"
+      },
+      "Items": [
+        {
+          "BlockType": "component",
+          "Component": "standings_head",
+          "Margin": "120,60,60,0",
+          "ComponentOptions": {
+            "Vars": {
+              "sessionInfo": "<sessionInfo2>"
+            }
+          }
+        },
+        {
+          "BlockType": "table",
+          "Margin": "60,35,60,0",
+          "Height": 660,
+          "Triggers": [
+            {
+              "Trigger": "TableParts"
+            }
+          ],
+          "TableOptions": {
+            "ItemsSource": "{Standings.Drivers}",
+            "IndexStart": 0,
+            "IndexEnd": 9,
+            "RowSpacing": 15,
+            "HeaderTemplate": {
+              "BlockType": "text",
+              "Margin": "0,0,0,10"
+            },
+            "Columns": [
+              {
+                "Header": "",
+                "Template": {
+                  "BlockType": "component",
+                  "Component": "table_position"
+                }
+              },
+              {
+                "Header": "",
+                "Template": {
+                  "BlockType": "component",
+                  "Component": "table_logo"
+                }
+              },
+              {
+                "Header": "",
+                "Template": {
+                  "BlockType": "component",
+                  "Component": "table_number"
+                }
+              },
+              {
+                "Header": "",
+                "Template": {
+                  "BlockType": "component",
+                  "Component": "table_car",
+                  "ComponentOptions": {
+                    "Vars": {
+                      "renderCar1": "<renderCar>"
+                    }
+                  }
+                }
+              },
+              {
+                "Header": "",
+                "Template": {
+                  "BlockType": "component",
+                  "Component": "table_driver",
+                  "ComponentOptions": {
+                    "Vars": {
+                      "renderDriver1": "<renderDriver>"
+                    }
+                  }
+                }
+              },
+              {
+                "Header": "",
+                "Template": {
+                  "BlockType": "component",
+                  "Component": "table_team",
+                  "ComponentOptions": {
+                    "Vars": {
+                      "renderTeam1": "<renderTeam>"
+                    }
+                  }
+                }
+              },
+              {
+                "Header": "Points",
+                "Template": {
+                  "BlockType": "component",
+                  "Component": "table_standing",
+                  "ComponentOptions": {
+                    "Vars": {
+                      "sessionInfo": "{Item.Points}"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "BlockType": "dock",
+          "Orientation": "Horizontal",
+          "Margin": "60,15,70,0",
+          "Items": [
+            {
+              "BlockType": "stack",
+              "VerticalAlignment": "Center",
+              "HorizontalAlignment": "Left",
+              "Orientation": "Horizontal",
+              "Items": [
+                {
+                  "BlockType": "text",
+                  "Source": "FIAWEC.TV",
+                  "FontSize": 18,
+                  "Foreground": "{DarkBlue}",
+                  "Background": "{LightBlue}",
+                  "Padding": "5,2,5,0",
+                  "VerticalAlignment": "Bottom",
+                  "Height": 20
+                },
+                {
+                  "BlockType": "text",
+                  "Source": "THE OFFICIAL STREAMING APP",
+                  "FontSize": 15,
+                  "FontName": "{FontNameBold}",
+                  "VerticalAlignment": "Center",
+                  "Foreground": "{LightBlue}",
+                  "Padding": "10,5,0,0"
+                }
+              ]
+            },
+            {
+              "BlockType": "stack",
+              "HorizontalAlignment": "Right",
+              "VerticalAlignment": "Center",
+              "Items": [
+                {
+                  "BlockType": "image",
+                  "Source": "instagram.png",
+                  "VerticalAlignment": "Center",
+                  "Height": 25
+                },
+                {
+                  "BlockType": "text",
+                  "Source": "@FIAWEC_OFFICIAL",
+                  "VerticalAlignment": "Center",
+                  "FontSize": "{FontSizeSmall}"
+                },
+                {
+                  "BlockType": "image",
+                  "MarginLeft": 20,
+                  "Source": "tiktok",
+                  "VerticalAlignment": "Center",
+                  "Height": 25
+                },
+                {
+                  "BlockType": "text",
+                  "Source": "FIAWEC",
+                  "VerticalAlignment": "Center",
+                  "FontSize": "{FontSizeSmall}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

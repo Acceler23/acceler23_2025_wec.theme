@@ -1,0 +1,53 @@
+{
+    "ComponentName": "table_position",
+    "BlockType": "dock",
+    "HorizontalAlignment": "Center",
+    "VerticalAlignment": "Center",
+    "MaxHeight": "{TableLineHeight}",
+    "Items": [
+        {
+            "BlockType": "text",
+            "RenderIf": "{Item.Position, Converter=NumberNotEquals, Parameter=1}",
+            "Source": "{Item.Position}",
+            "Background": "{DarkBlue}",
+            "Style": "Session_Style",
+            "Width": 60,
+            "Height": "{TableLineHeight}"
+        },
+        {
+            "BlockType": "dock",
+            "Orientation": "Horizontal",
+            "Width": 60,
+            "Height": "{TableLineHeight}",
+            "RenderIf": "{Item.Position, Converter=NumberEquals, Parameter=1}",
+            "Items": [
+                {
+                    "BlockType": "stack",
+                    "HorizontalAlignment": "Center",
+                    "VerticalAlignment": "Center",
+                    "Items": [
+                        {
+                            "BlockType": "text",
+                            "Source": "{Item.Position}",
+                            "FontName": "{FontNameWideItalic}",
+                            "Foreground": "{White}",
+                            "FontSize": "{FontSizeMedium}",
+                            "HorizontalAlignment": "Center",
+                            "VerticalAlignment": "Center",
+                            "MarginTop": 3
+                        },
+                        {
+                            "BlockType": "text",
+                            "Source": "st",
+                            "Foreground": "{White}",
+                            "HorizontalAlignment": "Center",
+                            "VerticalAlignment": "Top",
+                            "MarginTop": 7,
+                            "FontSize": "{FontSizeSmall}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

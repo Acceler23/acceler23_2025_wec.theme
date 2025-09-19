@@ -1,0 +1,38 @@
+[
+    {
+        "TriggerName": "MainCarColorBackGround",
+        "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+        "Property": "Background",
+        "Value": "{Item.Car.Color}"
+    },
+    {
+        "TriggerName": "MainCarColorForeground",
+        "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+        "Property": "Foreground",
+        "Value": "{Item.Car.Color}"
+    },
+    {
+        "TriggerName": "ShapeCarColorForeground",
+        "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+        "Property": "ShapeOptions.Fill",
+        "Value": "{Item.Car.Color}"
+    },
+    {
+        "TriggerName": "LeaderColorCar",
+        "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+        "ConditionAnd": "{Item.Position, Converter=NumberEquals, Parameter=1}",
+        "Setters": [
+            {
+                "Property": "Background",
+                "Value": "{Item.Car.Color}"
+            },
+            {
+                "Property": "Foreground",
+                "Value": "{Item.Car.SecondaryColor}"
+            }
+        ]
+    },
+    {
+        
+    }
+]

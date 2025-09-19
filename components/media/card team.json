@@ -1,0 +1,216 @@
+{
+    "ComponentName": "card_team",
+    "BlockType": "stack",
+    "Orientation": "Vertical",
+    "VerticalAlignment": "Center",
+    "Height": "{TableHeight}",
+    "Width": 343,
+    "BackgroundImage": "Session/leader_bg.png",
+    "ColorizeBackground": {
+        "Color": "{LightBlue}"
+    },
+    "Items": [
+        {
+            "BlockType": "stack",
+            "Orientation": "Vertical",
+            "BackgroundImage": "Session/car_highlight.png",
+            "UseBackgroundCrop": true,
+            "Height": 970,
+            "Width": 343,
+            "ColorizeBackground": {
+                "Color": "{DarkBlue}"
+            },
+            "Items": [
+                {
+                    "BlockType": "stack",
+                    "Orientation": "Vertical",
+                    "BackgroundImage": "Session/car_bright.png",
+                    "UseBackgroundCrop": true,
+                    "Height": 970,
+                    "Width": 343,
+                    "ColorizeBackground": {
+                        "Color": "{LightBlue}"
+                    },
+                    "Items": [
+                        {
+                            "BlockType": "component",
+                            "Component": "card_head_standings"
+                        },
+                        {
+                            "BlockType": "stack",
+                            "BackgroundImage": "{Standings.LastEvent.Track.Nation.LogotypePath}",
+                            "Orientation": "Vertical",
+                            "Height": "*",
+                            "Width": "*",
+                            "BackgroundImageOpacity": 50,
+                            "UseBackgroundCrop": false,
+                            "Items": [
+                                {
+                                    "BlockType": "itemstack",
+                                    "Width": "*",
+                                    "MarginTop": 200,
+                                    //"MarginBottom": -100,
+                                    "HorizontalAlignment": "Center",
+                                    "ItemStackOptions": {
+                                        "Limit": 1,
+                                        "ItemSource": "{Standings.Drivers}",
+                                        "ItemTemplate": {
+                                            "BlockType": "stack",
+                                            "Orientation": "Vertical",
+                                            "Items": [
+                                                {
+                                                    "BlockType": "dock",
+                                                    "Height": "*",
+                                                    "HorizontalAlignment": "Center",
+                                                    "VerticalAlignment": "Center",
+                                                    "Width": 343,
+                                                    "Orientation": "Vertical",
+                                                    "Items": [
+                                                        {
+                                                            "BlockType": "image",
+                                                            "Source": "{Item.Team.LiveryPath}",
+                                                            "Width": 300,
+                                                            "VerticalAlignment": "Center",
+                                                            "HorizontalAlignment": "Center"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "BlockType": "itemstack",
+                            "HorizontalAlignment": "Center",
+                            "MarginTop": -80,
+                            "ItemStackOptions": {
+                                "Limit": 1,
+                                "ItemSource": "{Standings.Drivers}",
+                                "ItemTemplate": {
+                                    "BlockType": "stack",
+                                    "Orientation": "Vertical",
+                                    "Items": [
+                                        {
+                                            "BlockType": "stack",
+                                            "HorizontalAlignment": "Center",
+                                            "Width": 343,
+                                            "Padding": "10",
+                                            "FontSize": "{FontSizeMedium}",
+                                            "Foreground": "{Item.Team.SecondaryColor}",
+                                            "Items": [
+                                                {
+                                                    "BlockType": "dock",
+                                                    "Width": 343,
+                                                    "Items": [
+                                                        {
+                                                            "BlockType": "stack",
+                                                            "Orientation": "Horizontal",
+                                                            "HorizontalAlignment": "Center",
+                                                            "Spacing": 20,
+                                                            "Padding": "5,0,5,5",
+                                                            "Items": [
+                                                                {
+                                                                    "BlockType": "image",
+                                                                    "Source": "{Item.Team.LogotypePath}",
+                                                                    "Height": 60,
+                                                                    "HorizontalAlignment": "Center",
+                                                                    "VerticalAlignment": "Center"
+                                                                },
+                                                                {
+                                                                    "BlockType": "text",
+                                                                    "Source": "{Item.Team.Abbreviation, Converter=StringToUpperString}",
+                                                                    "Foreground": "{White}",
+                                                                    "FontSize": "{FontSizeBig}",
+                                                                    "Padding": "0,0,10,0",
+                                                                    "HorizontalAlignment": "Center",
+                                                                    "VerticalAlignment": "Center",
+                                                                    "FontName": "{FontNameBoldItalic}",
+                                                                    "Triggers": [
+                                                                        {
+                                                                            "Trigger": "NumberAbrevi"
+                                                                        },
+                                                                        {
+                                                                            "Trigger": "NumberBadge"
+                                                                        },
+                                                                        {
+                                                                            "Trigger": "NumberDriver"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "BlockType": "itemstack",
+                            "Width": "*",
+                            "HorizontalAlignment": "Center",
+                            "ItemStackOptions": {
+                                "Limit": 1,
+                                "ItemSource": "{Standings.Drivers}",
+                                "ItemTemplate": {
+                                    "BlockType": "stack",
+                                    "Orientation": "Vertical",
+                                    "Items": [
+                                        {
+                                            "BlockType": "dock",
+                                            "Width": 343,
+                                            "Orientation": "Vertical",
+                                            "Items": [
+                                                {
+                                                    "BlockType": "text",
+                                                    "Source": "{Item.Team.FullName, Converter=StringToUpperString}",
+                                                    "VerticalAlignment": "Bottom",
+                                                    "HorizontalAlignment": "Center",
+                                                    "FontName": "{FontNameBoldItalic}",
+                                                    "FontSize": 40,
+                                                    "Width": 223,
+                                                    "Padding": "60,20,60,30",
+                                                    "TextOptions": {
+                                                        "Wrap": true,
+                                                        "TextAlignment": "Center",
+                                                        "HorizontalAlignment": "Left"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "BlockType": "text",
+                            "Margin": "0,60,0,0",
+                            "VerticalAlignment": "Bottom",
+                            "HorizontalAlignment": "Center",
+                            "Source": "#{RaceName, Converter=StringToUpperString} {Standings.LastEvent.Track.Name, Converter=StringToUpperString}",
+                            "FontSize": 14,
+                            "Triggers": [
+                                {
+                                    "Condition": "{DescriptionName}",
+                                    "ConditionAnd": "{Standings.LastEvent.Description, Converter=EmptyObjectToFalse}",
+                                    "Property": "Source",
+                                    "Value": "{Standings.LastEvent.Description, Converter=StringToUpperString}"
+                                }
+                            ],
+                            "MarginTop": -20,
+                            "Padding": "0,20,0,30",
+                            "TextOptions": {
+                                "Wrap": true,
+                                "TextAlignment": "Center"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

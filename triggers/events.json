@@ -1,0 +1,9 @@
+[
+    {
+        "TriggerName": "NameDescription",
+        "Condition": "{DescriptionName}",
+        "ConditionAnd": "{Event.Description, Converter=EmptyObjectToFalse}",
+        "Property": "Source",
+        "Value": "{Event.Description, Converter=StringToUpperString}"
+    }
+]

@@ -1,0 +1,231 @@
+{
+  "ComponentName": "result_session",
+  "BlockType": "stack",
+  "HorizontalAlignment": "Right",
+  "Width": "{TableWidth}",
+  "Height": "{TableHeight}",
+  "BackgroundImage": "Session/Session_bg.png",
+  "BackgroundImageOpacity": 60,
+  "ColorizeBackground": {
+    "Color": "{DarkBlue}"
+  },
+  "Orientation": "Vertical",
+  "Items": [
+    {
+      "BlockType": "stack",
+      "Orientation": "Vertical",
+      "HorizontalAlignment": "Center",
+      "Width": "{TableWidth}",
+      "Height": "{TableHeight}",
+      "BackgroundImage": "Session/table_shade.png",
+      "ColorizeBackground": {
+        "Color": "{LightBlue}"
+      },
+      "Items": [
+        {
+          "BlockType": "component",
+          "Component": "session_head",
+          "Margin": "120,60,60,0",
+          "ComponentOptions": {
+            "Vars": {
+              "sessionInfo": "{Session.SessionType, Converter=StringToUpperString}"
+            }
+          }
+        },
+        {
+          "BlockType": "shape",
+          "Margin": "120,15,120,0",
+          "Width": 1160,
+          "Height": 5,
+          "Opacity": 30,
+          "ShapeOptions": {
+            "Fill": "{LightBlue}",
+            "ShapeType": "rectangle"
+          }
+        },
+        {
+          "BlockType": "dock",
+          "Orientation": "Horizontal",
+          "Width": "*",
+          "Margin": "60,40,70,0",
+          "Items": [
+            {
+              "BlockType": "text",
+              "Source": "{Session.RacingClass.Name}",
+              "HorizontalAlignment": "Left",
+              "FontSize": 25,
+              "FontName": "{FontNameWideItalic}"
+            },
+            {
+              "BlockType": "text",
+              "HorizontalAlignment": "Right",
+              "Source": "{RaceSponsor, Converter=StringToUpperString} {RaceName, Converter=StringToUpperString} {Session.Track.Name, Converter=StringToUpperString}",
+              "FontSize": 25,
+              "FontName": "{FontNameWideItalic}"
+            }
+          ]
+        },
+        {
+          "BlockType": "table",
+          "Margin": "60,35,60,0",
+          "Height": 615,
+          "Triggers": [
+            {
+              "Trigger": "TableParts"
+            }
+          ],
+          "TableOptions": {
+            "ItemsSource": "{Session.Drivers}",
+            "IndexStart": 0,
+            "IndexEnd": 9,
+            "RowSpacing": 15,
+            "HeaderTemplate": {
+              "BlockType": "text"
+            },
+            "Columns": [
+              {
+                "Header": "",
+                "Template": {
+                  "BlockType": "component",
+                  "Component": "table_position"
+                }
+              },
+              {
+                "Header": "",
+                "Template": {
+                  "BlockType": "component",
+                  "Component": "table_logo"
+                }
+              },
+              {
+                "Header": "",
+                "Template": {
+                  "BlockType": "component",
+                  "Component": "table_number"
+                }
+              },
+              {
+                "Header": "",
+                "Template": {
+                  "BlockType": "component",
+                  "Component": "table_car",
+                  "ComponentOptions": {
+                    "Vars": {
+                      "renderCar1": "<renderCar>"
+                    }
+                  }
+                }
+              },
+              {
+                "Header": "",
+                "Template": {
+                  "BlockType": "component",
+                  "Component": "table_driver",
+                  "ComponentOptions": {
+                    "Vars": {
+                      "renderDriver1": "<renderDriver>"
+                    }
+                  }
+                }
+              },
+              {
+                "Header": "",
+                "Template": {
+                  "BlockType": "component",
+                  "Component": "table_team",
+                  "ComponentOptions": {
+                    "Vars": {
+                      "renderTeam1": "<renderTeam>"
+                    }
+                  }
+                }
+              },
+              {
+                "Header": "",
+                "Template": {
+                  "BlockType": "component",
+                  "Component": "table_session",
+                  "ComponentOptions": {
+                    "Vars": {
+                      "sessionInfo": "{Item.Time}"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "BlockType": "component",
+          "Component": "fastest_lap"
+        },
+        {
+          "BlockType": "dock",
+          "Orientation": "Horizontal",
+          "Margin": "60,15,70,0",
+          "Items": [
+            {
+              "BlockType": "stack",
+              "VerticalAlignment": "Center",
+              "HorizontalAlignment": "Left",
+              "Orientation": "Horizontal",
+              "Items": [
+                {
+                  "BlockType": "text",
+                  "Source": "FIAWEC.TV",
+                  "FontSize": 18,
+                  "Foreground": "{DarkBlue}",
+                  "Background": "{LightBlue}",
+                  "Padding": "5,2,5,0",
+                  "VerticalAlignment": "Bottom",
+                  "Height": 20
+                },
+                {
+                  "BlockType": "text",
+                  "Source": "THE OFFICIAL STREAMING APP",
+                  "FontSize": 15,
+                  "FontName": "{FontNameBold}",
+                  "VerticalAlignment": "Center",
+                  "Foreground": "{LightBlue}",
+                  "Padding": "10,5,0,0"
+                }
+              ]
+            },
+            {
+              "BlockType": "stack",
+              "HorizontalAlignment": "Right",
+              "VerticalAlignment": "Center",
+              "Items": [
+                {
+                  "BlockType": "image",
+                  "Source": "instagram.png",
+                  "VerticalAlignment": "Center",
+                  "Height": 25
+                },
+                {
+                  "BlockType": "text",
+                  "Source": "@FIAWEC_OFFICIAL",
+                  "VerticalAlignment": "Center",
+                  "FontSize": "{FontSizeSmall}"
+                },
+                {
+                  "BlockType": "image",
+                  "MarginLeft": 20,
+                  "Source": "tiktok",
+                  "VerticalAlignment": "Center",
+                  "Height": 25
+                },
+                {
+                  "BlockType": "text",
+                  "Source": "FIAWEC",
+                  "VerticalAlignment": "Center",
+                  "FontSize": "{FontSizeSmall}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

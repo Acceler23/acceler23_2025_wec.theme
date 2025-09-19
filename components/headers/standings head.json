@@ -1,0 +1,23 @@
+{
+    "ComponentName": "standings_head",
+    "BlockType": "stack",
+    "Orientation": "Vertical",
+    "Items": [
+        {
+            "BlockType": "text",
+            "Source": "FIA {Standings.RacingClass.Name} {Season.LeagueInfo.LeagueFullName, Converter=StringToUpperString}",
+            "FontSize": "{FontSizeBig}",
+            "FontName": "{FontNameRegularItalic}",
+            "Foreground": "{White}",
+            "Padding": "0,0,10,0"
+        },
+        {
+            "BlockType": "text",
+            "Source": "<sessionInfo>",
+            "FontSize": "{FontSizeBig}",
+            "FontName": "{FontNameRegularItalic}",
+            "Foreground": "{LightBlue}",
+            "Padding": "0,0,10,0"
+        }
+    ]
+}

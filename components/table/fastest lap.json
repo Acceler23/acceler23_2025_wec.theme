@@ -1,0 +1,116 @@
+{
+    "ComponentName": "fastest_lap",
+    "BlockType": "itemstack",
+    "Orientation": "Horizontal",
+    "Margin": "60,15,60,0",
+    "ItemStackOptions": {
+        "ItemSource": "{Session.Drivers}",
+        "FilterMember": "IsRaceFastestLap",
+        "FilterMemberValue": "True",
+        "ItemTemplate": {
+            "BlockType": "stack",
+            "Orientation": "Horizontal",
+            "Items": [
+                {
+                    "BlockType": "dock",
+                    "Width": 60,
+                    "Background": "{Purple}",
+                    "Height": "{TableLineHeight}",
+                    "Items": [
+                        {
+                            "BlockType": "image",
+                            "Source": "clock",
+                            "Foreground": "{White}",
+                            "HorizontalAlignment": "Center",
+                            "VerticalAlignment": "Center",
+                            "Height": 30,
+                            "Colorize": {
+                                "Color": "{White}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "BlockType": "text",
+                    "Source": "{Item.FastestLapTime}",
+                    "Background": "{Purple}",
+                    "FontName": "{FontNameBoldItalic}",
+                    "Foreground": "{White}",
+                    "Height": "{TableLineHeight}",
+                    "HorizontalAlignment": "Center",
+                    "VerticalAlignment": "Center",
+                    "Width": 160
+                },
+                {
+                    "BlockType": "text",
+                    "Source": "{Item.Driver.Name, Converter=StringToUpperString}",
+                    "Background": "{Purple}",
+                    "FontName": "{FontNameBoldItalic}",
+                    "Foreground": "{White}",
+                    "Height": "{TableLineHeight}",
+                    "HorizontalAlignment": "Left",
+                    "VerticalAlignment": "Center",
+                    "Width": 300
+                },
+                {
+                    "BlockType": "stack",
+                    "Orientation": "Horizontal",
+                    "Height": "{TableLineHeight}",
+                    "HorizontalAlignment": "Left",
+                    "VerticalAlignment": "Center",
+                    "Width": 500,
+                    "Background": "{Purple}",
+                    "Items": [
+                        {
+                            "BlockType": "text",
+                            "Source": "{Item.Driver.RaceNumber, Converter=StringToUpperString}",
+                            "FontName": "{FontNameRegularItalic}",
+                            "Foreground": "{White}",
+                            "Padding": "10,0,10,0",
+                            "HorizontalAlignment": "Left",
+                            "VerticalAlignment": "Center",
+                            "Triggers": [
+                                {
+                                    "Trigger": "NumberAbrevi"
+                                },
+                                {
+                                    "Trigger": "NumberBadge"
+                                },
+                                {
+                                    "Trigger": "NumberDriver"
+                                }
+                            ]
+                        },
+                        {
+                            "BlockType": "text",
+                            "Source": " | {Item.Team.FullName, Converter=StringToUpperString}",
+                            "FontName": "{FontNameRegularItalic}",
+                            "Foreground": "{White}",
+                            "MarginLeft": -10,
+                            "HorizontalAlignment": "Left",
+                            "VerticalAlignment": "Center",
+                            "Triggers": [
+                                {
+                                    "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+                                    "Property": "Source",
+                                    "Value": " | {Item.Car.Name, Converter=StringToUpperString}"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "BlockType": "text",
+                    "Source": "LAP {Item.FastestLapNumLap}",
+                    "Background": "{Purple}",
+                    "FontName": "{FontNameBoldItalic}",
+                    "Foreground": "{White}",
+                    "Height": "{TableLineHeight}",
+                    "HorizontalAlignment": "Center",
+                    "VerticalAlignment": "Center",
+                    "Width": 200
+                }
+            ]
+        }
+    }
+}

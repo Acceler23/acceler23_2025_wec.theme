@@ -1,0 +1,31 @@
+{
+    "LightBlue": "#00B9FF",
+    "DarkBlue": "#090030",
+    "White": "#FFFFFF",
+    "Black": "#000000",
+    "Purple": "#7a2680",
+
+    "ForegroundDefault": "{White}",
+    "BackgroundDefault": "{DarkBlue}",
+
+    "FontNameDefault": "Franko-E4SI",
+    "FontNameBold": "built titling rg it",
+    "FontNameRegularItalic": "steelfish eb it",
+    "FontNameBoldItalic": "ChangaOne-Italic",
+    "FontNameWideItalic": "UPBOLTERS ITALIC",
+    "FontMainTitle": "Shapiro 105 Max Extd",
+
+    "FontSizeBig": 60,
+    "FontSizeMedium": 30,
+    "FontSizeDefault": 25,
+    "FontSizeSmall": 15,
+
+    "RenderWidth": 1920,
+    "RenderHeight": 1080,
+    "MediaHeight": 1500,
+    "TableHeight": 966,
+    "TableWidth": 1350,
+    "TableLineHeight": 48,
+
+    "PaddingDefault": "5"
+}

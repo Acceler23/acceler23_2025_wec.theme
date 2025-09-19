@@ -1,0 +1,71 @@
+{
+    "Categories": [
+        {
+            "Name": "Fix & Tweaks"
+        },
+        {
+            "Name": "Results"
+        },
+        {
+            "Name": "Championship"
+        }
+    ],
+    "Properties": [
+        {
+            "Category": "Fix & Tweaks",
+            "Name": "CardFontSize",
+            "PublicName": "Results Card Font Size",
+            "Type": "Integer",
+            "DefaultValue": 25
+        },
+        {
+            "Category": "Fix & Tweaks",
+            "Name": "CardMaxWidth",
+            "PublicName": "Results Card Text Max Width",
+            "Type": "Integer",
+            "DefaultValue": 220
+        },
+        {
+            "Category": "Fix & Tweaks",
+            "Name": "DescriptionName",
+            "PublicName": "Use Event Description as Event Name",
+            "Type": "Bool",
+            "DefaultValue": false
+        },
+
+        //Results
+        {
+            "Category": "Results",
+            "Name": "CarNumber",
+            "PublicName": "Car Number as",
+            "Type": "Enum",
+            "EnumValues": [
+                "Driver",
+                "Abbreviation",
+                "Badge"
+            ],
+            "DefaultValue": "Abbreviation"
+        },
+        {
+            "Category": "Results",
+            "Name": "RaceName",
+            "PublicName": "Race Name as",
+            "Type": "String",
+            "DefaultValue": "6 Hours of"
+        },
+        {
+            "Category": "Results",
+            "Name": "ResultPage",
+            "PublicName": "Result Page",
+            "Type": "Integer",
+            "DefaultValue": 0
+        },
+        {
+            "Category": "Results",
+            "Name": "RaceSponsor",
+            "PublicName": "Major Race Sponsor",
+            "Type": "String",
+            "DefaultValue": "Rolex"
+        }
+    ]
+}

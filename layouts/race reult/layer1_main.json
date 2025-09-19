@@ -1,0 +1,33 @@
+{
+    "BlockRoot": {
+        "Name": "mainStack",
+        "BlockType": "dock",
+        "Width": "{RenderWidth}",
+        "Height": "{RenderHeight}",
+        "Margin": "80,60,90,60",
+        "Items": [
+            {
+                "BlockType": "component",
+                "Component": "leader_driver_card",
+                "HorizontalAlignment": "Left",
+                "ComponentOptions": {
+                    "Vars": {
+                        "sessionLeader": "WINNER",
+                        "fontSize": 50
+                    }
+                }
+            },
+            {
+                "BlockType": "component",
+                "Component": "result_session",
+                "ComponentOptions": {
+                    "Vars": {
+                        "renderDriver": true,
+                        "renderTeam": false,
+                        "renderCar": false
+                    }
+                }
+            }
+        ]
+    }
+}

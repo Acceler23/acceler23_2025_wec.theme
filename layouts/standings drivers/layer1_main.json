@@ -1,0 +1,29 @@
+{
+    "BlockRoot": {
+        "Name": "mainStack",
+        "BlockType": "dock",
+        "Width": "{RenderWidth}",
+        "Height": "{RenderHeight}",
+        "Margin": "80,60,90,60",
+        "Items": [
+            {
+                "BlockType": "component",
+                "Component": "card_driver",
+                "VerticalAlignment": "Center"
+            },
+            {
+                "BlockType": "component",
+                "Component": "standings_table",
+                "VerticalAlignment": "Center",
+                "ComponentOptions": {
+                    "Vars": {
+                        "sessionInfo2": "DRIVER'S CHAMPIONSHIP",
+                        "renderDriver": true,
+                        "renderTeam": false,
+                        "renderCar": false
+                    }
+                }
+            }
+        ]
+    }
+}

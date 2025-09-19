@@ -1,0 +1,66 @@
+{
+    "ComponentName": "table_car",
+    "BlockType": "stack",
+    "RenderIf": "<renderCar1>",
+    "Background": "{DarkBlue}",
+    "Width": 850,
+    "MaxHeight": "{TableLineHeight}",
+    "Items": [
+        {
+            "BlockType": "shape",
+            "Height": "{TableLineHeight}",
+            "Width": 5,
+            "HorizontalAlignment": "Left",
+            "VerticalAlignment": "Center",
+            "ShapeOptions": {
+                "Fill": "{Item.Team.Color}",
+                "ShapeType": "rectangle"
+            },
+            "Triggers": [
+                {
+                    "Trigger": "ShapeCarColorForeground"
+                }
+            ]
+        },
+        {
+            "BlockType": "text",
+            "Source": "{Item.Car.Vendor.Name, Converter=StringToUpperString}",
+            "HorizontalAlignment": "Left",
+            "Background": "{DarkBlue}",
+            "Style": "Session_Style",
+            "FontName": "{FontNameWideItalic}",
+            "Height": "{TableLineHeight}",
+            "Width": 180,
+            "PaddingLeft": 20,
+            "Triggers": [
+                {
+                    "Trigger": "LeaderColorTeam"
+                },
+                {
+                    "Trigger": "LeaderColorCar"
+                }
+            ]
+        },
+        {
+            "BlockType": "text",
+            "Source": "{Item.Driver.Name, Converter=StringToUpperString}",
+            "Background": "{DarkBlue}",
+            "Style": "Session_Style",
+            "Height": "{TableLineHeight}",
+            "PaddingLeft": 20,
+            "Triggers": [
+                {
+                    "Trigger": "LeaderColorTeam"
+                }
+            ]
+        }
+    ],
+    "Triggers": [
+        {
+            "Trigger": "LeaderColorTeam"
+        },
+        {
+            "Trigger": "LeaderColorCar"
+        }
+    ]
+}

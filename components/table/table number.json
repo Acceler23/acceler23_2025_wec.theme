@@ -1,0 +1,28 @@
+{
+    "ComponentName": "table_number",
+    "BlockType": "text",
+    "Source": "{Item.Driver.RaceNumber}",
+    "Background": "{DarkBlue}",
+    "FontName": "{FontNameBoldItalic}",
+    "Style": "Session_Style",
+    "Width": 60,
+    "Height": "{TableLineHeight}",
+    "MaxHeight": "{TableLineHeight}",
+    "Triggers": [
+        {
+            "Trigger": "LeaderColorTeam"
+        },
+        {
+            "Trigger": "LeaderColorCar"
+        },
+        {
+            "Trigger": "NumberAbrevi"
+        },
+        {
+            "Trigger": "NumberBadge"
+        },
+        {
+            "Trigger": "NumberDriver"
+        }
+    ]
+}

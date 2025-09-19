@@ -1,0 +1,30 @@
+{
+    "ComponentName": "table_logo",
+    "BlockType": "dock",
+    "MaxHeight": "{TableLineHeight}",
+    "Background": "{Item.Team.Color}",
+    "Height": 50,
+    "Width": 50,
+    "Triggers": [
+        {
+            "Trigger": "CarColorRender"
+        },
+        {
+            "Trigger": "MainCarColorBackGround"
+        }
+    ],
+    "Items": [
+        {
+            "BlockType": "image",
+            "Source": "{Item.Team.LogotypePath}",
+            "HorizontalAlignment": "Center",
+            "VerticalAlignment": "Center",
+            "Width": 25,
+            "Triggers": [
+                {
+                    "Trigger": "CarLogoRender"
+                }
+            ]
+        }
+    ]
+}

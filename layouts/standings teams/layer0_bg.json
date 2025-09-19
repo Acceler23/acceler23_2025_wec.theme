@@ -1,0 +1,11 @@
+{
+    "BlockRoot": {
+        /*"BlockType": "shape",
+        "ShapeOptions": {
+            "Fill": "{White}",
+            "ShapeType": "rectangle"
+        }*/
+        "BlockType": "image",
+        "Source": "Track_images/{Standings.LastEvent.Track.CircuitName}.png"
+    }
+}

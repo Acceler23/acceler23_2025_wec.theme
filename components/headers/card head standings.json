@@ -1,0 +1,61 @@
+{
+    "ComponentName": "card_head_standings",
+    "BlockType": "canvas",
+    "Orientation": "Vertical",
+    "Margin": "50",
+    "Padding": "10",
+    "BackgroundImage": "Session/racename_bg.png",
+    "ColorizeBackground": {
+        "Color": "{LightBlue}"
+    },
+    "Width": 240,
+    "Height": 150,
+    "Items": [
+        {
+            "BlockType": "image",
+            "Source": "{Season.LogotypePath}",
+            "Width": 90,
+            "PositionX": 0,
+            "PositionY": -10
+        },
+        {
+
+            "BlockType": "text",
+            "Source": "{Season.LeagueInfo.LeagueFullName, Converter=StringToUpperString}\nCHAMPIONSHIP",
+            "FontSize": 12,
+            "PositionY": 0,
+            "PositionX": 90
+        },
+        {
+            "BlockType": "text",
+            "Source": "{RaceSponsor, Converter=StringToUpperString} {RaceName, Converter=StringToUpperString} {Standings.LastEvent.Track.Name, Converter=StringToUpperString}",
+            "FontName": "{FontNameBoldItalic}",
+            "FontSize": "{CardFontSize}",
+            "HorizontalAlignment": "Left",
+            "VerticalAlignment": "Top",
+            "Width": "{CardMaxWidth}",
+            "PositionY": 40,
+            "Triggers": [
+                {
+                    "Condition": "{DescriptionName}",
+                    "ConditionAnd": "{Standings.LastEvent.Description, Converter=EmptyObjectToFalse}",
+                    "Property": "Source",
+                    "Value": "{Standings.LastEvent.Description, Converter=StringToUpperString}"
+                }
+            ],
+            "TextOptions": {
+                "Wrap": true
+            }
+        },
+        {
+            "BlockType": "text",
+            "Source": "{Season.Name}",
+            "FontName": "{FontMainTitle}",
+            "FontSize": 15,
+            "Padding": "5",
+            "PositionY": 132,
+            "PositionX": 100
+        }
+    ]
+
+}

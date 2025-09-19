@@ -1,0 +1,23 @@
+{
+    "ComponentName": "table_standing",
+    "BlockType": "stack",
+    "MaxHeight": "{TableLineHeight}",
+    "Items": [
+        {
+            "BlockType": "text",
+            "Source": "<sessionInfo>",
+            "Background": "{DarkBlue}",
+            "Height": "{TableLineHeight}",
+            "Style": "Session_Style",
+            "Width": 200,
+            "Triggers": [
+                {
+                    "Trigger": "LeaderColorTeam"
+                },
+                {
+                    "Trigger": "LeaderColorCar"
+                }
+            ]
+        }
+    ]
+}

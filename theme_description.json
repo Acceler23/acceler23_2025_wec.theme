@@ -1,0 +1,24 @@
+{
+  "ThemeId": "acceler23_2025_wec.theme",
+  "Name": "2025 WEC Theme",
+  "Author": "Acceler23",
+  "Description": "Theme Based on the second half 2025 season",
+  "Version": "1.0.0",
+  "DisableUnspecifiedLocalization": false,
+  "Links": [],
+  "ForceLiveriesLoading": false,
+  "RequiredLogotypeVariants": {
+    "Season": [
+      "Light"
+    ]
+  },
+  "LogotypeBehaviours": [
+    {
+      "Category": "Season",
+      "Variant": "Light",
+      "UseFallbackSource": true,
+      "UseFallbackVariant": true,
+      "SetVariantByDefault": false
+    }
+  ]
+}

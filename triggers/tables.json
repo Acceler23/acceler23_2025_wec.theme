@@ -1,0 +1,77 @@
+[
+    {
+        "TriggerName": "CarLogoRender",
+        "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+        "Property": "Source",
+        "Value": "{Item.Car.Vendor.LogotypePath}"
+    },
+    {
+        "TriggerName": "CarColorRender",
+        "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+        "Setters": [
+            {
+                "Property": "Background",
+                "Value": "{Black}"
+            },
+            {
+                "Property": "Foreground",
+                "Value": "{White}"
+            }
+        ]
+    },
+    {
+        "TriggerName": "LeaderColorTeam",
+        "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Teams}",
+        "ConditionAnd": "{Item.Position, Converter=NumberEquals, Parameter=1}",
+        "Setters": [
+            {
+                "Property": "Background",
+                "Value": "{Item.Team.Color}"
+            },
+            {
+                "Property": "Foreground",
+                "Value": "{Item.Team.SecondaryColor}"
+            }
+        ]
+    },
+    {
+        "TriggerName": "LeaderToLaps",
+        "Condition": "{Item.Position, Converter=NumberEquals, Parameter=1}",
+        "ConditionAnd": "{Session.SessionType, Converter=StringNotEquals, Parameter=Qualification}",
+        "Property": "Source",
+        "Value": "{Item.LapsCount} Laps"
+    },
+    {
+        "TriggerName": "NumberDriver",
+        "Condition": "{CarNumber, Converter=StringEquals, Parameter=Driver}",
+        "Property": "Source",
+        "Value": "{Item.Driver.RaceNumber}"
+    },
+    {
+        "TriggerName": "NumberBadge",
+        "Condition": "{CarNumber, Converter=StringEquals, Parameter=Badge}",
+        "Property": "Source",
+        "Value": "{Item.Tean.Badge}"
+    },
+    {
+        "TriggerName": "NumberAbrevi",
+        "Condition": "{CarNumber, Converter=StringEquals, Parameter=Abbreviation}",
+        "ConditionAnd": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Teams}",
+        "Property": "Source",
+        "Value": "{Item.Team.Abbreviation}"
+    },
+    {
+        "TriggerName": "TableParts",
+        "Condition": "{ResultPage, Converter=NumberNotEquals, Parameter=0}",
+        "Setters": [
+            {
+                "Property": "TableOptions.IndexStart",
+                "Value": "{ResultPage, Converter=NumberMultiply, Parameter=10}"
+            },
+            {
+                "Property": "TableOptions.IndexEnd",
+                "Value": "{{ResultPage, Converter=NumberMultiply, Parameter=10}, Converter=NumberAdd, Parameter=9}"
+            }
+        ]
+    }
+]
