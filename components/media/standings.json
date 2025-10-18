@@ -168,7 +168,7 @@
                 },
                 {
                   "BlockType": "text",
-                  "Source": "@FIAWEC_OFFICIAL",
+                  "Source": "{Instagram}",
                   "VerticalAlignment": "Center",
                   "FontSize": "{FontSizeSmall}"
                 },
@@ -181,7 +181,7 @@
                 },
                 {
                   "BlockType": "text",
-                  "Source": "FIAWEC",
+                  "Source": "{TikTok}",
                   "VerticalAlignment": "Center",
                   "FontSize": "{FontSizeSmall}"
                 }

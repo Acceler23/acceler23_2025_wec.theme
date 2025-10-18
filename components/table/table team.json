@@ -35,6 +35,9 @@
                 },
                 {
                     "Trigger": "LeaderColorCar"
+                },
+                {
+                    "Trigger": "TeamtoCarName"
                 }
             ]
         },

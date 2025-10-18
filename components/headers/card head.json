@@ -29,8 +29,9 @@
         {
             "BlockType": "text",
             "Source": "{RaceSponsor, Converter=StringToUpperString} {RaceName, Converter=StringToUpperString} {Session.Track.Name, Converter=StringToUpperString}",
-            "FontName": "{FontNameBoldItalic}",
+            "FontName": "{FontMainTitle}",
             "FontSize": "{CardFontSize}",
+            "Padding": "10",
             "HorizontalAlignment": "Left",
             "VerticalAlignment": "Top",
             "Width": "{CardMaxWidth}",

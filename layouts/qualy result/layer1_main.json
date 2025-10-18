@@ -13,7 +13,10 @@
                 "ComponentOptions": {
                     "Vars": {
                         "sessionLeader": "FASTEST DRIVER",
-                        "fontSize": 40
+                        "fontSize": 70,
+                        "sessionInfo": "{Item.Time}",
+                        "sessionColor": "{White}",
+                        "sessionColor2": "{Purple}"
                     }
                 }
             },

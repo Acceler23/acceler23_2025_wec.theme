@@ -33,6 +33,29 @@
         ]
     },
     {
-        
+        "TriggerName": "LeaderInfoColor",
+        "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+        "Setters": [
+            {
+                "Property": "Foreground",
+                "Value": "{Item.Car.SecondaryColor}"
+            },
+            {
+                "Property": "ColorizeBackground.Color",
+                "Value": "{Item.Car.Color}"
+            }
+        ]
+    },
+    {
+        "TriggerName": "TeamtoCarName",
+        "Condition":"{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+        "Property": "Source",
+        "Value": "{Item.Car.Name, Converter=StringToUpperString}"
+    },
+    {
+        "TriggerName": "TeamtoCarLivery",
+        "Condition":"{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+        "Property": "Source",
+        "Value": "{Item.Car.LiveryPath}"
     }
 ]

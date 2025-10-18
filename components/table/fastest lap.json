@@ -39,6 +39,7 @@
                     "Height": "{TableLineHeight}",
                     "HorizontalAlignment": "Center",
                     "VerticalAlignment": "Center",
+                    "Padding": "5,0,5,0",
                     "Width": 160
                 },
                 {
@@ -50,6 +51,7 @@
                     "Height": "{TableLineHeight}",
                     "HorizontalAlignment": "Left",
                     "VerticalAlignment": "Center",
+                    "Padding": "5,0,5,0",
                     "Width": 300
                 },
                 {
@@ -89,6 +91,7 @@
                             "MarginLeft": -10,
                             "HorizontalAlignment": "Left",
                             "VerticalAlignment": "Center",
+                            "Padding": "5,0,5,0",
                             "Triggers": [
                                 {
                                     "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",

@@ -11,12 +11,21 @@
         }
     ],
     "Properties": [
+        //General
+        {
+            "Name": "ResultPage",
+            "PublicName": "Result Page",
+            "Type": "Integer",
+            "DefaultValue": 0
+        },
+
+        //Fix
         {
             "Category": "Fix & Tweaks",
             "Name": "CardFontSize",
             "PublicName": "Results Card Font Size",
             "Type": "Integer",
-            "DefaultValue": 25
+            "DefaultValue": 20
         },
         {
             "Category": "Fix & Tweaks",
@@ -31,6 +40,20 @@
             "PublicName": "Use Event Description as Event Name",
             "Type": "Bool",
             "DefaultValue": false
+        },
+        {
+            "Category": "Fix & Tweaks",
+            "Name": "TikTok",
+            "PublicName": "Tik Tok",
+            "Type": "String",
+            "DefaultValue": "FIAWEC"
+        },
+        {
+            "Category": "Fix & Tweaks",
+            "Name": "Instagram",
+            "PublicName": "Instagram",
+            "Type": "String",
+            "DefaultValue": "@FIAWEC_OFFICIAL"
         },
 
         //Results
@@ -55,17 +78,17 @@
         },
         {
             "Category": "Results",
-            "Name": "ResultPage",
-            "PublicName": "Result Page",
-            "Type": "Integer",
-            "DefaultValue": 0
-        },
-        {
-            "Category": "Results",
             "Name": "RaceSponsor",
             "PublicName": "Major Race Sponsor",
             "Type": "String",
             "DefaultValue": "Rolex"
+        },
+        {
+            "Category": "Results",
+            "Name": "OrganizerName",
+            "PublicName": "League Organizer Name",
+            "Type": "String",
+            "DefaultValue": "FIA"
         }
     ]
 }

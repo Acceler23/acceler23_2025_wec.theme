@@ -1,0 +1,252 @@
+{
+    "ComponentName": "leader_car_card",
+    "BlockType": "canvas",
+    "Orientation": "Vertical",
+    "Height": "{TableHeight}",
+    "Width": 343,
+    "BackgroundImage": "Session/leader_bg.png",
+    "ColorizeBackground": {
+        "Color": "{LightBlue}"
+    },
+    "Items": [
+        {
+            "BlockType": "image",
+            "Source": "Session/car_highlight.png",
+            "UseBackgroundCrop": true,
+            "Height": "{TableHeight}",
+            "Width": 343,
+            "PositionZ": 1,
+            "Colorize": {
+                "Color": "{DarkBlue}"
+            }
+        },
+        {
+            "BlockType": "component",
+            "Component": "card_head",
+
+            "PositionX": 50,
+            "PositionY": 50,
+            "PositionZ": 2
+        },
+        {
+            "BlockType": "itemstack",
+            "Width": 343,
+            "PositionX": 0,
+            "PositionY": 250,
+            "PositionZ": 2,
+            "HorizontalAlignment": "Center",
+            "ItemStackOptions": {
+                "Limit": 1,
+                "ItemSource": "{Session.Drivers}",
+                "ItemTemplate": {
+                    "BlockType": "stack",
+                    "Orientation": "Vertical",
+                    "Items": [
+                        {
+                            "BlockType": "stack",
+                            "HorizontalAlignment": "Center",
+                            "Width": 343,
+                            "Padding": "0,10,0,10",
+                            "FontSize": "{FontSizeMedium}",
+                            "BackgroundImage": "Session/leader_info.png",
+                            "Foreground": "{Item.Team.SecondaryColor}",
+                            "ColorizeBackground": {
+                                "Color": "{Item.Team.Color}"
+                            },
+                            "Triggers": [
+                                {
+                                    "Trigger": "LeaderInfoColor"
+                                }
+                            ],
+                            "Items": [
+                                {
+                                    "BlockType": "dock",
+                                    "Width": 343,
+                                    "Items": [
+                                        {
+                                            "BlockType": "stack",
+                                            "Orientation": "Horizontal",
+                                            "HorizontalAlignment": "Center",
+                                            "Spacing": 20,
+                                            "Padding": "5,0,5,5",
+                                            "Items": [
+                                                {
+                                                    "BlockType": "image",
+                                                    "Source": "{Item.Team.LogotypePath}",
+                                                    "Height": 40,
+                                                    "HorizontalAlignment": "Center",
+                                                    "VerticalAlignment": "Center",
+                                                    "Triggers": [
+                                                        {
+                                                            "Trigger": "CarLogoRender"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "BlockType": "text",
+                                                    "Source": "{Item.Team.Abbreviation, Converter=StringToUpperString}",
+                                                    "Foreground": "{Item.Team.SecondaryColor}",
+                                                    "FontSize": "{FontSizeBig}",
+                                                    "Padding": "0,0,10,0",
+                                                    "HorizontalAlignment": "Center",
+                                                    "VerticalAlignment": "Center",
+                                                    "FontName": "{FontNameRegularItalic}",
+                                                    "Triggers": [
+                                                        {
+                                                            "Trigger": "NumberAbrevi"
+                                                        },
+                                                        {
+                                                            "Trigger": "NumberBadge"
+                                                        },
+                                                        {
+                                                            "Trigger": "NumberDriver"
+                                                        },
+                                                        {
+                                                            "Trigger": "LeaderInfoColor"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "BlockType": "image",
+            "Source": "{Session.Track.Nation.LogotypePath}",
+            "Width": 900,
+            "Opacity": 90,
+            "PositionX": -270,
+            "PositionY": 183,
+            "PositionZ": 0
+        },
+        {
+            "BlockType": "image",
+            "Source": "Session/fl_shade",
+            "Height": "{TableHeight}",
+            "Width": 343,
+            "PositionX": 0,
+            "PositionY": 0,
+            "Colorize": {
+                "Color": "{LightBlue}"
+            }
+        },
+        {
+            "BlockType": "text",
+            "PositionY": 350,
+            "PositionZ": 2,
+            "Source": "<sessionLeader>",
+            "FontSize": 90,
+            "Width": 343,
+            "FontName": "{FontNameRegularItalic}",
+            "Foreground": "{LightBlue}",
+            "HorizontalAlignment": "Center",
+            "VerticalAlignment": "Bottom"
+        },
+        {
+            "BlockType": "itemstack",
+            "PositionX": 22,
+            "Width": 343,
+            "PositionY": 600,
+            "PositionZ": 2,
+            "ItemStackOptions": {
+                "Limit": 1,
+                "ItemSource": "{Session.Drivers}",
+                "ItemTemplate": {
+                    "BlockType": "stack",
+                    "Orientation": "Vertical",
+                    "Items": [
+                        {
+                            "BlockType": "dock",
+                            "Orientation": "Vertical",
+                            "Items": [
+                                {
+                                    "BlockType": "image",
+                                    "Source": "{Item.Team.LiveryPath}",
+                                    "Width": 300,
+                                    "VerticalAlignment": "Top",
+                                    "HorizontalAlignment": "Center",
+                                    "Triggers": [
+                                        {
+                                            "Trigger": "TeamtoCarLivery"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "BlockType": "itemstack",
+            "Width": 343,
+            "PositionX": -10,
+            "PositionY": 800,
+            "PositionZ": 2,
+            "HorizontalAlignment": "Center",
+            "ItemStackOptions": {
+                "Limit": 1,
+                "ItemSource": "{Session.Drivers}",
+                "ItemTemplate": {
+                    "BlockType": "dock",
+                    "Width": 283,
+                    "Margin": "30,0,30,0",
+                    "Orientation": "Horizontal",
+                    "Padding": "10",
+                    "Items": [
+                        {
+                            "BlockType": "text",
+                            "Source": "{Item.Team.FullName, Converter=StringToUpperString}",
+                            "VerticalAlignment": "Bottom",
+                            "HorizontalAlignment": "Center",
+                            "FontName": "{FontNameBoldItalic}",
+                            "FontSize": "{FontSizeMedium}",
+                            "Padding": "10",
+                            "TextOptions": {
+                                "Wrap": true,
+                                "TextAlignment": "Center"
+                            },
+                            "Triggers": [
+                                {
+                                    "Trigger": "TeamtoCarName"
+                                }
+                            ]
+
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "BlockType": "dock",
+            "Width": 343,
+            "PositionX": 0,
+            "PositionY": 940,
+            "PositionZ": 2,
+            "Items": [
+                {
+                    "BlockType": "text",
+                    "HorizontalAlignment": "Center",
+                    "Source": "#{RaceName, Converter=StringToUpperString} {Session.Track.Name, Converter=StringToUpperString}",
+                    "FontSize": 14,
+                    "Triggers": [
+                        {
+                            "Trigger": "NameDescription"
+                        }
+                    ],
+                    "Padding": "10",
+                    "TextOptions": {
+                        "Wrap": true,
+                        "TextAlignment": "Center"
+                    }
+                }
+            ]
+        }
+    ]
+}
