@@ -1,0 +1,50 @@
+{
+    "ComponentName": "table_driver_stats",
+    "BlockType": "stack",
+    "RenderIf": "<renderDriver1>",
+    "Background": "{DarkBlue}",
+    "Width": 250,
+    "MaxHeight": "{TableLineHeight}",
+    "Items": [
+        {
+            "BlockType": "shape",
+            "Height": "{TableLineHeight}",
+            "Width": 5,
+            "HorizontalAlignment": "Left",
+            "VerticalAlignment": "Center",
+            "ShapeOptions": {
+                "Fill": "{Item.Team.Color}",
+                "ShapeType": "rectangle"
+            },
+            "Triggers": [
+                {
+                    "Trigger": "ShapeCarColorForeground"
+                }
+            ]
+        },
+        {
+            "BlockType": "text",
+            "Source": "{Item.Driver.Name, Converter=StringToUpperString}",
+            "Background": "{DarkBlue}",
+            "Style": "Session_Style",
+            "Height": "{TableLineHeight}",
+            "PaddingLeft": 20,
+            "Triggers": [
+                {
+                    "Trigger": "LeaderColorTeam"
+                },
+                {
+                    "Trigger": "LeaderColorCar"
+                }
+            ]
+        }
+    ],
+    "Triggers": [
+        {
+            "Trigger": "LeaderColorTeam"
+        },
+        {
+            "Trigger": "LeaderColorCar"
+        }
+    ]
+}

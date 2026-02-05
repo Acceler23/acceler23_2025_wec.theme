@@ -1,0 +1,246 @@
+{
+    "ComponentName": "table_media",
+    "BlockType": "itemstack",
+    "Orientation": "Vertical",
+    "Spacing": 5,
+    "Triggers": [
+        {
+            "Trigger": "MediaParts",
+        }
+    ],
+    "ItemStackOptions": {
+        "ItemSource": "<info1>",
+        "Limit": 4,
+        "IndexStart": 0,
+        "ItemTemplate": {
+            "BlockType": "canvas",
+            "Items": [
+                {
+                    "BlockType": "shape",
+                    "PositionY": 36,
+                    "Height": 102,
+                    "Width": 20,
+                    "ShapeOptions": {
+                        "Fill": "{Item.Team.Color}",
+                        "ShapeType": "rectangle"
+                    },
+                    "Triggers": [
+                        {
+                            "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+                            "Property": "ShapeOptions.Fill",
+                            "Value": "{Item.Car.Color}"
+                        }
+                    ]
+                },
+                {
+                    "BlockType": "image",
+                    "Source": "media/standings_type1",
+                    "Height": 173,
+                    "Triggers": [
+                        {
+                            "Condition": "{Item.Position, Converter=NumberIsEven}",
+                            "Property": "Source",
+                            "Value": "media/standings_type2"
+                        }
+                    ]
+                },
+                {
+                    "BlockType": "text",
+                    "Source": "<pos>",
+                    "FontName": "{Font1}",
+                    "Padding": "10",
+                    "FontSize": 75,
+                    "PositionX": 50,
+                    "PositionY": 45,
+                    "TextOptions": {
+                        "TextAlignment": "Start"
+                    },
+                    "Triggers": [
+                        {
+                            "Condition": "<isRace>",
+                            "ConditionAnd": "{Item.IntervalRace, Converter=StringEquals, Parameter=DNF}",
+                            "Property": "Source",
+                            "Value": "DNF"
+                        },
+                        {
+                            "Condition": "<isRace>",
+                            "ConditionAnd": "{Item.IntervalRace, Converter=StringEquals, Parameter=DNS}",
+                            "Property": "Source",
+                            "Value": "DNS"
+                        },
+                        {
+                            "Condition": "<isRace>",
+                            "ConditionAnd": "{Item.IntervalRace, Converter=StringEquals, Parameter=DSQ}",
+                            "Property": "Source",
+                            "Value": "DSQ"
+                        }
+                    ]
+                },
+                {
+                    "BlockType": "text",
+                    "PositionX": 220,
+                    "PositionY": 65,
+                    "Source": "N°",
+                    "FontSize": 30,
+                    "Padding": "5",
+                    "FontName": "{Font6}",
+                    "Foreground": "{White}",
+                    "Opacity": 50
+                },
+                {
+                    "BlockType": "text",
+                    "PositionX": 260,
+                    "PositionY": 57,
+                    "VerticalAlignment": "Bottom",
+                    "Source": "{Item.Driver.RaceNumber}",
+                    "FontName": "{Font0}",
+                    "FontSize": 45,
+                    "Padding": "5",
+                    "Triggers": [
+
+                        {
+                            "Trigger": "NumberAbrevi"
+                        },
+                        {
+                            "Trigger": "NumberBadge"
+                        },
+                        {
+                            "Trigger": "NumberDriver"
+                        }
+                    ]
+                },
+                {
+                    "BlockType": "dock",
+                    "Orientation": "Vertical",
+                    "Height": 126,
+                    "Width": 200,
+                    "PositionX": 381,
+                    "PositionY": 23,
+                    "Items": [
+                        {
+                            "BlockType": "image",
+                            "Source": "{Item.Team.LogotypePath}",
+                            "HorizontalAlignment": "Center",
+                            "VerticalAlignment": "Center",
+                            "Height": 90,
+                            "Triggers": [
+                                {
+                                    "Trigger": "CarLogoRender"
+                                },
+                                {
+                                    "Condition": "{Item.Team.LiveryPath, Converter=EmptyObjectToTrue}",
+                                    "ConditionAnd": "{Item.Car.LiveryPath, Converter=EmptyObjectToTrue}",
+                                    "Property": "Source",
+                                    "Value": "{Item.Team.LogotypePath}"
+                                },
+                                {
+                                    "Condition": "{Item.Team.LiveryPath, Converter=EmptyObjectToTrue}",
+                                    "ConditionAnd": "{Item.Car.LiveryPath, Converter=EmptyObjectToTrue}",
+                                    "ConditionAndValue": "{Item.Team.LogotypePath, Converter=EmptyObjectToTrue}",
+                                    "Property": "Source",
+                                    "Value": "{Item.Team.Car.Vendor.LogotypePath}"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "BlockType": "image",
+                    "Source": "media/spacer",
+                    "Width": 9,
+                    "PositionX": 582,
+                    "PositionY": 45
+                },
+                {
+                    "BlockType": "text",
+                    "Width": 280,
+                    "Height": 120,
+                    "PositionX": 620,
+                    "PositionY": 30,
+                    "Source": "{<nameSource>, Converter=StringToUpperString}",
+                    "FontName": "{Font5}",
+                    "HorizontalAlignment": "Left",
+                    "VerticalAlignment": "Center",
+                    "FontSize": 20,
+                    "TextOptions": {
+                        "Wrap": true,
+                        "VerticalAlignment": "Center"
+                    },
+                    "Triggers": [
+                        {
+                            "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+                            "Property": "Source",
+                            "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
+                        }
+                    ]
+                },
+                {
+                    "BlockType": "canvas",
+                    "Height": 70,
+                    "Width": 250,
+                    "PositionX": 870,
+                    "PositionY": 50,
+                    "Triggers": [
+                        {
+                            "Condition": "<isRace>",
+                            "Property": "RenderIf",
+                            "Value": false
+                        }
+                    ],
+                    "Items": [
+                        {
+                            "BlockType": "image",
+                            "Source": "media/standings_shade",
+                            "Height": 70,
+                            "Width": 210
+                        },
+                        {
+                            "BlockType": "image",
+                            "Source": "media/standings_shade",
+                            "Height": 70,
+                            "Width": 210
+                        },
+                        {
+                            "BlockType": "image",
+                            "Source": "media/standings_shade",
+                            "Height": 70,
+                            "Width": 210
+                        },
+                        {
+                            "BlockType": "image",
+                            "Source": "media/triangle",
+                            "Height": 15,
+                            "PositionX": 25,
+                            "PositionY": 28
+                        },
+                        {
+                            "BlockType": "text",
+                            "Width": 100,
+                            "Source": "{Item.Points}",
+                            "PositionX": 20,
+                            "PositionY": 15,
+                            "FontName": "{Font7}",
+                            "Padding": "10",
+                            "FontSize": 30,
+                            "TextOptions": {
+                                "TextAlignment": "End",
+                                "HorizontalAlignment": "Right",
+                                "VerticalAlignment": "Center"
+                            }
+                        },
+                        {
+                            "BlockType": "text",
+                            "Source": "PTS",
+                            "PositionX": 125,
+                            "PositionY": 20,
+                            "FontName": "{Font7}",
+                            "Padding": "10",
+                            "FontSize": 15,
+                            "Foreground": "{DarkBlue}"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

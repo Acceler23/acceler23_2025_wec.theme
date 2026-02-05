@@ -1,0 +1,90 @@
+{
+    "ComponentName": "card_head_media",
+    "BackgroundImage": "media/standings_header",
+    "BlockType": "canvas",
+    "Items": [
+        {
+            "BlockType": "dock",
+            "Orientation": "Horizontal",
+            "Height": 150,
+            "Width": 542,
+            "Items": [
+                {
+                    "BlockType": "stack",
+                    "VerticalAlignment": "Center",
+                    "HorizontalAlignment": "Center",
+                    "Items": [
+                        {
+                            "BlockType": "stack",
+                            "Orientation": "Vertical",
+                            "VerticalAlignment": "Center",
+                            "Items": [
+                                {
+                                    "BlockType": "image",
+                                    "Source": "{Season.LogotypePath}",
+                                    "HorizontalAlignment": "Center",
+                                    "Width": 140
+                                },
+                                {
+
+                                    "BlockType": "text",
+                                    "HorizontalAlignment": "Center",
+                                    "Source": "{Season.LeagueInfo.LeagueFullName, Converter=StringToUpperString}\nCHAMPIONSHIP",
+                                    "FontSize": 10,
+                                    "Padding": "10"
+                                }
+                            ]
+                        },
+                        {
+                            "BlockType": "canvas",
+                            "VerticalAlignment": "Center",
+                            "Items": [
+                                {
+                                    "BlockType": "image",
+                                    "Source": "media/standings_head_name.png",
+                                    "PositionX": 10,
+                                    "PositionY": 15,
+                                    "Height": 110,
+                                    "Colorize": {
+                                        "Color": "{LightBlue}"
+                                    }
+                                },
+                                {
+                                    "BlockType": "text",
+                                    "Source": "{RaceSponsor, Converter=StringToUpperString} {RaceName, Converter=StringToUpperString} {Session.Track.Name, Converter=StringToUpperString}",
+                                    "FontName": "{FontMainTitle}",
+                                    "FontSize": "{MediaFontSize}",
+                                    "Padding": "10",
+                                    "HorizontalAlignment": "Left",
+                                    "VerticalAlignment": "Top",
+                                    "Width": "{MediaMaxWidth}",
+                                    "PositionY": 22,
+                                    "PositionX": 5,
+                                    "Triggers": [
+                                        {
+                                            "Trigger": "NameDescription"
+                                        }
+                                    ],
+                                    "TextOptions": {
+                                        "Wrap": true
+                                    }
+                                },
+                                {
+                                    "BlockType": "text",
+                                    "Source": "{Season.Name}",
+                                    "FontName": "{FontMainTitle}",
+                                    "Foreground": "{DarkBlue}",
+                                    "FontSize": 15,
+                                    "Padding": "5",
+                                    "PositionY": 102,
+                                    "PositionX": 25
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+
+        }
+    ]
+}

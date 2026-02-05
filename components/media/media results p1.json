@@ -1,0 +1,106 @@
+{
+    "ComponentName": "media_table_p1",
+    "BlockType": "canvas",
+    "Height": 1500,
+    "Width": 1200,
+    "Items": [
+        //bg
+        {
+            "PositionX": 36,
+            "PositionY": 719,
+            "PositionZ": 0,
+            "BlockType": "image",
+            "Source": "media/standings_stripes",
+            "Height": 712
+        },
+        {
+            "PositionX": 36,
+            "PositionY": 1427,
+            "PositionZ": 0,
+            "BlockType": "image",
+            "Source": "media/standings_stripes",
+            "Height": 712
+        },
+        {
+            "PositionX": 0,
+            "PositionY": 790,
+            "PositionZ": 1,
+            "BlockType": "image",
+            "Source": "media/standings_stripes_shade",
+            "Height": 710,
+            "Width": 1200
+        },
+        {
+            "PositionX": 0,
+            "PositionY": 790,
+            "PositionZ": 1,
+            "BlockType": "image",
+            "Source": "media/standings_stripes_shade",
+            "Height": 710,
+            "Width": 1200
+        },
+        //partas
+        {
+            "BlockType": "dock",
+            "PositionZ": 2,
+            "Width": 1200,
+            "PositionX": 0,
+            "PositionY": 250,
+            "Items": [
+                {
+                    "BlockType": "component",
+                    "Component": "render_type_media",
+                    "HorizontalAlignment": "Center",
+                    "ComponentOptions": {
+                        "Vars": {
+                            "info1": "<infor1>",
+                            "info2": "<infor2>"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "PositionX": 25,
+            "PositionY": 550,
+            "PositionZ": 2,
+            "BlockType": "component",
+            "Component": "session_banner",
+            "HorizontalAlignment": "Center",
+            "MarginTop": 80,
+            "ComponentOptions": {
+                "Vars": {
+                    "pageNum": 1,
+                    "info1": "<infor3>"
+                }
+            }
+
+        },
+        {
+            "PositionX": 80,
+            "PositionY": 700,
+            "PositionZ": 2,
+            "BlockType": "component",
+            "Component": "table_media",
+            "HorizontalAlignment": "Center",
+            "ComponentOptions": {
+                "Vars": {
+                    "pos": "<pos1>",
+                    "info1": "<infor4>",
+                    "pgLimit": "<info5>",
+                    "pgstart": "<info6>",
+                    "isRace": "<raceIs>",
+                    "nameSource": "<sourceName>"
+                }
+            }
+        },
+        {
+            "PositionX": 1100,
+            "PositionY": 1450,
+            "PositionZ": 2,
+            "BlockType": "text",
+            "Source": "1/{{{<stanSess>.DriversCount, Converter=NumberSubtract, Parameter=4}, Converter=NumberDivide, Parameter=7}, Converter=NumberAdd, Parameter=1}",
+            "Opacity": 50
+        }
+    ]
+}

@@ -25,27 +25,41 @@
             "PositionX": 50,
             "PositionY": 50,
             "PositionZ": 2
-        },
-        {
+        }, {
             "BlockType": "itemstack",
-            "Orientation": "Vertical",
-            "PositionX": 0,
-            "PositionY": 220,
-            "PositionZ": 2,
             "HorizontalAlignment": "Center",
-            "VerticalAlignment": "Center",
+            "Width": 343,
+            "PositionZ": 2,
+            "PositionY": 220,
             "ItemStackOptions": {
                 "Limit": 1,
                 "ItemSource": "{Session.Drivers}",
                 "ItemTemplate": {
-                    "BlockType": "image",
-                    "Source": "{Item.Driver.LogotypePath}",
-                    "Width": 350,
-                    "Triggers": [
+                    "BlockType": "stack",
+                    "Orientation": "Vertical",
+                    "Items": [
                         {
-                            "Condition": "{Item.Driver.LogotypePath, Converter=EmptyObjectToTrue}",
-                            "Property": "Source",
-                            "Value": "driver_placeholder.png"
+                            "BlockType": "dock",
+                            "Width": 343,
+                            "HorizontalAlignment": "Center",
+                            "VerticalAlignment": "Center",
+                            "Orientation": "Horizontal",
+                            "Items": [
+                                {
+                                    "BlockType": "image",
+                                    "Source": "{Item.Driver.LogotypePath}",
+                                    "Height": 600,
+                                    "VerticalAlignment": "Top",
+                                    "HorizontalAlignment": "Center",
+                                    "Triggers": [
+                                        {
+                                            "Condition": "{Item.Driver.LogotypePath, Converter=EmptyObjectToTrue}",
+                                            "Property": "Source",
+                                            "Value": "driver_placeholder.png"
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }
@@ -78,7 +92,7 @@
         {
             "BlockType": "itemstack",
             "HorizontalAlignment": "Center",
-            "PositionY": 700,
+            "PositionY": 710,
             "PositionZ": 3,
             "ItemStackOptions": {
                 "Limit": 1,
@@ -89,13 +103,33 @@
                     "HorizontalAlignment": "Center",
                     "FontName": "{FontNameBoldItalic}",
                     "Width": 343,
-                    "Padding": "10",
-                    "FontSize": "{FontSizeMedium}",
+                    "Padding": "5,10,5,10",
+                    "FontSize": 40,
                     "BackgroundImage": "Session/leader_info.png",
                     "Foreground": "<sessionColor>",
                     "ColorizeBackground": {
                         "Color": "<sessionColor2>"
-                    }
+                    },
+                    "Triggers": [
+                        {
+                            "Condition": "{Session.SessionType, Converter=StringEquals, Parameter=Race}",
+                            "ConditionAnd": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+                            "Property": "Source",
+                            "Value": "{Item.Car.Vendor.Name, Converter=StringToUpperString}"
+                        },
+                        {
+                            "Condition": "{Session.SessionType, Converter=StringEquals, Parameter=Race}",
+                            "ConditionAnd": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+                            "Property": "Foreground",
+                            "Value": "{Item.Car.SecondaryColor}"
+                        },
+                        {
+                            "Condition": "{Session.SessionType, Converter=StringEquals, Parameter=Race}",
+                            "ConditionAnd": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+                            "Property": "ColorizeBackground.Color",
+                            "Value": "{Item.Car.Color}"
+                        }
+                    ]
                 }
             }
         },
@@ -121,7 +155,7 @@
                         },
                         {
                             "BlockType": "dock",
-                            "MarginTop": 30,
+                            "MarginTop": 10,
                             "Width": 343,
                             "Items": [
                                 {
@@ -129,12 +163,12 @@
                                     "Orientation": "Horizontal",
                                     "HorizontalAlignment": "Center",
                                     "Spacing": 20,
-                                    "Padding": "5,0,5,5",
+                                    "Padding": "5",
                                     "Items": [
                                         {
                                             "BlockType": "image",
                                             "Source": "{Item.Team.LogotypePath}",
-                                            "Height": 40,
+                                            "Height": 70,
                                             "HorizontalAlignment": "Center",
                                             "VerticalAlignment": "Center",
                                             "Triggers": [

@@ -16,15 +16,19 @@
     "Items": [
         {
             "BlockType": "image",
-            "Source": "{Item.Team.LogotypePath}",
+            //"Source": "{Item.Team.DarkLogotypePath}",
             "HorizontalAlignment": "Center",
             "VerticalAlignment": "Center",
-            "Width": 25,
+            "Width": 30,
+            //"MaxHeight": 30,
             "Triggers": [
                 {
                     "Trigger": "CarLogoRender"
                 }
-            ]
+            ],
+            "ImageOptions": {
+                "Path": "{Item.Team.DarkLogotypePath}"
+            }
         }
     ]
 }

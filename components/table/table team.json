@@ -28,7 +28,7 @@
             "Background": "{DarkBlue}",
             "Style": "Session_Style",
             "Height": "{TableLineHeight}",
-            "PaddingLeft": 20,
+            "Padding": "20",
             "Triggers": [
                 {
                     "Trigger": "LeaderColorTeam"

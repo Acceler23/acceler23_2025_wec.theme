@@ -1,0 +1,259 @@
+{
+    "ComponentName": "card_team",
+    "BlockType": "canvas",
+    "Orientation": "Vertical",
+    "VerticalAlignment": "Center",
+    "Height": "{TableHeight}",
+    "Width": 343,
+    "BackgroundImage": "Session/leader_bg.png",
+    "ColorizeBackground": {
+        "Color": "{LightBlue}"
+    },
+    "Items": [
+        {
+            "BlockType": "image",
+            "Source": "{Standings.LastEvent.Track.Nation.LogotypePath}",
+            "Width": 900,
+            "Opacity": 90,
+            "PositionX": -270,
+            "PositionY": 70,
+            "PositionZ": 0
+        },
+        {
+            "BlockType": "image",
+            "PositionX": 0,
+            "PositionY": 0,
+            "PozitionZ": 2,
+            "Source": "Session/standings_shade_top.png",
+            "Height": 970,
+            "Width": 343,
+            "Colorize": {
+                "Color": "{DarkBlue}"
+            }
+        },
+        {
+            "BlockType": "image",
+            "PositionX": 0,
+            "PositionY": 0,
+            "PozitionZ": 2,
+            "Source": "Session/car_bright.png",
+            "Height": 970,
+            "Width": 343,
+            "Colorize": {
+                "Color": "{LightBlue}"
+            }
+        },
+        {
+            "BlockType": "image",
+            "PositionX": 0,
+            "PositionY": 0,
+            "PozitionZ": 2,
+            "Source": "Session/standings_shade_botton.png",
+            "Height": 970,
+            "Width": 343,
+            "Colorize": {
+                "Color": "{LightBlue}"
+            }
+        },
+        {
+            "BlockType": "image",
+            "PositionX": 0,
+            "PositionY": 0,
+            "PozitionZ": 2,
+            "Source": "Session/standings_shade_botton.png",
+            "Height": 970,
+            "Width": 343,
+            "Colorize": {
+                "Color": "{DarkBlue}"
+            }
+        },
+        {
+            "BlockType": "component",
+            "Component": "card_head_standings",
+            "PositionX": 50,
+            "PositionY": 50,
+            "PositionZ": 2
+        },
+        {
+            "BlockType": "itemstack",
+            "Width": 343,
+            "PositionY": 300,
+            "PositionZ": 2,
+            "HorizontalAlignment": "Center",
+            "ItemStackOptions": {
+                "Limit": 1,
+                "ItemSource": "{Standings.Drivers}",
+                "ItemTemplate": {
+                    "BlockType": "dock",
+                    "Height": 400,
+                    "Width": 343,
+                    "Orientation": "Vertical",
+                    "Items": [
+                        {
+                            "BlockType": "image",
+                            "Source": "{Item.Team.LiveryPath}",
+                            "Width": 300,
+                            "VerticalAlignment": "Center",
+                            "HorizontalAlignment": "Center",
+                            "Triggers": [
+                                {
+                                    "Trigger": "TeamToCarLivery"
+                                },
+                                {
+                                    "Condition": "{Item.Team.LiveryPath, Converter=EmptyObjectToTrue}",
+                                    "ConditionAnd": "{Item.Car.LiveryPath, Converter=EmptyObjectToTrue}",
+                                    "Property": "Source",
+                                    "Value": "{Item.Team.LogotypePath}"
+                                },
+                                {
+                                    "Condition": "{Item.Team.LiveryPath, Converter=EmptyObjectToTrue}",
+                                    "ConditionAnd": "{Item.Car.LiveryPath, Converter=EmptyObjectToTrue}",
+                                    "ConditionAndValue": "{Item.Team.LogotypePath, Converter=EmptyObjectToTrue}",
+                                    "Property": "Source",
+                                    "Value": "{Item.Car.Vendor.LogotypePath}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+
+        },
+        {
+            "BlockType": "itemstack",
+            "PositionX": 0,
+            "Width": 343,
+            "PositionY": 700,
+            "PositionZ": 2,
+            "ItemStackOptions": {
+                "Limit": 1,
+                "ItemSource": "{Standings.Drivers}",
+                "ItemTemplate": {
+                    "BlockType": "dock",
+                    "Width": 283,
+                    "Margin": "30,0,30,0",
+                    "Orientation": "Horizontal",
+                    "Items": [
+                        {
+                            "BlockType": "stack",
+                            "HorizontalAlignment": "Center",
+                            "Spacing": 10,
+                            "Items": [
+                                {
+                                    "BlockType": "image",
+                                    "Source": "{Item.Team.LogotypePath}",
+                                    "Height": 90,
+                                    "HorizontalAlignment": "Right",
+                                    "VerticalAlignment": "Center",
+                                    "Triggers": [
+                                        {
+                                            "Trigger": "CarLogoRender"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "BlockType": "text",
+                                    "Source": "{Item.Team.Abbreviation, Converter=StringToUpperString}",
+                                    "Foreground": "{White}",
+                                    "FontSize": 70,
+                                    "Padding": "5,0,5,0",
+                                    "HorizontalAlignment": "Right",
+                                    "VerticalAlignment": "Center",
+                                    "FontName": "{FontNameBoldItalic}",
+                                    "Triggers": [
+                                        {
+                                            "Trigger": "NumberAbrevi"
+                                        },
+                                        {
+                                            "Trigger": "NumberBadge"
+                                        },
+                                        {
+                                            "Trigger": "NumberDriver"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+
+
+                }
+            }
+        },
+        {
+            "BlockType": "itemstack",
+            "Width": 343,
+            "PositionX": 0,
+            "PositionY": 750,
+            "PositionZ": 2,
+            "HorizontalAlignment": "Center",
+            "ItemStackOptions": {
+                "Limit": 1,
+                "ItemSource": "{Standings.Drivers}",
+                "ItemTemplate": {
+                    "BlockType": "dock",
+                    "VerticalAlignment": "Top",
+                    "HorizontalAlignment": "Center",
+                    "Width": 303,
+                    "Margin": "20,0,20,0",
+                    "Orientation": "Horizontal",
+                    "Items": [
+                        {
+                            "BlockType": "text",
+                            "Source": "{Item.Team.FullName, Converter=StringToUpperString}",
+                            "VerticalAlignment": "Top",
+                            "HorizontalAlignment": "Center",
+                            "FontName": "{FontNameBoldItalic}",
+                            "FontSize": 50,
+                            "MaxWidth": 303,
+                            "Height": 150,
+                            "Padding": "5",
+                            "TextOptions": {
+                                "Wrap": true,
+                                "TextAlignment": "Center",
+                                "VerticalAlignment": "Top",
+                                "HorizontalAlignment": "Left"
+                            },
+                            "Triggers": [
+                                {
+                                    "Trigger": "TeamtoCarName"
+                                }
+                            ]
+
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "BlockType": "dock",
+            "Width": 343,
+            "PositionX": 0,
+            "PositionY": 940,
+            "PositionZ": 2,
+            "Items": [
+                {
+                    "BlockType": "text",
+                    "Padding": "10",
+                    "VerticalAlignment": "Bottom",
+                    "HorizontalAlignment": "Center",
+                    "Source": "#{RaceName, Converter=StringToUpperString} {Standings.LastEvent.Track.Name, Converter=StringToUpperString}",
+                    "FontSize": 14,
+                    "Triggers": [
+                        {
+                            "Condition": "{DescriptionName}",
+                            "ConditionAnd": "{Standings.LastEvent.Description, Converter=EmptyObjectToFalse}",
+                            "Property": "Source",
+                            "Value": "{Standings.LastEvent.Description, Converter=StringToUpperString}"
+                        }
+                    ],
+                    "TextOptions": {
+                        "Wrap": true,
+                        "TextAlignment": "Center"
+                    }
+                }
+            ]
+        }
+
+    ]
+}

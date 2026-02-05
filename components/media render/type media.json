@@ -1,0 +1,31 @@
+{
+    "ComponentName": "render_type_media",
+    "BlockType": "stack",
+    "Spacing": -27,
+    "Height": 230,
+    "Orientation": "Vertical",
+    "Items": [
+        {
+            "BlockType": "text",
+            "HorizontalAlignment": "Center",
+            "VerticalAlignment": "Center",
+            "Padding": "10,43,10,0",
+            "Height": 90,
+            "FontSize": 120,
+            "Source": "<info1>",
+            "FontName": "{Font2}",
+            "Foreground": "{White}"
+        },
+        {
+            "BlockType": "text",
+            "Height": 90,
+            "Padding": "10,43,10,0",
+            "HorizontalAlignment": "Center",
+            "VerticalAlignment": "Center",
+            "FontSize": 120,
+            "Source": "<info2>",
+            "FontName": "{Font2}",
+            "Foreground": "{LightBlue}"
+        }
+    ]
+}

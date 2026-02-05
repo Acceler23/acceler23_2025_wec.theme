@@ -11,11 +11,58 @@
     "Items": [
         {
             "BlockType": "image",
-            "Source": "Session/car_highlight.png",
-            "UseBackgroundCrop": true,
-            "Height": "{TableHeight}",
+            "Source": "{Session.Track.Nation.LogotypePath}",
+            "Width": 900,
+            "Opacity": 90,
+            "PositionX": -270,
+            "PositionY": 183,
+            "PositionZ": 0
+        },
+        {
+            "BlockType": "image",
+            "PositionX": 0,
+            "PositionY": 0,
+            "PozitionZ": 2,
+            "Source": "Session/results_shade_top.png",
+            "Height": 970,
             "Width": 343,
-            "PositionZ": 1,
+            "Colorize": {
+                "Color": "{DarkBlue}"
+            }
+        },
+        {
+            "BlockType": "image",
+            "PositionX": 0,
+            "PositionY": 0,
+            "PozitionZ": 2,
+            "Source": "Session/car_bright.png",
+            "Height": 970,
+            "Width": 343,
+            "Colorize": {
+                "Color": "{LightBlue}"
+            }
+        },
+        {
+            "BlockType": "image",
+            "PositionX": 0,
+            "PositionY": 0,
+            "PozitionZ": 2,
+            "Source": "Session/standings_shade_botton.png",
+            "Height": 970,
+            "Width": 343,
+            "Colorize": {
+                "Color": "{LightBlue}"
+            }
+        },
+        {
+            "BlockType": "image",
+            "PositionX": 0,
+            "PositionY": 0,
+            "PozitionZ": 2,
+            "Source": "Session/standings_shade_botton.png",
+            "Height": 970,
+            "Width": 343,
+            "Opacity": 70,
             "Colorize": {
                 "Color": "{DarkBlue}"
             }
@@ -23,9 +70,8 @@
         {
             "BlockType": "component",
             "Component": "card_head",
-
             "PositionX": 50,
-            "PositionY": 50,
+            "PositionY": 30,
             "PositionZ": 2
         },
         {
@@ -67,13 +113,12 @@
                                             "BlockType": "stack",
                                             "Orientation": "Horizontal",
                                             "HorizontalAlignment": "Center",
-                                            "Spacing": 20,
-                                            "Padding": "5,0,5,5",
+                                            "Spacing": 10,
                                             "Items": [
                                                 {
                                                     "BlockType": "image",
                                                     "Source": "{Item.Team.LogotypePath}",
-                                                    "Height": 40,
+                                                    "Height": "{CardLogoSize}",
                                                     "HorizontalAlignment": "Center",
                                                     "VerticalAlignment": "Center",
                                                     "Triggers": [
@@ -86,8 +131,8 @@
                                                     "BlockType": "text",
                                                     "Source": "{Item.Team.Abbreviation, Converter=StringToUpperString}",
                                                     "Foreground": "{Item.Team.SecondaryColor}",
-                                                    "FontSize": "{FontSizeBig}",
-                                                    "Padding": "0,0,10,0",
+                                                    "FontSize": "{CardLogoSize}",
+                                                    "Padding": "5",
                                                     "HorizontalAlignment": "Center",
                                                     "VerticalAlignment": "Center",
                                                     "FontName": "{FontNameRegularItalic}",
@@ -117,31 +162,11 @@
             }
         },
         {
-            "BlockType": "image",
-            "Source": "{Session.Track.Nation.LogotypePath}",
-            "Width": 900,
-            "Opacity": 90,
-            "PositionX": -270,
-            "PositionY": 183,
-            "PositionZ": 0
-        },
-        {
-            "BlockType": "image",
-            "Source": "Session/fl_shade",
-            "Height": "{TableHeight}",
-            "Width": 343,
-            "PositionX": 0,
-            "PositionY": 0,
-            "Colorize": {
-                "Color": "{LightBlue}"
-            }
-        },
-        {
             "BlockType": "text",
-            "PositionY": 350,
+            "PositionY": 355,
             "PositionZ": 2,
             "Source": "<sessionLeader>",
-            "FontSize": 90,
+            "FontSize": 100,
             "Width": 343,
             "FontName": "{FontNameRegularItalic}",
             "Foreground": "{LightBlue}",
@@ -150,9 +175,8 @@
         },
         {
             "BlockType": "itemstack",
-            "PositionX": 22,
             "Width": 343,
-            "PositionY": 600,
+            "PositionY": 460,
             "PositionZ": 2,
             "ItemStackOptions": {
                 "Limit": 1,
@@ -163,17 +187,32 @@
                     "Items": [
                         {
                             "BlockType": "dock",
+                            "Height": 300,
+                            "Width": 343,
                             "Orientation": "Vertical",
                             "Items": [
                                 {
                                     "BlockType": "image",
                                     "Source": "{Item.Team.LiveryPath}",
                                     "Width": 300,
-                                    "VerticalAlignment": "Top",
+                                    "VerticalAlignment": "Center",
                                     "HorizontalAlignment": "Center",
                                     "Triggers": [
                                         {
                                             "Trigger": "TeamtoCarLivery"
+                                        },
+                                        {
+                                            "Condition": "{Item.Team.LiveryPath, Converter=EmptyObjectToTrue}",
+                                            "ConditionAnd": "{Item.Car.LiveryPath, Converter=EmptyObjectToTrue}",
+                                            "Property": "Source",
+                                            "Value": "{Item.Team.LogotypePath}"
+                                        },
+                                        {
+                                            "Condition": "{Item.Team.LiveryPath, Converter=EmptyObjectToTrue}",
+                                            "ConditionAnd": "{Item.Car.LiveryPath, Converter=EmptyObjectToTrue}",
+                                            "ConditionAndValue": "{Item.Team.LogotypePath, Converter=EmptyObjectToTrue}",
+                                            "Property": "Source",
+                                            "Value": "{Item.Car.Vendor.LogotypePath}"
                                         }
                                     ]
                                 }
@@ -186,8 +225,8 @@
         {
             "BlockType": "itemstack",
             "Width": 343,
-            "PositionX": -10,
-            "PositionY": 800,
+            "PositionX": 0,
+            "PositionY": 750,
             "PositionZ": 2,
             "HorizontalAlignment": "Center",
             "ItemStackOptions": {
@@ -195,22 +234,27 @@
                 "ItemSource": "{Session.Drivers}",
                 "ItemTemplate": {
                     "BlockType": "dock",
-                    "Width": 283,
-                    "Margin": "30,0,30,0",
-                    "Orientation": "Horizontal",
-                    "Padding": "10",
+                    "VerticalAlignment": "Top",
+                    "HorizontalAlignment": "Center",
+                    "Width": 303,
+                    "Margin": "20,0,20,0",
+                    "Orientation": "Vertical",
                     "Items": [
                         {
                             "BlockType": "text",
                             "Source": "{Item.Team.FullName, Converter=StringToUpperString}",
-                            "VerticalAlignment": "Bottom",
+                            "VerticalAlignment": "Top",
                             "HorizontalAlignment": "Center",
                             "FontName": "{FontNameBoldItalic}",
-                            "FontSize": "{FontSizeMedium}",
-                            "Padding": "10",
+                            "FontSize": 50,
+                            "Width": 300,
+                            "Height": 170,
+                            "Padding": "5",
                             "TextOptions": {
                                 "Wrap": true,
-                                "TextAlignment": "Center"
+                                "TextAlignment": "Center",
+                                "VerticalAlignment": "Top",
+                                "HorizontalAlignment": "Left"
                             },
                             "Triggers": [
                                 {
@@ -239,12 +283,7 @@
                         {
                             "Trigger": "NameDescription"
                         }
-                    ],
-                    "Padding": "10",
-                    "TextOptions": {
-                        "Wrap": true,
-                        "TextAlignment": "Center"
-                    }
+                    ]
                 }
             ]
         }

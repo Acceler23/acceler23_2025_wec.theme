@@ -1,0 +1,78 @@
+{
+    "ComponentName": "session_stats_cell",
+    "BlockType": "stack",
+    "MaxHeight": "{TableLineHeight}",
+    "Items": [
+        {
+            "BlockType": "text",
+            "Source": "<{data.Value}>",
+            "PaddingLeft": 20,
+            "PaddingRight": 20,
+            "Background": "{DarkBlue}",
+            "Height": "{TableLineHeight}",
+            "Style": "Session_Style",
+            "Width": "*",
+            "Triggers": [
+                {
+                    "Trigger": "LeaderColorTeam"
+                },
+                {
+                    "Trigger": "LeaderColorCar"
+                }
+            ]
+        },
+        //stint
+        {
+            "BlockType": "itemstack",
+            "PaddingLeft": 20,
+            "PaddingRight": 20,
+            "Background": "{DarkBlue}",
+            "Height": "{TableLineHeight}",
+            "Width": "*",
+            "Style": "Session_Style",
+            "Triggers": [
+                {
+                    "Trigger": "LeaderColorTeam"
+                },
+                {
+                    "Trigger": "LeaderColorCar"
+                }
+            ],
+            "ItemStackOptions": {
+                "ItemSource": "<{data.Stints}>",
+                "ItemTemplate": {
+                    "BlockType": "stack",
+                    "VerticalAlignment": "Center",
+                    "Items": [
+                        {
+                            "BlockType": "image",
+                            "Source": "tyres/tyres_{Item.Tyres}.png",
+                            "Height": 20,
+                            "MaxHeight": 72,
+                            "Style": "Session_Style",
+                            "Padding": "10,10,0,0"
+                        },
+                        {
+                            "BlockType": "text",
+                            "Style": "Session_Style",
+                            "Padding": "5,16,10,16",
+                            "Source": "{Item.Laps}",
+                            "Height": "{TableLineHeight}",
+                            "Triggers": [
+                                {
+                                    "Condition": "{Item.IsPercentage}",
+                                    "Setters": [
+                                        {
+                                            "Property": "Source",
+                                            "Value": "{Item.Percentage, Converter=StringAdd, Parameter=%}"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+    ]
+}

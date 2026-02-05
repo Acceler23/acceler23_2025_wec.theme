@@ -14,6 +14,17 @@
     "FontNameBoldItalic": "ChangaOne-Italic",
     "FontNameWideItalic": "UPBOLTERS ITALIC",
     "FontMainTitle": "Shapiro 105 Max Extd",
+    "Font00": "Archivo-SemiBoldItalic",
+    "Font0": "Archivo-BoldItalic",
+    "Font1": "DrukCond-Super-Trial",
+    "Font2": "DrukWide-SuperItalic-Trial",
+    "Font3": "Druk-Medium-Trial",
+    "Font4": "SegUIVar",
+    "Font5": "DrukTextWide-Medium-Trial",
+    "Font6": "HATTEN",
+    "Font7": "DrukWide-BoldItalic-Trial",
+    "CardHeadFont": "DrukTextWide-MediumItalic-Trial",
+
 
     "FontSizeBig": 60,
     "FontSizeMedium": 30,

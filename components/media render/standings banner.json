@@ -1,0 +1,85 @@
+{
+    "ComponentName": "standings_banner",
+    "BlockType": "canvas",
+    "Items": [
+        {
+            "BlockType": "image",
+            "Source": "media/banner",
+            "Width": 1100,
+            "Height": 100
+        },
+        {
+            "BlockType": "dock",
+            "Width": 1000,
+            "Height": 100,
+            "Items": [
+                {
+                    "BlockType": "image",
+                    "Source": "{Season.LogotypePath}",
+                    "Height": 100,
+                    "HorizontalAlignment": "Right",
+                    "VerticalAlignment": "Center",
+                    "ImageOptions": {
+                        "Opacity": 20
+                    }
+                }
+            ]
+        },
+        {
+            "BlockType": "dock",
+            "Width": 1100,
+            "Height": 100,
+            "Items": [
+                {
+                    "BlockType": "stack",
+                    "VerticalAlignment": "Center",
+                    "HorizontalAlignment": "Center",
+                    "Orientation": "Horizontal",
+                    "Items": [
+                        {
+                            "BlockType": "text",
+                            "Source": "LAST",
+                            "Padding": "5"
+                        },
+                        {
+                            "BlockType": "text",
+                            "Source": "RACE",
+                            "Padding": "5"
+                        },
+                        {
+                            "BlockType": "text",
+                            "Source": ":",
+                            "Padding": "5"
+                        },
+                        {
+                            "BlockType": "text",
+                            "Source": "{Standings.LastEvent.DateLocal, Converter=DateCustomFormat, Parameter=MMM. dd}",
+                            "Padding": "5",
+                            "Foreground": "{LightBlue}",
+                            "FontName": "{FontNameWideItalic}",
+                            "FontSize": 40
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "BlockType": "shape",
+            "PositionX": 1080,
+            "PositionY": 32,
+            "Height": 36,
+            "Width": 36,
+            "ShapeOptions": {
+                "Fill": "{LightBlue}",
+                "ShapeType": "rectangle"
+            }
+        },
+        {
+            "BlockType": "text",
+            "Source": ">",
+            "Foreground": "{DarkBlue}",
+            "PositionX": 1092,
+            "PositionY": 36
+        }
+    ]
+}

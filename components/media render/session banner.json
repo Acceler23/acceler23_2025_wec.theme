@@ -1,0 +1,104 @@
+{
+    "ComponentName": "session_banner",
+    "BlockType": "canvas",
+    "Items": [
+        {
+            "BlockType": "image",
+            "Source": "media/banner",
+            "Width": 1100,
+            "Height": 100
+        },
+        {
+            "BlockType": "dock",
+            "Width": 1000,
+            "Height": 100,
+            "Items": [
+                {
+                    "BlockType": "image",
+                    "Source": "{Season.LogotypePath}",
+                    "Height": 100,
+                    "HorizontalAlignment": "Right",
+                    "VerticalAlignment": "Center",
+                    "ImageOptions": {
+                        "Opacity": 20
+                    }
+                }
+            ]
+        },
+        {
+            "BlockType": "stack",
+            "Orientation": "Horizontal",
+            "PositionX": 180,
+            "PositionY": 40,
+            "Items": [
+                {
+                    "BlockType": "text",
+                    "Source": "> > >    {Session.RacingClass.Name}",
+                    "Padding": "15,0,15,0",
+                    "FontName": "{FontNameWideItalic}",
+                    "HorizontalAlignment": "Left",
+                    "VerticalAlignment": "Center",
+                    "Triggers": [
+                        {
+                            "Condition": "{Session.RacingClass.Name, Converter=EmptyObjectToTrue}",
+                            "Property": "Source",
+                            "Value": "> > >    OVERALL"
+                        }
+                    ]
+                },
+                {
+                    "BlockType": "text",
+                    "Padding": "0,0,15,0",
+                    "Source": "PT<pageNum>",
+                    "HorizontalAlignment": "Left",
+                    "VerticalAlignment": "Center",
+                    "FontSize": 15
+                }
+            ]
+        },
+        {
+            "BlockType": "stack",
+            "Orientation": "Horizontal",
+            "PositionX": 680,
+            "PositionY": 25,
+            "Items": [
+                {
+                    "BlockType": "text",
+                    "Source": "<info1>",
+                    "Padding": "5",
+                    "HorizontalAlignment": "Left",
+                    "VerticalAlignment": "Center"
+                },
+                {
+                    "BlockType": "text",
+                    "Foreground": "{LightBlue}",
+                    "MarginTop": 3,
+                    "Padding": "5",
+                    "Source": "Round {Season.SeasonCurrentNumberEvent} - {Event.DateLocal, Converter=DateCustomFormat, Parameter=MMM. dd}",
+                    "HorizontalAlignment": "Left",
+                    "VerticalAlignment": "Center",
+                    "FontName": "{FontNameWideItalic}",
+                    "FontSize": 40
+                }
+            ]
+        },
+        {
+            "BlockType": "shape",
+            "PositionX": 1080,
+            "PositionY": 32,
+            "Height": 36,
+            "Width": 36,
+            "ShapeOptions": {
+                "Fill": "{LightBlue}",
+                "ShapeType": "rectangle"
+            }
+        },
+        {
+            "BlockType": "text",
+            "Source": ">",
+            "Foreground": "{DarkBlue}",
+            "PositionX": 1092,
+            "PositionY": 36,
+        }
+    ]
+}

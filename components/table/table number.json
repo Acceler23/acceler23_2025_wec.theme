@@ -1,28 +1,42 @@
 {
     "ComponentName": "table_number",
-    "BlockType": "text",
-    "Source": "{Item.Driver.RaceNumber}",
+    "BlockType": "dock",
     "Background": "{DarkBlue}",
-    "FontName": "{FontNameBoldItalic}",
-    "Style": "Session_Style",
     "Width": 60,
     "Height": "{TableLineHeight}",
     "MaxHeight": "{TableLineHeight}",
+    "Items": [
+        {
+            "BlockType": "text",
+            "Source": "{Item.Driver.RaceNumber}",
+            "FontName": "{Font0}",
+            "Style": "Session_Style",
+            "Padding": "5",
+            "Triggers": [
+                {
+                    "Trigger": "NumberAbrevi"
+                },
+                {
+                    "Trigger": "NumberBadge"
+                },
+                {
+                    "Trigger": "NumberDriver"
+                },
+                {
+                    "Trigger": "LeaderColorTeam"
+                },
+                {
+                    "Trigger": "LeaderColorCar"
+                }
+            ]
+        }
+    ],
     "Triggers": [
         {
             "Trigger": "LeaderColorTeam"
         },
         {
             "Trigger": "LeaderColorCar"
-        },
-        {
-            "Trigger": "NumberAbrevi"
-        },
-        {
-            "Trigger": "NumberBadge"
-        },
-        {
-            "Trigger": "NumberDriver"
         }
     ]
 }

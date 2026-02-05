@@ -22,6 +22,13 @@
         //Fix
         {
             "Category": "Fix & Tweaks",
+            "Name": "CalendarFontSize",
+            "PublicName": "Calendar Title Font Size",
+            "Type": "Integer",
+            "DefaultValue": 120
+        },
+        {
+            "Category": "Fix & Tweaks",
             "Name": "CardFontSize",
             "PublicName": "Results Card Font Size",
             "Type": "Integer",
@@ -33,6 +40,20 @@
             "PublicName": "Results Card Text Max Width",
             "Type": "Integer",
             "DefaultValue": 220
+        },
+        {
+            "Category": "Fix & Tweaks",
+            "Name": "MediaFontSize",
+            "PublicName": "Media Font Size",
+            "Type": "Integer",
+            "DefaultValue": 25
+        },
+        {
+            "Category": "Fix & Tweaks",
+            "Name": "MediaMaxWidth",
+            "PublicName": "Media Text Max Width",
+            "Type": "Integer",
+            "DefaultValue": 200
         },
         {
             "Category": "Fix & Tweaks",
@@ -54,6 +75,13 @@
             "PublicName": "Instagram",
             "Type": "String",
             "DefaultValue": "@FIAWEC_OFFICIAL"
+        },
+        {
+            "Category": "Fix & Tweaks",
+            "Name": "CardLogoSize",
+            "PublicName": "Results Card Logo and Number size",
+            "Type": "Integer",
+            "DefaultValue": 80
         },
 
         //Results
