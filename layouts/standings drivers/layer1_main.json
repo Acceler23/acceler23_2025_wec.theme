@@ -17,7 +17,7 @@
                 "VerticalAlignment": "Center",
                 "ComponentOptions": {
                     "Vars": {
-                        "sessionInfo2": "DRIVER'S CHAMPIONSHIP",
+                        "sessionInfo2": "DRIVERS CHAMPIONSHIP",
                         "renderDriver": true,
                         "renderTeam": false,
                         "renderCar": false

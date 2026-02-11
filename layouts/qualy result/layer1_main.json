@@ -12,9 +12,9 @@
                 "HorizontalAlignment": "Left",
                 "ComponentOptions": {
                     "Vars": {
-                        "sessionLeader": "FASTEST DRIVER",
+                        "sessionLeader": "[FASTEST DRIVER]",
                         "fontSize": 70,
-                        "sessionInfo": "{Item.Time}",
+                        "sessionInfo": "{Item.Time, Converter=StringToUpperString}",
                         "sessionColor": "{White}",
                         "sessionColor2": "{Purple}"
                     }

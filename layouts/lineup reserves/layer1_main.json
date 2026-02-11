@@ -1,0 +1,18 @@
+{
+    "BlockRoot": {
+        "BlockType": "stack",
+        "Margin": "50",
+        "Items": [
+            {
+                "BlockType": "component",
+                "Component": "driver_lineup",
+                "ComponentOptions": {
+                    "Vars": {
+                        "type": "RESERVES",
+                        "Lineups": "LineupsReserves"
+                    }
+                }
+            }
+        ]
+    }
+}

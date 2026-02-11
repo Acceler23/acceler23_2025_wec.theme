@@ -1,0 +1,96 @@
+{
+    "BlockRoot": {
+        "BlockType": "canvas",
+        "Height": 1600,
+        "Width": 1200,
+        "Items": [
+            {
+                "BlockType": "dock",
+                "Orientation": "Vertical",
+                "PositionY": 110,
+                "Width": 1200,
+                "Items": [
+                    {
+                        "BlockType": "text",
+                        "Source": "{Season.Name}",
+                        "FontName": "{Font7}",
+                        "FontSize": 45,
+                        "Foreground": "{LightBlue}",
+                        "HorizontalAlignment": "Center",
+                        "VerticalAlignment": "Top",
+                        "Padding": "5",
+                        "Width": 1200
+                    },
+                    {
+                        "BlockType": "text",
+                        "Source": "[SEASON]",
+                        "FontName": "{Font7}",
+                        "FontSize": 45,
+                        "Foreground": "{White}",
+                        "HorizontalAlignment": "Center",
+                        "VerticalAlignment": "Bottom",
+                        "Padding": "5",
+                        "Width": 1200
+                    }
+                ]
+            },
+            {
+                "BlockType": "dock",
+                "PositionY": 620,
+                "Width": 1200,
+                "Height": 370,
+                "Items": [
+                    {
+                        "BlockType": "image",
+                        "Source": "{Season.LogotypePath}",
+                        "Height": 200,
+                        "HorizontalAlignment": "Center",
+                        "VerticalAlignment": "Center"
+                    }
+                ]
+            },
+            {
+                "BlockType": "dock",
+                "PositionX": 20,
+                "PositionY": 765,
+                "Width": 300,
+                "Height": 110,
+                "Items": [
+                    {
+                        "BlockType": "text",
+                        "HorizontalAlignment": "Center",
+                        "VerticalAlignment": "Center",
+                        "Source": "{Season.SeasonOverallNumberEventsExcludingNonChampionship} [RACES]",
+                        "FontName": "{Font5}",
+                        "FontSize": 20,
+                        "Padding": "5"
+                    }
+                ]
+            },
+            {
+                "BlockType": "dock",
+                "PositionX": 880,
+                "PositionY": 765,
+                "Width": 300,
+                "Height": 110,
+                "Items": [
+                    {
+                        "BlockType": "text",
+                        "HorizontalAlignment": "Center",
+                        "VerticalAlignment": "Center",
+                        "Source": "{TeamMax} [TEAMS]",
+                        "FontName": "{Font5}",
+                        "FontSize": 20,
+                        "Padding": "5"
+                    }
+                ]
+            },
+            {
+                "BlockType": "component",
+                "Component": "teams_circle",
+                "PositionX": 125,
+                "PositionY": 330
+            }
+        ]
+    }
+}

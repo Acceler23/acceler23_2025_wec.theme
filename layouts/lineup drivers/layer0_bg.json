@@ -1,0 +1,8 @@
+{
+    "BlockRoot": {
+        "BlockType": "shape",
+        "ShapeOptions": {
+            "Fill": "{White}"
+        }
+    }
+}

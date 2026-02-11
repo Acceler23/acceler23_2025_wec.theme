@@ -1,0 +1,24 @@
+{
+    "BlockRoot": {
+        "BlockType": "stack",
+        "Margin": "50",
+        "Items": [
+            {
+                "BlockType": "component",
+                "Component": "team_lineup_site",
+                "RenderIf": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Teams}"
+            },
+            {
+                "BlockType": "component",
+                "Component": "driver_lineup",
+                "RenderIf": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+                "ComponentOptions": {
+                    "Vars": {
+                        "type": "GRID",
+                        "Lineups": "Lineups"
+                    }
+                }
+            }
+        ]
+    }
+}

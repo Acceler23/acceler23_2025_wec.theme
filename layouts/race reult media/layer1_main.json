@@ -1,0 +1,69 @@
+{
+    "BlockRoot": {
+        "Name": "mainStack",
+        "BlockType": "stack",
+        "Width": 1200,
+        "Height": 1500,
+        "Orientation": "Vertical",
+        "Items": [
+            {
+                "BlockType": "dock",
+                "RenderIf": "{PageRender, Converter=NumberEquals, Parameter=1}",
+                "VerticalAlignment": "Top",
+                "Width": 1200,
+                "Items": [
+                    {
+                        "BlockType": "component",
+                        "HorizontalAlignment": "Center",
+                        "Component": "card_head_media",
+                        "ComponentOptions": {
+                            "Vars": {
+                                "date": "{Event.DateLocal, Converter=DateToYear}"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "RenderIf": "{PageRender, Converter=NumberEquals, Parameter=1}",
+                "BlockType": "component",
+                "MarginTop": -150,
+                "VerticalAlignment": "Center",
+                "Component": "media_table_p1",
+                "ComponentOptions": {
+                    "Vars": {
+                        "infor1": "RACE",
+                        "infor2": "RESULTS",
+                        "bannerRender": true,
+                        "infor3": "{Session.SessionType, Converter=StringToUpperString}",
+                        "pos1": "P{Item.Position}",
+                        "infor4": "{Session.Drivers}",
+                        "info5": 4,
+                        "info6": 0,
+                        "raceIs": true,
+                        "stanSess": "Session",
+                        "sourceName": "Item.Team.FullName"
+                    }
+                }
+            },
+            {
+                "RenderIf": "{PageRender, Converter=NumberNotEquals, Parameter=1}",
+                "BlockType": "component",
+                "Component": "media_results",
+                "ComponentOptions": {
+                    "Vars": {
+                        "bannerRender": true,
+                        "infor3": "{Session.SessionType, Converter=StringToUpperString}",
+                        "pos1": "P{Item.Position}",
+                        "infor4": "{Session.Drivers}",
+                        "info5": 7,
+                        "info6": 4,
+                        "raceIs": true,
+                        "stansess": "Session",
+                        "sourceName": "Item.Team.FullName"
+                    }
+                }
+            }
+        ]
+    }
+}

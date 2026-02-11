@@ -1,0 +1,51 @@
+{
+    "BlockRoot": {
+        "Name": "mainStack",
+        "BlockType": "stack",
+        "Orientation": "Horizontal",
+        "Height": 1500,
+        "Width": 1200,
+        "Items": [
+           {
+                "RenderIf": "{PageRender, Converter=NumberEquals, Parameter=1}",
+                "BlockType": "component",
+                "Component": "media_standings_p1",
+                "ComponentOptions": {
+                    "Vars": {
+                        "infor1": "DRIVERS",
+                        "infor2": "STANDINGS",
+                        "pos1": "{Item.Position}",
+                        "infor4": "{Standings.Drivers}",
+                        "info5": 4,
+                        "info6": 0,
+                        "raceIs": false,
+                        "stanSes": "Standings",
+                        "sourceName": "Item.Driver.Name"
+                    }
+                }
+            },
+            {
+                "RenderIf": "{PageRender, Converter=NumberNotEquals, Parameter=1}",
+                "BlockType": "component",
+                "Component": "media_standings",
+                "ComponentOptions": {
+                    "Vars": {
+                        "infor1": "DRIVERS",
+                        "infor2": "STANDINGS",
+                        "pos1": "{Item.Position}",
+                        "infor4": "{Standings.Drivers}",
+                        "info5": 4,
+                        "info6": 0,
+                        "raceIs": false,
+                        "stanSes": "Standings",
+                        "sourceName": "Item.Driver.Name"
+                    }
+                }
+            },
+            {
+                "BlockType": "component",
+                "Component": "standings_table"
+            }
+        ]
+    }
+}

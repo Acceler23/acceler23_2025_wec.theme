@@ -1,0 +1,215 @@
+{
+    "BlockRoot": {
+        "Name": "mainStack",
+        "BlockType": "dock",
+        "Width": "{RenderWidth}",
+        "Height": "{RenderHeight}",
+        "Margin": "80,60,90,60",
+        "Items": [
+            {
+                "BlockType": "component",
+                "Component": "leader_driver_card",
+                "HorizontalAlignment": "Left",
+                "ComponentOptions": {
+                    "Vars": {
+                        "sessionLeader": "[FASTEST DRIVER]",
+                        "fontSize": 70,
+                        "sessionInfo": "{Item.Time, Converter=StringToUpperString}",
+                        "sessionColor": "{White}",
+                        "sessionColor2": "{Purple}"
+                    }
+                }
+            },
+            {
+                "BlockType": "stack",
+                "HorizontalAlignment": "Right",
+                "Width": "{TableWidth}",
+                "Height": "{TableHeight}",
+                "BackgroundImage": "Session/Session_bg.png",
+                "BackgroundImageOpacity": 60,
+                "ColorizeBackground": {
+                    "Color": "{DarkBlue}"
+                },
+                "Orientation": "Vertical",
+                "Items": [
+                    {
+                        "BlockType": "stack",
+                        "Orientation": "Vertical",
+                        "HorizontalAlignment": "Center",
+                        "Width": "{TableWidth}",
+                        //"Height": "{TableHeight}",
+                        "BackgroundImage": "Session/table_shade.png",
+                        "ColorizeBackground": {
+                            "Color": "{LightBlue}"
+                        },
+                        "Items": [
+                            {
+                                "BlockType": "component",
+                                "Component": "session_head",
+                                "Margin": "120,60,60,0",
+                                "ComponentOptions": {
+                                    "Vars": {
+                                        "sessionInfo": "{Session.SessionType}"
+                                    }
+                                }
+                            },
+                            {
+                                "BlockType": "shape",
+                                "Margin": "120,15,120,0",
+                                "Width": 1160,
+                                "Height": 5,
+                                "Opacity": 30,
+                                "ShapeOptions": {
+                                    "Fill": "{LightBlue}",
+                                    "ShapeType": "rectangle"
+                                }
+                            },
+                            {
+                                "BlockType": "dock",
+                                "Orientation": "Horizontal",
+                                "Width": "*",
+                                "Margin": "60,40,70,0",
+                                "Items": [
+                                    {
+                                        "BlockType": "text",
+                                        "Source": "[{Session.RacingClass.Name}]",
+                                        "HorizontalAlignment": "Left",
+                                        "FontSize": 25,
+                                        "FontName": "{CardHeadFont}",
+                                        "Padding": "5",
+                                        "Background": "{Session.RacingClass.Color}",
+                                        "Foreground": "{Session.RacingClass.SecondaryColor}",
+                                        "TextOptions": {
+                                            "VerticalAlignment": "Bottom"
+                                        }
+                                    },
+                                    {
+                                        "BlockType": "text",
+                                        "HorizontalAlignment": "Right",
+                                        "Source": "[{Session.Track.CircuitFullName, Converter=StringToUpperString}]",
+                                        "VerticalAlignment": "Center",
+                                        "FontSize": 25,
+                                        "Padding": "5,10,5,0",
+                                        "FontName": "{CardHeadFont}",
+                                        "Triggers": [
+                                            {
+                                                "Trigger": "NameDescription"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "BlockType": "table",
+                                "Margin": "60,15,60,0",
+                                "Height": 620,
+                                "Triggers": [
+                                    {
+                                        "Trigger": "TableParts"
+                                    }
+                                ],
+                                "TableOptions": {
+                                    "ItemsSource": "{Session.Drivers}",
+                                    "IndexStart": 0,
+                                    "IndexEnd": 9,
+                                    "RowSpacing": 15,
+                                    "HeaderTemplate": {
+                                        "BlockType": "text"
+                                    },
+                                    "Columns": [
+                                        {
+                                            "Header": "",
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "table_position"
+                                            }
+                                        },
+                                        {
+                                            "Header": "",
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "table_logo"
+                                            }
+                                        },
+                                        {
+                                            "Header": "",
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "table_number"
+                                            }
+                                        },
+                                        {
+                                            "Header": "",
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "table_car_small",
+                                                "ComponentOptions": {
+                                                    "Vars": {
+                                                        "renderCar1": true
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "Header": "",
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "table_session",
+                                                "ComponentOptions": {
+                                                    "Vars": {
+                                                        "sessionInfo": "{Item.QualQ1Time}"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "Header": "",
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "table_session",
+                                                "ComponentOptions": {
+                                                    "Vars": {
+                                                        "sessionInfo": "{Item.QualQ2Time}"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "Header": "",
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "table_session",
+                                                "ComponentOptions": {
+                                                    "Vars": {
+                                                        "sessionInfo": "{Item.QualQ3Time}"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "BlockType": "component",
+                                "Component": "fastest_lap",
+                                "Height": "{TableLineHeight}"
+                            },
+                            {
+                                "BlockType": "component",
+                                "Component": "bottom_table",
+                                "Triggers": [
+                                    {
+                                        "Condition": "{Session.SessionType, Converter=StringNotEquals, Parameter=Race}",
+                                        "Property": "MarginTop",
+                                        "Value": 80
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+
+        ]
+    }
+}

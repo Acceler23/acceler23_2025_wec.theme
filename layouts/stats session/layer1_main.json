@@ -1,0 +1,401 @@
+{
+    "BlockRoot": {
+        "Name": "mainStack",
+        "BlockType": "dock",
+        "Width": "{RenderWidth}",
+        "Height": "{RenderHeight}",
+        "Margin": "80,60,80,60",
+        "Items": [
+            {
+                "BlockType": "stack",
+                "HorizontalAlignment": "Center",
+                "Height": "{TableHeight}",
+                "BackgroundImage": "Session/Session_bg.png",
+                "BackgroundImageOpacity": 60,
+                "ColorizeBackground": {
+                    "Color": "{DarkBlue}"
+                },
+                "Orientation": "Vertical",
+                "Items": [
+                    {
+                        "BlockType": "stack",
+                        "Orientation": "Vertical",
+                        "HorizontalAlignment": "Center",
+                        "Width": "*",
+                        "Height": "{TableHeight}",
+                        "BackgroundImage": "Session/table_shade.png",
+                        "ColorizeBackground": {
+                            "Color": "{LightBlue}"
+                        },
+                        "Items": [
+                            {
+                                "BlockType": "component",
+                                "Component": "session_head",
+                                "Margin": "120,60,60,0",
+                                "ComponentOptions": {
+                                    "Vars": {
+                                        "sessionInfo": "{Statistics.Header, Converter=StringToUpperString}"
+                                    }
+                                }
+                            },
+                            {
+                                "BlockType": "shape",
+                                "Margin": "120,15,120,15",
+                                "Width": 2000,
+                                "Height": 5,
+                                "Opacity": 30,
+                                "ShapeOptions": {
+                                    "Fill": "{LightBlue}",
+                                    "ShapeType": "rectangle"
+                                }
+                            },
+                            {
+                                "BlockType": "dock",
+                                "Orientation": "Horizontal",
+                                "Width": "*",
+                                "Margin": "60,40,70,0",
+                                "Items": [
+                                    {
+                                        "BlockType": "text",
+                                        "HorizontalAlignment": "Right",
+                                        "Source": "[{Session.Track.CircuitFullName, Converter=StringToUpperString}]",
+                                        "FontSize": 25,
+                                        "Padding": "5",
+                                        "FontName": "{FontNameWideItalic}"
+                                    }
+                                ]
+                            },
+                            {
+                                "BlockType": "table",
+                                "Padding": "60,5,60,35",
+                                "Height": 620,
+                                "Triggers": [
+                                    {
+                                        "Trigger": "TableParts"
+                                    }
+                                ],
+                                "TableOptions": {
+                                    "ItemsSource": "{Statistics.Drivers}",
+                                    "IndexStart": 0,
+                                    "IndexEnd": 9,
+                                    "RowSpacing": 15,
+                                    "HeaderTemplate": {
+                                        "BlockType": "text",
+                                        "Padding": "5",
+                                        "VerticalAlignment": "Bottom",
+                                        "HorizontalAlignment": "Center"
+                                    },
+                                    "Columns": [
+                                        {
+                                            "Header": "",
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "table_position"
+                                            }
+                                        },
+                                        {
+                                            "Header": "",
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "table_logo"
+                                            }
+                                        },
+                                        {
+                                            "Header": "",
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "table_number"
+                                            }
+                                        },
+                                        {
+                                            "Header": "",
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "table_driver_stats",
+                                                "ComponentOptions": {
+                                                    "Vars": {
+                                                        "renderDriver1": "<renderDriver>"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        //column 0
+                                        {
+                                            "Header": "[{Statistics.Column0.Header}]",
+                                            "IsSeparator": "{Statistics.Column0.Type, Converter=EnumEquals, Parameter=Separator}",
+                                            "GroupId": "{Statistics.Column0.GroupId}",
+                                            "WidthStretch": true,
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "session_stats_cell",
+                                                "ComponentOptions": {
+                                                    "Vars": {
+                                                        "data": "Item.Value0"
+                                                    }
+                                                }
+                                            }
+                                        },
+
+                                        //column 1
+                                        {
+                                            "Header": "[{Statistics.Column1.Header}]",
+                                            "IsSeparator": "{Statistics.Column1.Type, Converter=EnumEquals, Parameter=Separator}",
+                                            "GroupId": "{Statistics.Column1.GroupId}",
+                                            "WidthStretch": true,
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "session_stats_cell",
+                                                "ComponentOptions": {
+                                                    "Vars": {
+                                                        "data": "Item.Value1"
+                                                    }
+                                                }
+                                            }
+                                        },
+
+                                        //column 2
+                                        {
+                                            "Header": "[{Statistics.Column2.Header}]",
+                                            "WidthStretch": true,
+                                            "IsSeparator": "{Statistics.Column2.Type, Converter=EnumEquals, Parameter=Separator}",
+                                            "GroupId": "{Statistics.Column2.GroupId}",
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "session_stats_cell",
+                                                "ComponentOptions": {
+                                                    "Vars": {
+                                                        "data": "Item.Value2"
+                                                    }
+                                                }
+                                            }
+                                        },
+
+                                        //column 3
+                                        {
+                                            "Header": "[{Statistics.Column3.Header}]",
+                                            "WidthStretch": true,
+                                            "IsSeparator": "{Statistics.Column3.Type, Converter=EnumEquals, Parameter=Separator}",
+                                            "GroupId": "{Statistics.Column3.GroupId}",
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "session_stats_cell",
+                                                "ComponentOptions": {
+                                                    "Vars": {
+                                                        "data": "Item.Value3"
+                                                    }
+                                                }
+                                            }
+                                        },
+
+                                        //column 4
+                                        {
+                                            "Header": "[{Statistics.Column4.Header}]",
+                                            "IsSeparator": "{Statistics.Column4.Type, Converter=EnumEquals, Parameter=Separator}",
+                                            "GroupId": "{Statistics.Column4.GroupId}",
+                                            "WidthStretch": true,
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "session_stats_cell",
+                                                "ComponentOptions": {
+                                                    "Vars": {
+                                                        "data": "Item.Value4"
+                                                    }
+                                                }
+                                            }
+                                        },
+
+                                        //column 5
+                                        {
+                                            "Header": "[{Statistics.Column5.Header}]",
+                                            "IsSeparator": "{Statistics.Column5.Type, Converter=EnumEquals, Parameter=Separator}",
+                                            "GroupId": "{Statistics.Column5.GroupId}",
+                                            "WidthStretch": true,
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "session_stats_cell",
+                                                "ComponentOptions": {
+                                                    "Vars": {
+                                                        "data": "Item.Value5"
+                                                    }
+                                                }
+                                            }
+                                        },
+
+                                        //column 6
+                                        {
+                                            "Header": "[{Statistics.Column6.Header}]",
+                                            "IsSeparator": "{Statistics.Column6.Type, Converter=EnumEquals, Parameter=Separator}",
+                                            "GroupId": "{Statistics.Column6.GroupId}",
+                                            "WidthStretch": true,
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "session_stats_cell",
+                                                "ComponentOptions": {
+                                                    "Vars": {
+                                                        "data": "Item.Value6"
+                                                    }
+                                                }
+                                            }
+                                        },
+
+                                        //column 7
+                                        {
+                                            "Header": "[{Statistics.Column7.Header}]",
+                                            "IsSeparator": "{Statistics.Column7.Type, Converter=EnumEquals, Parameter=Separator}",
+                                            "GroupId": "{Statistics.Column7.GroupId}",
+                                            "WidthStretch": true,
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "session_stats_cell",
+                                                "ComponentOptions": {
+                                                    "Vars": {
+                                                        "data": "Item.Value7"
+                                                    }
+                                                }
+                                            }
+                                        },
+
+                                        //column 8
+                                        {
+                                            "Header": "[{Statistics.Column8.Header}]",
+                                            "IsSeparator": "{Statistics.Column8.Type, Converter=EnumEquals, Parameter=Separator}",
+                                            "GroupId": "{Statistics.Column8.GroupId}",
+                                            "WidthStretch": true,
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "session_stats_cell",
+                                                "ComponentOptions": {
+                                                    "Vars": {
+                                                        "data": "Item.Value8"
+                                                    }
+                                                }
+                                            }
+                                        },
+
+                                        //column 9
+                                        {
+                                            "Header": "[{Statistics.Column9.Header}]",
+                                            "IsSeparator": "{Statistics.Column9.Type, Converter=EnumEquals, Parameter=Separator}",
+                                            "GroupId": "{Statistics.Column9.GroupId}",
+                                            "WidthStretch": true,
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "session_stats_cell",
+                                                "ComponentOptions": {
+                                                    "Vars": {
+                                                        "data": "Item.Value9"
+                                                    }
+                                                }
+                                            }
+                                        },
+
+                                        //column 10
+                                        {
+                                            "Header": "[{Statistics.Column10.Header}]",
+                                            "IsSeparator": "{Statistics.Column10.Type, Converter=EnumEquals, Parameter=Separator}",
+                                            "GroupId": "{Statistics.Column10.GroupId}",
+                                            "WidthStretch": true,
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "session_stats_cell",
+                                                "ComponentOptions": {
+                                                    "Vars": {
+                                                        "data": "Item.Value10"
+                                                    }
+                                                }
+                                            }
+                                        },
+
+                                        //column 11
+                                        {
+                                            "Header": "[{Statistics.Column11.Header}]",
+                                            "IsSeparator": "{Statistics.Column11.Type, Converter=EnumEquals, Parameter=Separator}",
+                                            "GroupId": "{Statistics.Column11.GroupId}",
+                                            "WidthStretch": true,
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "session_stats_cell",
+                                                "ComponentOptions": {
+                                                    "Vars": {
+                                                        "data": "Item.Value11"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "BlockType": "dock",
+                                "Orientation": "Horizontal",
+                                "Margin": "60,15,70,0",
+                                "Items": [
+                                    {
+                                        "BlockType": "stack",
+                                        "VerticalAlignment": "Center",
+                                        "HorizontalAlignment": "Left",
+                                        "Orientation": "Horizontal",
+                                        "Items": [
+                                            {
+                                                "BlockType": "text",
+                                                "Source": "[FIAWEC.TV]",
+                                                "FontSize": 18,
+                                                "Foreground": "{DarkBlue}",
+                                                "Background": "{LightBlue}",
+                                                "Padding": "5,2,5,0",
+                                                "VerticalAlignment": "Bottom",
+                                                "Height": 20
+                                            },
+                                            {
+                                                "BlockType": "text",
+                                                "Source": "[THE OFFICIAL STREAMING APP]",
+                                                "FontSize": 15,
+                                                "FontName": "{FontNameBold}",
+                                                "VerticalAlignment": "Center",
+                                                "Foreground": "{LightBlue}",
+                                                "Padding": "10,5,0,0"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "BlockType": "stack",
+                                        "HorizontalAlignment": "Right",
+                                        "VerticalAlignment": "Center",
+                                        "Items": [
+                                            {
+                                                "BlockType": "image",
+                                                "Source": "instagram.png",
+                                                "VerticalAlignment": "Center",
+                                                "Height": 25
+                                            },
+                                            {
+                                                "BlockType": "text",
+                                                "Source": "[{Instagram}]",
+                                                "VerticalAlignment": "Center",
+                                                "FontSize": "{FontSizeSmall}"
+                                            },
+                                            {
+                                                "BlockType": "image",
+                                                "MarginLeft": 20,
+                                                "Source": "tiktok",
+                                                "VerticalAlignment": "Center",
+                                                "Height": 25
+                                            },
+                                            {
+                                                "BlockType": "text",
+                                                "Source": "[{TikTok}]",
+                                                "VerticalAlignment": "Center",
+                                                "FontSize": "{FontSizeSmall}"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+
+        ]
+    }
+}
