@@ -33,7 +33,7 @@
             "Items": [
                 {
                     "BlockType": "text",
-                    "Source": "> > >    [{Session.RacingClass.Name}]",
+                    "Source": "> > >    [{Session.RacingClass.Name, Converter=StringToUpperString}]",
                     "Padding": "15,0,15,0",
                     "FontName": "{FontNameWideItalic}",
                     "HorizontalAlignment": "Left",
@@ -111,4 +111,5 @@
             "PositionY": 36,
         }
     ]
+
 }
