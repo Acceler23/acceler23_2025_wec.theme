@@ -24,7 +24,7 @@
         },
         {
             "BlockType": "text",
-            "Source": "{Item.Team.FullName, Converter=StringToUpperString}",
+            "Source": "[{Item.Team.FullName, Converter=StringToUpperString}]",
             "Background": "{DarkBlue}",
             "Style": "Session_Style",
             "Height": "{TableLineHeight}",

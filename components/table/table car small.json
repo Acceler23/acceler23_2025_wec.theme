@@ -1,9 +1,10 @@
 {
-    "ComponentName": "table_car",
+    "ComponentName": "table_car_small",
     "BlockType": "stack",
     "RenderIf": "<renderCar1>",
     "Background": "{DarkBlue}",
-    "Width": 850,
+    "Width": "*",
+    "StretchWidth": true,
     "MaxHeight": "{TableLineHeight}",
     "Items": [
         {
@@ -30,7 +31,7 @@
             "Style": "Session_Style",
             "FontName": "{FontNameWideItalic}",
             "Height": "{TableLineHeight}",
-            "Width": 180,
+            "Width": 150,
             "PaddingLeft": 20,
             "Triggers": [
                 {

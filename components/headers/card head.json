@@ -36,14 +36,14 @@
         {
 
             "BlockType": "text",
-            "Source": "{Season.LeagueInfo.LeagueFullName, Converter=StringToUpperString}\nCHAMPIONSHIP",
+            "Source": "[{Season.LeagueInfo.LeagueFullName, Converter=StringToUpperString}]\nCHAMPIONSHIP",
             "FontSize": 12,
             "PositionY": 20,
             "PositionX": 93
         },
         {
             "BlockType": "text",
-            "Source": "{Session.Track.CircuitFullName, Converter=StringToUpperString}",
+            "Source": "[{Session.Track.CircuitFullName, Converter=StringToUpperString}]",
             "FontName": "{CardHeadFont}",
             "FontSize": "{CardFontSize}",
             "Padding": "10",

@@ -58,21 +58,21 @@
                     "Triggers": [
                         {
                             "Condition": "<isRace>",
-                            "ConditionAnd": "{Item.IntervalRace, Converter=StringEquals, Parameter=DNF}",
+                            "ConditionAnd": "{Item.IntervalRace, Converter=EnumEquals, Parameter=DNF}",
                             "Property": "Source",
-                            "Value": "DNF"
+                            "Value": "[DNF]"
                         },
                         {
                             "Condition": "<isRace>",
-                            "ConditionAnd": "{Item.IntervalRace, Converter=StringEquals, Parameter=DNS}",
+                            "ConditionAnd": "{Item.IntervalRace, Converter=EnumEquals, Parameter=DNS}",
                             "Property": "Source",
-                            "Value": "DNS"
+                            "Value": "[DNS]"
                         },
                         {
                             "Condition": "<isRace>",
-                            "ConditionAnd": "{Item.IntervalRace, Converter=StringEquals, Parameter=DSQ}",
+                            "ConditionAnd": "{Item.IntervalRace, Converter=EnumEquals, Parameter=DSQ}",
                             "Property": "Source",
-                            "Value": "DSQ"
+                            "Value": "[DSQ]"
                         }
                     ]
                 },
@@ -92,7 +92,7 @@
                     "PositionX": 260,
                     "PositionY": 57,
                     "VerticalAlignment": "Bottom",
-                    "Source": "{Item.Driver.RaceNumber}",
+                    "Source": "[{Item.Driver.RaceNumber}]",
                     "FontName": "{Font0}",
                     "FontSize": 45,
                     "Padding": "5",
@@ -157,7 +157,7 @@
                     "Height": 120,
                     "PositionX": 620,
                     "PositionY": 30,
-                    "Source": "{<nameSource>, Converter=StringToUpperString}",
+                    "Source": "[{<nameSource>, Converter=StringToUpperString}]",
                     "FontName": "{Font5}",
                     "HorizontalAlignment": "Left",
                     "VerticalAlignment": "Center",
@@ -170,7 +170,7 @@
                         {
                             "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
                             "Property": "Source",
-                            "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
+                            "Value": "[{Item.Driver.Name, Converter=StringToUpperString}]"
                         }
                     ]
                 },
@@ -230,7 +230,7 @@
                         },
                         {
                             "BlockType": "text",
-                            "Source": "PTS",
+                            "Source": "[PTS]",
                             "PositionX": 125,
                             "PositionY": 20,
                             "FontName": "{Font7}",

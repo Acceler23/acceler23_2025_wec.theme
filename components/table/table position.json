@@ -38,7 +38,7 @@
                         },
                         {
                             "BlockType": "text",
-                            "Source": "st",
+                            "Source": "[st]",
                             "Foreground": "{White}",
                             "HorizontalAlignment": "Center",
                             "VerticalAlignment": "Top",

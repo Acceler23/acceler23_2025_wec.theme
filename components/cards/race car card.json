@@ -129,7 +129,7 @@
                                                 },
                                                 {
                                                     "BlockType": "text",
-                                                    "Source": "{Item.Team.Abbreviation, Converter=StringToUpperString}",
+                                                    "Source": "[{Item.Team.Abbreviation, Converter=StringToUpperString}]",
                                                     "Foreground": "{Item.Team.SecondaryColor}",
                                                     "FontSize": "{CardLogoSize}",
                                                     "Padding": "5",
@@ -165,7 +165,7 @@
             "BlockType": "text",
             "PositionY": 355,
             "PositionZ": 2,
-            "Source": "<sessionLeader>",
+            "Source": "[<sessionLeader>]",
             "FontSize": 100,
             "Width": 343,
             "FontName": "{FontNameRegularItalic}",
@@ -242,7 +242,7 @@
                     "Items": [
                         {
                             "BlockType": "text",
-                            "Source": "{Item.Team.FullName, Converter=StringToUpperString}",
+                            "Source": "[{Item.Team.FullName, Converter=StringToUpperString}]",
                             "VerticalAlignment": "Top",
                             "HorizontalAlignment": "Center",
                             "FontName": "{FontNameBoldItalic}",
@@ -277,7 +277,7 @@
                 {
                     "BlockType": "text",
                     "HorizontalAlignment": "Center",
-                    "Source": "#{RaceName, Converter=StringToUpperString} {Session.Track.Name, Converter=StringToUpperString}",
+                    "Source": "#[{Session.Track.CircuitFullName, Converter=StringToUpperString}]",
                     "FontSize": 14,
                     "Triggers": [
                         {

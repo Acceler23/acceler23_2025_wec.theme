@@ -1,13 +1,14 @@
 {
     "ComponentName": "card_head_media",
     "BackgroundImage": "media/standings_header",
-    "BlockType": "canvas",
+    "BlockType": "stack",
     "Items": [
         {
             "BlockType": "dock",
+            "Padding": "70,0",
             "Orientation": "Horizontal",
             "Height": 150,
-            "Width": 542,
+            //"Width": 542,
             "Items": [
                 {
                     "BlockType": "stack",
@@ -18,26 +19,36 @@
                             "BlockType": "stack",
                             "Orientation": "Vertical",
                             "VerticalAlignment": "Center",
+                            "HorizontalAlignment": "Center",
                             "Items": [
                                 {
-                                    "BlockType": "image",
-                                    "Source": "{Season.LogotypePath}",
-                                    "HorizontalAlignment": "Center",
-                                    "Width": 140
+                                    "BlockType": "dock",
+                                    //"Background": "#dddddd",
+                                    "Height": 125,
+                                    "Width": 125,
+                                    "Items": [
+                                        {
+                                            "BlockType": "image",
+                                            "Source": "{Season.LogotypePath}",
+                                            "HorizontalAlignment": "Center",
+                                            "Height": 120
+                                        }
+                                    ]
                                 },
                                 {
-
                                     "BlockType": "text",
                                     "HorizontalAlignment": "Center",
-                                    "Source": "{Season.LeagueInfo.LeagueFullName, Converter=StringToUpperString}\nCHAMPIONSHIP",
+                                    "Source": "[{Season.LeagueInfo.LeagueFullName, Converter=StringToUpperString}]\n[CHAMPIONSHIP]",
                                     "FontSize": 10,
-                                    "Padding": "10"
+                                    "Padding": "10",
+                                    "MarginTop": -5
                                 }
                             ]
                         },
                         {
                             "BlockType": "canvas",
                             "VerticalAlignment": "Center",
+                            "HorizontalAlignment": "Center",
                             "Items": [
                                 {
                                     "BlockType": "image",
@@ -51,7 +62,7 @@
                                 },
                                 {
                                     "BlockType": "text",
-                                    "Source": "{RaceSponsor, Converter=StringToUpperString} {RaceName, Converter=StringToUpperString} {Session.Track.Name, Converter=StringToUpperString}",
+                                    "Source": "[{Session.Track.CircuitFullName, Converter=StringToUpperString}]",
                                     "FontName": "{FontMainTitle}",
                                     "FontSize": "{MediaFontSize}",
                                     "Padding": "10",
@@ -71,7 +82,7 @@
                                 },
                                 {
                                     "BlockType": "text",
-                                    "Source": "{Season.Name}",
+                                    "Source": "<date>",
                                     "FontName": "{FontMainTitle}",
                                     "Foreground": "{DarkBlue}",
                                     "FontSize": 15,

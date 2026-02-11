@@ -1,0 +1,282 @@
+{
+    "ComponentName": "driver_lineup",
+    "BlockType": "stack",
+    "Orientation": "Vertical",
+    "Items": [
+        {
+            "BlockType": "text",
+            "Source": "[{Season.Name, Converter=StringToUpperString}] [<type>]",
+            "Foreground": "{DarkBlue}",
+            "FontName": "{Font9}",
+            "FontSize": 64,
+            "Padding": "20",
+            "HorizontalAlignment": "Center"
+        },
+        {
+            "BlockType": "stack",
+            "Orientation": "Horizontal",
+            "HorizontalAlignment": "Center",
+            "Items": [
+                {
+                    "BlockType": "text",
+                    "Source": "[{Season.GridSize, Converter=StringToUpperString}] [DRIVERS]",
+                    "Foreground": "{DarkBlue}",
+                    "FontName": "{Font000}",
+                    "FontSize": 16,
+                    "Padding": "24,{lineupSize}",
+                    "VerticalAlignment": "Center"
+                },
+                {
+                    "BlockType": "shape",
+                    "VerticalAlignment": "Center",
+                    "Width": 1,
+                    "Height": 16,
+                    "ShapeOptions": {
+                        "Fill": "{DarkBlue}"
+                    }
+                },
+                {
+                    "BlockType": "text",
+                    "Source": "[{Season.SeasonOverallNumberEventsExcludingNonChampionship, Converter=StringToUpperString}] [RACES]",
+                    "Foreground": "{DarkBlue}",
+                    "FontName": "{Font000}",
+                    "FontSize": 16,
+                    "Padding": "24,{lineupSize}",
+                    "VerticalAlignment": "Center"
+                }
+            ]
+        },
+        {
+            "BlockType": "stack",
+            "Orientation": "Horizontal",
+            "Spacing": 50,
+            "Items": [
+                {
+                    "BlockType": "itemstack",
+                    "Orientation": "Vertical",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=0}",
+                    "Spacing": 50,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.<Lineups>}",
+                        "CollectionPart": "1/{lineupSize}",
+                        "SortMember": "{Car.Vendor.Name}",
+                        "OrderByDescending": "{Car.CarClass.Name}",
+                        "OrderBy2": "{Car.Vendor.Name}",
+                        "OrderBy3": "{Driver.Name}",
+                        "ItemTemplate": {
+                            "BlockType": "component",
+                            "Component": "Livery_lineup"
+                        }
+                    }
+                },
+                {
+                    "BlockType": "component",
+                    "Component": "lineup_separator",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=1}"
+                },
+                {
+                    "BlockType": "itemstack",
+                    "Orientation": "Vertical",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=1}",
+                    "Spacing": 50,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.<Lineups>}",
+                        "CollectionPart": "2/{lineupSize}",
+                        "SortMember": "{Car.Vendor.Name}",
+                        "OrderByDescending": "{Car.CarClass.Name}",
+                        "OrderBy2": "{Car.Vendor.Name}",
+                        "OrderBy3": "{Driver.Name}",
+                        "ItemTemplate": {
+                            "BlockType": "component",
+                            "Component": "Livery_lineup"
+                        }
+                    }
+                },
+                {
+                    "BlockType": "component",
+                    "Component": "lineup_separator",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=2}",
+                },
+                {
+                    "BlockType": "itemstack",
+                    "Orientation": "Vertical",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=2}",
+                    "Spacing": 50,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.<Lineups>}",
+                        "CollectionPart": "3/{lineupSize}",
+                        "SortMember": "{Car.Vendor.Name}",
+                        "OrderByDescending": "{Car.CarClass.Name}",
+                        "OrderBy2": "{Car.Vendor.Name}",
+                        "OrderBy3": "{Driver.Name}",
+                        "ItemTemplate": {
+                            "BlockType": "component",
+                            "Component": "Livery_lineup"
+                        }
+                    }
+                },
+                {
+                    "BlockType": "component",
+                    "Component": "lineup_separator",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=3}"
+                },
+                {
+                    "BlockType": "itemstack",
+                    "Orientation": "Vertical",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=3}",
+                    "Spacing": 50,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.<Lineups>}",
+                        "CollectionPart": "4/{lineupSize}",
+                        "SortMember": "{Car.Vendor.Name}",
+                        "OrderByDescending": "{Car.CarClass.Name}",
+                        "OrderBy2": "{Car.Vendor.Name}",
+                        "OrderBy3": "{Driver.Name}",
+                        "ItemTemplate": {
+                            "BlockType": "component",
+                            "Component": "Livery_lineup"
+                        }
+                    }
+                },
+                {
+                    "BlockType": "component",
+                    "Component": "lineup_separator",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=4}"
+                },
+                {
+                    "BlockType": "itemstack",
+                    "Orientation": "Vertical",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=4}",
+                    "Spacing": 50,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.<Lineups>}",
+                        "CollectionPart": "5/{lineupSize}",
+                        "SortMember": "{Car.Vendor.Name}",
+                        "OrderByDescending": "{Car.CarClass.Name}",
+                        "OrderBy2": "{Car.Vendor.Name}",
+                        "OrderBy3": "{Driver.Name}",
+                        "ItemTemplate": {
+                            "BlockType": "component",
+                            "Component": "Livery_lineup"
+                        }
+                    }
+                },
+                {
+                    "BlockType": "component",
+                    "Component": "lineup_separator",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=5}"
+                },
+                {
+                    "BlockType": "itemstack",
+                    "Orientation": "Vertical",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=5}",
+                    "Spacing": 50,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.<Lineups>}",
+                        "CollectionPart": "6/{lineupSize}",
+                        "SortMember": "{Car.Vendor.Name}",
+                        "OrderByDescending": "{Car.CarClass.Name}",
+                        "OrderBy2": "{Car.Vendor.Name}",
+                        "OrderBy3": "{Driver.Name}",
+                        "ItemTemplate": {
+                            "BlockType": "component",
+                            "Component": "Livery_lineup"
+                        }
+                    }
+                },
+                {
+                    "BlockType": "component",
+                    "Component": "lineup_separator",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=6}"
+                },
+                {
+                    "BlockType": "itemstack",
+                    "Orientation": "Vertical",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=6}",
+                    "Spacing": 50,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.<Lineups>}",
+                        "CollectionPart": "7/{lineupSize}",
+                        "SortMember": "{Car.Vendor.Name}",
+                        "OrderByDescending": "{Car.CarClass.Name}",
+                        "OrderBy2": "{Car.Vendor.Name}",
+                        "OrderBy3": "{Driver.Name}",
+                        "ItemTemplate": {
+                            "BlockType": "component",
+                            "Component": "Livery_lineup"
+                        }
+                    }
+                },
+                {
+                    "BlockType": "component",
+                    "Component": "lineup_separator",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=7}",
+                },
+                {
+                    "BlockType": "itemstack",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=7}",
+                    "Orientation": "Vertical",
+                    "Spacing": 50,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.<Lineups>}",
+                        "CollectionPart": "8/{lineupSize}",
+                        "SortMember": "{Car.Vendor.Name}",
+                        "OrderByDescending": "{Car.CarClass.Name}",
+                        "OrderBy2": "{Car.Vendor.Name}",
+                        "OrderBy3": "{Driver.Name}",
+                        "ItemTemplate": {
+                            "BlockType": "component",
+                            "Component": "Livery_lineup"
+                        }
+                    }
+                },
+                {
+                    "BlockType": "component",
+                    "Component": "lineup_separator",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=8}",
+                },
+                {
+                    "BlockType": "itemstack",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=8}",
+                    "Orientation": "Vertical",
+                    "Spacing": 50,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.<Lineups>}",
+                        "CollectionPart": "9/{lineupSize}",
+                        "SortMember": "{Car.Vendor.Name}",
+                        "OrderByDescending": "{Car.CarClass.Name}",
+                        "OrderBy2": "{Car.Vendor.Name}",
+                        "OrderBy3": "{Driver.Name}",
+                        "ItemTemplate": {
+                            "BlockType": "component",
+                            "Component": "Livery_lineup"
+                        }
+                    }
+                },
+                {
+                    "BlockType": "component",
+                    "Component": "lineup_separator",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=9}",
+                },
+                {
+                    "BlockType": "itemstack",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=9}",
+                    "Orientation": "Vertical",
+                    "Spacing": 50,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.<Lineups>}",
+                        "CollectionPart": "10/{lineupSize}",
+                        "SortMember": "{Car.Vendor.Name}",
+                        "OrderByDescending": "{Car.CarClass.Name}",
+                        "OrderBy2": "{Car.Vendor.Name}",
+                        "OrderBy3": "{Driver.Name}",
+                        "ItemTemplate": {
+                            "BlockType": "component",
+                            "Component": "Livery_lineup"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

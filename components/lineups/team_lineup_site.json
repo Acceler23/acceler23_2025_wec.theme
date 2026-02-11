@@ -1,0 +1,297 @@
+{
+    "ComponentName": "team_lineup_site",
+    "BlockType": "stack",
+    "Orientation": "Vertical",
+    "Items": [
+        {
+            "BlockType": "text",
+            "Source": "[{Season.Name, Converter=StringToUpperString}] [GRID]",
+            "Foreground": "{DarkBlue}",
+            "FontName": "{Font9}",
+            "FontSize": 64,
+            "Padding": "20",
+            "HorizontalAlignment": "Center"
+        },
+        {
+            "BlockType": "itemstack",
+            "Orientation": "Horizontal",
+            "HorizontalAlignment": "Center",
+            "ItemStackOptions": {
+                "ItemSource": "{Lineups.Teams}",
+                "CollectionPart": "1/2",
+                "SortMember": "{Team.Name}",
+                "ItemTemplate": {
+                    "BlockType": "stack",
+                    "Orientation": "Horizontal",
+                    "Items": [
+                        {
+                            "BlockType": "text",
+                            "Source": "[{Item.Team.Name, Converter=StringToUpperString}]",
+                            "Foreground": "{DarkBlue}",
+                            "FontName": "{Font000}",
+                            "FontSize": 16,
+                            "Padding": "24,8",
+                            "VerticalAlignment": "Center"
+                        },
+                        {
+                            "BlockType": "shape",
+                            "VerticalAlignment": "Center",
+                            "Width": 1,
+                            "Height": 16,
+                            "ShapeOptions": {
+                                "Fill": "{DarkBlue}"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "BlockType": "itemstack",
+            "Orientation": "Horizontal",
+            "HorizontalAlignment": "Center",
+            "ItemStackOptions": {
+                "ItemSource": "{Lineups.Teams}",
+                "CollectionPart": "2/2",
+                "SortMember": "{Team.Name}",
+                "ItemTemplate": {
+                    "BlockType": "stack",
+                    "Orientation": "Horizontal",
+                    "Items": [
+                        {
+                            "BlockType": "text",
+                            "Source": "[{Item.Team.Name, Converter=StringToUpperString}]",
+                            "Foreground": "{DarkBlue}",
+                            "FontName": "{Font000}",
+                            "FontSize": 16,
+                            "Padding": "24,8",
+                            "VerticalAlignment": "Center"
+                        },
+                        {
+                            "BlockType": "shape",
+                            "VerticalAlignment": "Center",
+                            "Width": 1,
+                            "Height": 16,
+                            "ShapeOptions": {
+                                "Fill": "{DarkBlue}"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "BlockType": "stack",
+            "Margin": "50",
+            "Spacing": 100,
+            "Orientation": "Horizontal",
+            "Items": [
+                {
+                    "BlockType": "itemstack",
+                    "Orientation": "Vertical",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=0}",
+                    "Spacing": 96,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.Teams}",
+                        "CollectionPart": "1/{lineupSize}",
+                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "ItemTemplate": {
+                            "HorizontalAlignment": "Center",
+                            "BlockType": "component",
+                            "Component": "team_lineup"
+                        }
+                    }
+                },
+                {
+                    "BlockType": "component",
+                    "Component": "lineup_separator",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=1}"
+                },
+                {
+                    "BlockType": "itemstack",
+                    "Orientation": "Vertical",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=1}",
+                    "Spacing": 96,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.Teams}",
+                        "CollectionPart": "2/{lineupSize}",
+                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "ItemTemplate": {
+                            "HorizontalAlignment": "Center",
+                            "BlockType": "component",
+                            "Component": "team_lineup"
+                        }
+                    }
+                },
+                {
+                    "BlockType": "component",
+                    "Component": "lineup_separator",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=2}"
+                },
+                {
+                    "BlockType": "itemstack",
+                    "Orientation": "Vertical",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=2}",
+                    "Spacing": 96,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.Teams}",
+                        "CollectionPart": "3/{lineupSize}",
+                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "ItemTemplate": {
+                            "HorizontalAlignment": "Center",
+                            "BlockType": "component",
+                            "Component": "team_lineup"
+                        }
+                    }
+                },
+                {
+                    "BlockType": "component",
+                    "Component": "lineup_separator",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=3}"
+                },
+                {
+                    "BlockType": "itemstack",
+                    "Orientation": "Vertical",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=3}",
+                    "Spacing": 96,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.Teams}",
+                        "CollectionPart": "4/{lineupSize}",
+                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "ItemTemplate": {
+                            "HorizontalAlignment": "Center",
+                            "BlockType": "component",
+                            "Component": "team_lineup"
+                        }
+                    }
+                },
+                {
+                    "BlockType": "component",
+                    "Component": "lineup_separator",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=4}"
+                },
+                {
+                    "BlockType": "itemstack",
+                    "Orientation": "Vertical",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=4}",
+                    "Spacing": 96,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.Teams}",
+                        "CollectionPart": "5/{lineupSize}",
+                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "ItemTemplate": {
+                            "HorizontalAlignment": "Center",
+                            "BlockType": "component",
+                            "Component": "team_lineup"
+                        }
+                    }
+                },
+                {
+                    "BlockType": "component",
+                    "Component": "lineup_separator",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=5}"
+                },
+                {
+                    "BlockType": "itemstack",
+                    "Orientation": "Vertical",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=5}",
+                    "Spacing": 96,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.Teams}",
+                        "CollectionPart": "6/{lineupSize}",
+                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "ItemTemplate": {
+                            "HorizontalAlignment": "Center",
+                            "BlockType": "component",
+                            "Component": "team_lineup"
+                        }
+                    }
+                },
+                {
+                    "BlockType": "component",
+                    "Component": "lineup_separator",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=6}"
+                },
+                {
+                    "BlockType": "itemstack",
+                    "Orientation": "Vertical",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=6}",
+                    "Spacing": 96,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.Teams}",
+                        "CollectionPart": "7/{lineupSize}",
+                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "ItemTemplate": {
+                            "HorizontalAlignment": "Center",
+                            "BlockType": "component",
+                            "Component": "team_lineup"
+                        }
+                    }
+                },
+                {
+                    "BlockType": "component",
+                    "Component": "lineup_separator",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=7}"
+                },
+                {
+                    "BlockType": "itemstack",
+                    "Orientation": "Vertical",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=7}",
+                    "Spacing": 96,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.Teams}",
+                        "CollectionPart": "8/{lineupSize}",
+                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "ItemTemplate": {
+                            "HorizontalAlignment": "Center",
+                            "BlockType": "component",
+                            "Component": "team_lineup"
+                        }
+                    }
+                },
+                {
+                    "BlockType": "component",
+                    "Component": "lineup_separator",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=8}"
+                },
+                {
+                    "BlockType": "itemstack",
+                    "Orientation": "Vertical",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=8}",
+                    "Spacing": 96,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.Teams}",
+                        "CollectionPart": "9/{lineupSize}",
+                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "ItemTemplate": {
+                            "HorizontalAlignment": "Center",
+                            "BlockType": "component",
+                            "Component": "team_lineup"
+                        }
+                    }
+                },
+                {
+                    "BlockType": "component",
+                    "Component": "lineup_separator",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=9}"
+                },
+                {
+                    "BlockType": "itemstack",
+                    "Orientation": "Vertical",
+                    "RenderIf": "{lineupSize, Converter=NumberGreater, Parameter=9}",
+                    "Spacing": 96,
+                    "ItemStackOptions": {
+                        "ItemSource": "{Lineups.Teams}",
+                        "CollectionPart": "10/{lineupSize}",
+                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "ItemTemplate": {
+                            "HorizontalAlignment": "Center",
+                            "BlockType": "component",
+                            "Component": "team_lineup"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -5,7 +5,7 @@
     "Items": [
         {
             "BlockType": "text",
-            "Source": "<sessionInfo> CLASSIFICATION",
+            "Source": "[<sessionInfo>] [CLASSIFICATION]",
             "FontSize": "{FontSizeBig}",
             "FontName": "{FontNameRegularItalic}",
             "Foreground": "{White}",
@@ -13,7 +13,7 @@
         },
         {
             "BlockType": "text",
-            "Source": " FINISH",
+            "Source": " [FINISH]",
             "FontSize": "{FontSizeBig}",
             "FontName": "{FontNameRegularItalic}",
             "Foreground": "{LightBlue}",

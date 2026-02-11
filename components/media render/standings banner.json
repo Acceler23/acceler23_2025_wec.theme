@@ -38,22 +38,12 @@
                     "Items": [
                         {
                             "BlockType": "text",
-                            "Source": "LAST",
+                            "Source": "[LAST RACE]:",
                             "Padding": "5"
                         },
                         {
                             "BlockType": "text",
-                            "Source": "RACE",
-                            "Padding": "5"
-                        },
-                        {
-                            "BlockType": "text",
-                            "Source": ":",
-                            "Padding": "5"
-                        },
-                        {
-                            "BlockType": "text",
-                            "Source": "{Standings.LastEvent.DateLocal, Converter=DateCustomFormat, Parameter=MMM. dd}",
+                            "Source": "[{Standings.LastEvent.DateLocal, Converter=DateCustomFormat, Parameter=MMM}]. [{Standings.LastEvent.DateLocal, Converter=DateCustomFormat, Parameter=dd}]",
                             "Padding": "5",
                             "Foreground": "{LightBlue}",
                             "FontName": "{FontNameWideItalic}",

@@ -1,0 +1,68 @@
+{
+    "ComponentName": "bottom_table",
+    "BlockType": "dock",
+    "Orientation": "Horizontal",
+    "VerticalAlignment": "Bottom",
+    "Margin": "60,15,70,0",
+    "Items": [
+        {
+            "BlockType": "stack",
+            "VerticalAlignment": "Center",
+            "HorizontalAlignment": "Left",
+            "Orientation": "Horizontal",
+            "Items": [
+                {
+                    "BlockType": "text",
+                    "Source": "[FIAWEC.TV]",
+                    "FontSize": 18,
+                    "Foreground": "{DarkBlue}",
+                    "Background": "{LightBlue}",
+                    "Padding": "5,2,5,0",
+                    "VerticalAlignment": "Bottom",
+                    "Height": 20
+                },
+                {
+                    "BlockType": "text",
+                    "Source": "[THE OFFICIAL STREAMING APP]",
+                    "FontSize": 15,
+                    "FontName": "{FontNameBold}",
+                    "VerticalAlignment": "Center",
+                    "Foreground": "{LightBlue}",
+                    "Padding": "10,5,0,0"
+                }
+            ]
+        },
+        {
+            "BlockType": "stack",
+            "HorizontalAlignment": "Right",
+            "VerticalAlignment": "Center",
+            "Items": [
+                {
+                    "BlockType": "image",
+                    "Source": "instagram.png",
+                    "VerticalAlignment": "Center",
+                    "Height": 25
+                },
+                {
+                    "BlockType": "text",
+                    "Source": "[{Instagram}]",
+                    "VerticalAlignment": "Center",
+                    "FontSize": "{FontSizeSmall}"
+                },
+                {
+                    "BlockType": "image",
+                    "MarginLeft": 20,
+                    "Source": "tiktok",
+                    "VerticalAlignment": "Center",
+                    "Height": 25
+                },
+                {
+                    "BlockType": "text",
+                    "Source": "[{TikTok}]",
+                    "VerticalAlignment": "Center",
+                    "FontSize": "{FontSizeSmall}"
+                }
+            ]
+        }
+    ]
+}

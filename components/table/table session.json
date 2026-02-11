@@ -5,7 +5,7 @@
     "Items": [
         {
             "BlockType": "text",
-            "Source": "<sessionInfo>",
+            "Source": "[<sessionInfo>]",
             "Background": "{DarkBlue}",
             "Height": "{TableLineHeight}",
             "Style": "Session_Style",

@@ -36,7 +36,7 @@
                             "BlockType": "component",
                             "Component": "card_head_standings",
                             "PositionX": 50,
-                            "PositionY": 60
+                            "PositionY": 40
                         },
                         {
                             "BlockType": "itemstack",
@@ -53,6 +53,7 @@
                                         {
                                             "BlockType": "dock",
                                             "Width": 343,
+                                            "Height": 600,
                                             "HorizontalAlignment": "Center",
                                             "VerticalAlignment": "Center",
                                             "Orientation": "Horizontal",
@@ -60,7 +61,7 @@
                                                 {
                                                     "BlockType": "image",
                                                     "Source": "{Item.Driver.LogotypePath}",
-                                                    "Height": 600,
+                                                    "Height": 700,
                                                     "VerticalAlignment": "Top",
                                                     "HorizontalAlignment": "Center",
                                                     "Triggers": [
@@ -151,7 +152,7 @@
                                                                 },
                                                                 {
                                                                     "BlockType": "text",
-                                                                    "Source": "{Item.Team.Abbreviation, Converter=StringToUpperString}",
+                                                                    "Source": "[{Item.Team.Abbreviation, Converter=StringToUpperString}]",
                                                                     "Foreground": "{White}",
                                                                     "FontSize": 80,
                                                                     "Padding": "5",
@@ -199,7 +200,7 @@
                                             "Items": [
                                                 {
                                                     "BlockType": "text",
-                                                    "Source": "{Item.Driver.Name, Converter=StringToUpperString}",
+                                                    "Source": "[{Item.Driver.Name, Converter=StringToUpperString}]",
                                                     "VerticalAlignment": "Bottom",
                                                     "HorizontalAlignment": "Center",
                                                     "FontName": "{FontNameBoldItalic}",
@@ -223,7 +224,7 @@
                             "PositionX": 0,
                             "PositionY": 950,
                             "Width": 343,
-                            "Source": "#{RaceName, Converter=StringToUpperString} {Standings.LastEvent.Track.Name, Converter=StringToUpperString}",
+                            "Source": "#[{Standings.LastEvent.Track.CircuitFullName, Converter=StringToUpperString}]",
                             "FontSize": 14,
                             "Triggers": [
                                 {

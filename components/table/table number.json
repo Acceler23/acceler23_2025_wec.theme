@@ -8,7 +8,7 @@
     "Items": [
         {
             "BlockType": "text",
-            "Source": "{Item.Driver.RaceNumber}",
+            "Source": "[{Item.Driver.RaceNumber}]",
             "FontName": "{Font0}",
             "Style": "Session_Style",
             "Padding": "5",

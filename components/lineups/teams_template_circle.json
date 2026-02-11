@@ -1,0 +1,15 @@
+{
+    "ComponentName": "team_template_circle",
+    "BlockType": "dock",
+    "Height": 140,
+    "Width": 140,
+    "Items": [
+        {
+            "BlockType": "image",
+            "Source": "{Item.Team.LogotypePath}",
+            "Height": 100,
+            "HorizontalAlignment": "Center",
+            "VerticalAlignment": "Center"
+        }
+    ]
+}

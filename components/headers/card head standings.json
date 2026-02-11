@@ -2,7 +2,7 @@
     "ComponentName": "card_head_standings",
     "BlockType": "canvas",
     "Orientation": "Vertical",
-    "Margin": "50",
+    //"Margin": "50",
     "Items": [
         {
             "BlockType": "image",
@@ -10,38 +10,47 @@
             "Width": 240,
             "Height": 165,
             "PositionX": 10,
-            "PositionY": 5,
+            "PositionY": 25,
             "Colorize": {
                 "Color": "{LightBlue}",
                 "ColorBlendingMode": "Normal"
             }
         },
         {
-            "BlockType": "image",
-            "Source": "{Season.LogotypePath}",
-            "Height": 25,
-            "MaxWidth": 90,
+            "BlockType": "dock",
+            "Height": 50,
+            "Width": 90,
             "PositionX": 0,
-            "PositionY": 0
+            "PositionY": 0,
+            //"Background": "#dddddd",
+            "Items": [
+                {
+                    "BlockType": "image",
+                    "Height": 50,
+                    "Source": "{Season.LogotypePath}",
+                    "VerticalAlignment": "Bottom",
+                    "HorizontalAlignment": "Right"
+                }
+            ]
         },
         {
 
             "BlockType": "text",
-            "Source": "{Season.LeagueInfo.LeagueFullName, Converter=StringToUpperString}\nCHAMPIONSHIP",
+            "Source": "[{Season.LeagueInfo.LeagueFullName, Converter=StringToUpperString}]\n[CHAMPIONSHIP]",
             "FontSize": 12,
-            "PositionY": 0,
+            "PositionY": 20,
             "PositionX": 93
         },
         {
             "BlockType": "text",
-            "Source": "{Standings.LastEvent.Track.CircuitFullName, Converter=StringToUpperString}",
+            "Source": "[{Standings.LastEvent.Track.CircuitFullName, Converter=StringToUpperString}]",
             "FontName": "{FontMainTitle}",
             "FontSize": "{CardFontSize}",
             "Padding": "10",
             "HorizontalAlignment": "Left",
             "VerticalAlignment": "Top",
             "Width": "{CardMaxWidth}",
-            "PositionY": 30,
+            "PositionY": 50,
             "PositionX": -10,
             "Triggers": [
                 {
@@ -59,7 +68,7 @@
             "Foreground": "{DarkBlue}",
             "FontSize": 15,
             "Padding": "5",
-            "PositionY": 132,
+            "PositionY": 152,
             "PositionX": 100
         }
     ]

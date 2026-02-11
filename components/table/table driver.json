@@ -24,7 +24,7 @@
         },
         {
             "BlockType": "text",
-            "Source": "{Item.Driver.Name, Converter=StringToUpperString}",
+            "Source": "[{Item.Driver.Name, Converter=StringToUpperString}]",
             "Background": "{DarkBlue}",
             "Style": "Session_Style",
             "Height": "{TableLineHeight}",

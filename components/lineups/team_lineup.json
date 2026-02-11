@@ -1,0 +1,48 @@
+{
+    "ComponentName": "team_lineup",
+    "BlockType": "stack",
+    "Orientation": "Vertical",
+    "Spacing": 28,
+    "Items": [
+        {
+            "BlockType": "text",
+            "Source": "[{Item.Team.Name, Converter=StringToUpperString}]",
+            "Foreground": "{DarkBlue}",
+            "FontSize": 32,
+            "FontName": "{Font9}",
+            "HorizontalAlignment": "Center"
+        },
+        {
+            "BlockType": "itemstack",
+            "Spacing": 46,
+            "HorizontalAlignment": "Center",
+            "ItemStackOptions": {
+                "ItemSource": "{Item.Lines}",
+                "ItemTemplate": {
+                    "BlockType": "component",
+                    "Component": "Livery_lineup",
+                    "Triggers": [
+                        {
+                            "Condition": "{WecMode}",
+                            "ConditionAnd": "{Item.Index, Converter=NumberNotEquals, Parameter=0}",
+                            "Property": "RenderIf",
+                            "Value": false
+                        },
+                        {
+                            "Condition": "{WecMode}",
+                            "ConditionAnd": "{Item.Index, Converter=NumberEquals, Parameter=3}",
+                            "Property": "RenderIf",
+                            "Value": true
+                        },
+                        {
+                            "Condition": "{WecMode}",
+                            "ConditionAnd": "{Item.Index, Converter=NumberEquals, Parameter=6}",
+                            "Property": "RenderIf",
+                            "Value": true
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

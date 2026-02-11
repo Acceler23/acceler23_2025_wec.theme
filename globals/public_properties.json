@@ -8,24 +8,31 @@
         },
         {
             "Name": "Championship"
+        },
+        {
+            "Name": "Calendar"
+        },
+        {
+            "Name": "Lineups"
         }
     ],
     "Properties": [
         //General
         {
-            "Name": "ResultPage",
-            "PublicName": "Result Page",
+            "Name": "PageRender",
+            "PublicName": "Page to Render",
             "Type": "Integer",
-            "DefaultValue": 0
+            "DefaultValue": 1,
+            "MinimumValue": 1
         },
 
         //Fix
         {
             "Category": "Fix & Tweaks",
-            "Name": "CalendarFontSize",
-            "PublicName": "Calendar Title Font Size",
-            "Type": "Integer",
-            "DefaultValue": 120
+            "Name": "WecMode",
+            "PublicName": "WEC Mode",
+            "Type": "Bool",
+            "DefaultValue": false
         },
         {
             "Category": "Fix & Tweaks",
@@ -97,26 +104,39 @@
             ],
             "DefaultValue": "Abbreviation"
         },
+        //Calendar
         {
-            "Category": "Results",
-            "Name": "RaceName",
-            "PublicName": "Race Name as",
-            "Type": "String",
-            "DefaultValue": "6 Hours of"
+            "Category": "Calendar",
+            "Name": "CalendarFontSize",
+            "PublicName": "Calendar Title Font Size",
+            "Type": "Integer",
+            "DefaultValue": 120
         },
         {
-            "Category": "Results",
-            "Name": "RaceSponsor",
-            "PublicName": "Major Race Sponsor",
+            "Category": "Calendar",
+            "Name": "SeasonShort",
+            "PublicName": "Season Short Name",
             "Type": "String",
-            "DefaultValue": "Rolex"
+            "DefaultValue": ""
+        },
+
+        //Lineups
+        {
+            "Category": "Lineups",
+            "Name": "TeamMax",
+            "PublicName": "Number of Teams",
+            "Type": "Integer",
+            "DefaultValue": 14,
+            "MinimumValue": 1
         },
         {
-            "Category": "Results",
-            "Name": "OrganizerName",
-            "PublicName": "League Organizer Name",
-            "Type": "String",
-            "DefaultValue": "FIA"
+            "Category": "Lineups",
+            "Name": "lineupSize",
+            "PublicName": "Number of Colluns",
+            "Type": "Integer",
+            "DefaultValue": 5,
+            "MinimumValue": 1,
+            "MaximumValue": 10
         }
     ]
 }

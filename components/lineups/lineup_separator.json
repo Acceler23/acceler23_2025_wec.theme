@@ -1,0 +1,49 @@
+{
+    "ComponentName": "lineup_separator",
+    "BlockType": "dock",
+    "Orientation": "Vertical",
+    "Height": "*",
+    "Items": [
+        {
+            "BlockType": "stack",
+            "Width": 10,
+            "Height": "*",
+            "HorizontalAlignment": "Center",
+            "VerticalAlignment": "Top",
+            "Background": "{DarkBlue}",
+            "Items": [
+                {
+                    "BlockType": "text",
+                    "Source": ".",
+                    "FontSize": 2,
+                    "Foreground": "{DarkBleu}"
+                }
+            ]
+        },
+        {
+            "BlockType": "image",
+            "Background": "{White}",
+            "HorizontalAlignment": "Center",
+            "VerticalAlignment": "Center",
+            "Padding": "5",
+            "Source": "{Season.LeagueInfo.LeagueLogo}",
+            "Width": 50
+        },
+        {
+            "BlockType": "stack",
+            "Width": 10,
+            "Height": "*",
+            "HorizontalAlignment": "Center",
+            "VerticalAlignment": "Bottom",
+            "Background": "{DarkBlue}",
+            "Items": [
+                {
+                    "BlockType": "text",
+                    "Source": ".",
+                    "FontSize": 2,
+                    "Foreground": "{DarkBleu}"
+                }
+            ]
+        }
+    ]
+}

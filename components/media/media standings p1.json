@@ -42,6 +42,113 @@
         //partas
         {
             "BlockType": "dock",
+            "Width": 1200,
+            "Items": [
+                {
+                    "BackgroundImage": "media/standings_header",
+                    "HorizontalAlignment":"Center",
+                    "BlockType": "stack",
+                    "Items": [
+                        {
+                            "BlockType": "dock",
+                            "Padding": "70,0",
+                            "Orientation": "Horizontal",
+                            "Height": 150,
+                            //"Width": 542,
+                            "Items": [
+                                {
+                                    "BlockType": "stack",
+                                    "VerticalAlignment": "Center",
+                                    "HorizontalAlignment": "Center",
+                                    "Items": [
+                                        {
+                                            "BlockType": "stack",
+                                            "Orientation": "Vertical",
+                                            "VerticalAlignment": "Center",
+                                            "HorizontalAlignment": "Center",
+                                            "Items": [
+                                                {
+                                                    "BlockType": "dock",
+                                                    //"Background": "#dddddd",
+                                                    "Height": 125,
+                                                    "Width": 125,
+                                                    "Items": [
+                                                        {
+                                                            "BlockType": "image",
+                                                            "Source": "{Season.LogotypePath}",
+                                                            "HorizontalAlignment": "Center",
+                                                            "Height": 120
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "BlockType": "text",
+                                                    "HorizontalAlignment": "Center",
+                                                    "Source": "[{Season.LeagueInfo.LeagueFullName, Converter=StringToUpperString}]\n[CHAMPIONSHIP]",
+                                                    "FontSize": 10,
+                                                    "Padding": "10",
+                                                    "MarginTop": -5
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "BlockType": "canvas",
+                                            "VerticalAlignment": "Center",
+                                            "HorizontalAlignment": "Center",
+                                            "Items": [
+                                                {
+                                                    "BlockType": "image",
+                                                    "Source": "media/standings_head_name.png",
+                                                    "PositionX": 10,
+                                                    "PositionY": 15,
+                                                    "Height": 110,
+                                                    "Colorize": {
+                                                        "Color": "{LightBlue}"
+                                                    }
+                                                },
+                                                {
+                                                    "BlockType": "text",
+                                                    "Source": "[{Standings.LastEvent.Track.CircuitFullName, Converter=StringToUpperString}]",
+                                                    "FontName": "{FontMainTitle}",
+                                                    "FontSize": "{MediaFontSize}",
+                                                    "Padding": "10",
+                                                    "HorizontalAlignment": "Left",
+                                                    "VerticalAlignment": "Top",
+                                                    "Width": "{MediaMaxWidth}",
+                                                    "PositionY": 22,
+                                                    "PositionX": 5,
+                                                    "Triggers": [
+                                                        {
+                                                            "Trigger": "NameDescription2"
+                                                        }
+                                                    ],
+                                                    "TextOptions": {
+                                                        "Wrap": true
+                                                    }
+                                                },
+                                                {
+                                                    "BlockType": "text",
+                                                    "Source": "{Standings.LastEvent.DateLocal, Converter=DateToYear}",
+                                                    "FontName": "{FontMainTitle}",
+                                                    "Foreground": "{DarkBlue}",
+                                                    "FontSize": 15,
+                                                    "Padding": "5",
+                                                    "PositionY": 102,
+                                                    "PositionX": 25
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "BlockType": "dock",
             "PositionZ": 2,
             "Width": 1200,
             "PositionX": 0,

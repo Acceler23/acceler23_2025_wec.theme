@@ -33,7 +33,7 @@
             "Items": [
                 {
                     "BlockType": "text",
-                    "Source": "> > >    {Session.RacingClass.Name}",
+                    "Source": "> > >    [{Session.RacingClass.Name}]",
                     "Padding": "15,0,15,0",
                     "FontName": "{FontNameWideItalic}",
                     "HorizontalAlignment": "Left",
@@ -42,14 +42,14 @@
                         {
                             "Condition": "{Session.RacingClass.Name, Converter=EmptyObjectToTrue}",
                             "Property": "Source",
-                            "Value": "> > >    OVERALL"
+                            "Value": "> > >    [OVERALL]"
                         }
                     ]
                 },
                 {
                     "BlockType": "text",
                     "Padding": "0,0,15,0",
-                    "Source": "PT<pageNum>",
+                    "Source": "[PT]<pageNum>",
                     "HorizontalAlignment": "Left",
                     "VerticalAlignment": "Center",
                     "FontSize": 15
@@ -57,28 +57,38 @@
             ]
         },
         {
-            "BlockType": "stack",
+            "BlockType": "dock",
             "Orientation": "Horizontal",
-            "PositionX": 680,
+            "PositionX": 550,
             "PositionY": 25,
+            "Width": 500,
             "Items": [
                 {
-                    "BlockType": "text",
-                    "Source": "<info1>",
-                    "Padding": "5",
-                    "HorizontalAlignment": "Left",
-                    "VerticalAlignment": "Center"
-                },
-                {
-                    "BlockType": "text",
-                    "Foreground": "{LightBlue}",
-                    "MarginTop": 3,
-                    "Padding": "5",
-                    "Source": "Round {Season.SeasonCurrentNumberEvent} - {Event.DateLocal, Converter=DateCustomFormat, Parameter=MMM. dd}",
-                    "HorizontalAlignment": "Left",
-                    "VerticalAlignment": "Center",
-                    "FontName": "{FontNameWideItalic}",
-                    "FontSize": 40
+                    "BlockType": "stack",
+                    "HorizontalAlignment": "Right",
+                    "Items": [
+                        {
+                            "BlockType": "text",
+                            "Source": "[<info1>]",
+                            "Padding": "5",
+                            "HorizontalAlignment": "Right",
+                            "VerticalAlignment": "Center"
+                        },
+                        {
+                            "BlockType": "text",
+                            "Foreground": "{LightBlue}",
+                            "MarginTop": 3,
+                            "Padding": "5",
+                            "Source": "[ROUND] {Season.SeasonCurrentNumberEventExcludingNonChampionship} - [{Event.DateLocal, Converter=DateCustomFormat, Parameter=MMM}]. [{Event.DateLocal, Converter=DateCustomFormat, Parameter=dd}]",
+                            "HorizontalAlignment": "Right",
+                            "VerticalAlignment": "Center",
+                            "FontName": "{FontNameWideItalic}",
+                            "FontSize": 40,
+                            "TextOptions": {
+                                "TextAlignment": "End"
+                            }
+                        }
+                    ]
                 }
             ]
         },

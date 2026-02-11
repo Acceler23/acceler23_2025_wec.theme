@@ -44,7 +44,7 @@
             "MarginTop": 80,
             "ComponentOptions": {
                 "Vars": {
-                    "pageNum": "{ResultPage, Converter=NumberAdd, Parameter=1}",
+                    "pageNum": "{PageRender}",
                     "info1": "<infor3>"
                 }
             }
@@ -72,7 +72,7 @@
             "PositionY": 1450,
             "PositionZ": 2,
             "BlockType": "text",
-            "Source": "{ResultPage, Converter=NumberAdd, Parameter=1}/{{{<stansess>.DriversCount, Converter=NumberSubtract, Parameter=4}, Converter=NumberDivide, Parameter=7}, Converter=NumberAdd, Parameter=1}",
+            "Source": "{PageRender}/{{{<stansess>.DriversCount, Converter=NumberSubtract, Parameter=4}, Converter=NumberDivide, Parameter=7}, Converter=NumberAdd, Parameter=1}",
             "Opacity": 50
         }
     ]

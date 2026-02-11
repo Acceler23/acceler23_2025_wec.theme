@@ -136,7 +136,7 @@
               "Items": [
                 {
                   "BlockType": "text",
-                  "Source": "FIAWEC.TV",
+                  "Source": "[FIAWEC.TV]",
                   "FontSize": 18,
                   "Foreground": "{DarkBlue}",
                   "Background": "{LightBlue}",
@@ -146,7 +146,7 @@
                 },
                 {
                   "BlockType": "text",
-                  "Source": "THE OFFICIAL STREAMING APP",
+                  "Source": "[THE OFFICIAL STREAMING APP]",
                   "FontSize": 15,
                   "FontName": "{FontNameBold}",
                   "VerticalAlignment": "Center",
@@ -168,7 +168,7 @@
                 },
                 {
                   "BlockType": "text",
-                  "Source": "{Instagram}",
+                  "Source": "[{Instagram}]",
                   "VerticalAlignment": "Center",
                   "FontSize": "{FontSizeSmall}"
                 },
@@ -181,7 +181,7 @@
                 },
                 {
                   "BlockType": "text",
-                  "Source": "{TikTok}",
+                  "Source": "[{TikTok}]",
                   "VerticalAlignment": "Center",
                   "FontSize": "{FontSizeSmall}"
                 }

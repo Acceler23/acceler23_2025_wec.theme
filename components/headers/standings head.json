@@ -5,7 +5,7 @@
     "Items": [
         {
             "BlockType": "text",
-            "Source": "{OrganizerName, Converter=StringToUpperString} {Season.LeagueInfo.LeagueFullName, Converter=StringToUpperString}",
+            "Source": "[{Season.LeagueInfo.LeagueFullName, Converter=StringToUpperString}]",
             "FontSize": "{FontSizeBig}",
             "FontName": "{FontNameRegularItalic}",
             "Foreground": "{White}",
@@ -13,7 +13,7 @@
         },
         {
             "BlockType": "text",
-            "Source": "<sessionInfo>",
+            "Source": "[<sessionInfo>]",
             "FontSize": "{FontSizeBig}",
             "FontName": "{FontNameRegularItalic}",
             "Foreground": "{LightBlue}",

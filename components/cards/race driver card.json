@@ -23,14 +23,14 @@
             "BlockType": "component",
             "Component": "card_head",
             "PositionX": 50,
-            "PositionY": 50,
+            "PositionY": 40,
             "PositionZ": 2
         }, {
             "BlockType": "itemstack",
             "HorizontalAlignment": "Center",
             "Width": 343,
             "PositionZ": 2,
-            "PositionY": 220,
+            "PositionY": 230,
             "ItemStackOptions": {
                 "Limit": 1,
                 "ItemSource": "{Session.Drivers}",
@@ -40,6 +40,7 @@
                     "Items": [
                         {
                             "BlockType": "dock",
+                            "Height": 600,
                             "Width": 343,
                             "HorizontalAlignment": "Center",
                             "VerticalAlignment": "Center",
@@ -48,7 +49,7 @@
                                 {
                                     "BlockType": "image",
                                     "Source": "{Item.Driver.LogotypePath}",
-                                    "Height": 600,
+                                    "Height": 700,
                                     "VerticalAlignment": "Top",
                                     "HorizontalAlignment": "Center",
                                     "Triggers": [
@@ -81,7 +82,7 @@
             "PositionX": 0,
             "PositionY": 620,
             "PositionZ": 3,
-            "Source": "<sessionLeader>",
+            "Source": "[<sessionLeader>]",
             "FontSize": "<fontSize>",
             "Width": 343,
             "FontName": "{FontNameRegularItalic}",
@@ -99,7 +100,7 @@
                 "ItemSource": "{Session.Drivers}",
                 "ItemTemplate": {
                     "BlockType": "text",
-                    "Source": "<sessionInfo>",
+                    "Source": "[<sessionInfo>]",
                     "HorizontalAlignment": "Center",
                     "FontName": "{FontNameBoldItalic}",
                     "Width": 343,
@@ -115,7 +116,7 @@
                             "Condition": "{Session.SessionType, Converter=StringEquals, Parameter=Race}",
                             "ConditionAnd": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
                             "Property": "Source",
-                            "Value": "{Item.Car.Vendor.Name, Converter=StringToUpperString}"
+                            "Value": "[{Item.Car.Vendor.Name, Converter=StringToUpperString}]"
                         },
                         {
                             "Condition": "{Session.SessionType, Converter=StringEquals, Parameter=Race}",
@@ -147,7 +148,7 @@
                     "Items": [
                         {
                             "BlockType": "text",
-                            "Source": "{Item.Driver.Name, Converter=StringToUpperString}",
+                            "Source": "[{Item.Driver.Name, Converter=StringToUpperString}]",
                             "HorizontalAlignment": "Center",
                             "Width": 343,
                             "Padding": "10",
@@ -179,7 +180,7 @@
                                         },
                                         {
                                             "BlockType": "text",
-                                            "Source": "{Item.Team.Abbreviation, Converter=StringToUpperString}",
+                                            "Source": "[{Item.Team.Abbreviation, Converter=StringToUpperString}]",
                                             "FontSize": 50,
                                             "HorizontalAlignment": "Center",
                                             "VerticalAlignment": "Center",
@@ -210,7 +211,7 @@
             "PositionY": 950,
             "PositionZ": 3,
             "Width": 343,
-            "Source": "#{RaceName, Converter=StringToUpperString} {Session.Track.Name, Converter=StringToUpperString}",
+            "Source": "#[{Session.Track.CircuitFullName, Converter=StringToUpperString}]",
             "FontSize": 14,
             "Triggers": [
                 {

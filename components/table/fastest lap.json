@@ -44,7 +44,7 @@
                 },
                 {
                     "BlockType": "text",
-                    "Source": "{Item.Driver.Name, Converter=StringToUpperString}",
+                    "Source": "[{Item.Driver.Name, Converter=StringToUpperString}]",
                     "Background": "{Purple}",
                     "FontName": "{Font0}",
                     "Foreground": "{White}",
@@ -85,7 +85,7 @@
                         },
                         {
                             "BlockType": "text",
-                            "Source": " | {Item.Team.FullName, Converter=StringToUpperString}",
+                            "Source": " | [{Item.Team.FullName, Converter=StringToUpperString}]",
                             "FontName": "{Font00}",
                             "Foreground": "{White}",
                             "MarginLeft": -10,
@@ -104,7 +104,7 @@
                 },
                 {
                     "BlockType": "text",
-                    "Source": "LAP {Item.FastestLapNumLap}",
+                    "Source": "[LAP] {Item.FastestLapNumLap}",
                     "Background": "{Purple}",
                     "FontName": "{Font00}",
                     "Foreground": "{White}",

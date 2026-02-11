@@ -1,0 +1,201 @@
+{
+    "ComponentName": "Livery_lineup",
+    "BlockType": "canvas",
+    "Items": [
+        {
+            "BlockType": "shape",
+            "PositionY": 30,
+            "Width": 432,
+            "Height": 360,
+            "ShapeOptions": {
+                "Fill": "{DarkBlue}",
+                "ShapeType": "rectangle"
+            }
+        },
+        {
+            "BlockType": "shape",
+            "PositionX": 2,
+            "PositionY": 32,
+            "Width": 428,
+            "Height": 356,
+            "ShapeOptions": {
+                "Fill": "{White}",
+                "ShapeType": "rectangle"
+            }
+        },
+        {
+            "BlockType": "dock",
+            "Background": "{White}",
+            "PositionX": 116,
+            "PositionY": 0,
+            "Width": 200,
+            "Height": 60,
+            "Items": [
+                {
+                    "BlockType": "image",
+                    "Source": "{Item.Team.DarkLogotypePath}",
+                    "Height": 60,
+                    "HorizontalAlignment": "Center",
+                    "VerticalAlignment": "Center",
+                    "Triggers": [
+                        {
+                            "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+                            "Property": "Source",
+                            "Value": "{Item.Car.Vendor.LogotypePath}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "BlockType": "dock",
+            "PositionX": 66,
+            "PositionY": 70,
+            "Width": 300,
+            "Items": [
+                {
+                    "BlockType": "stack",
+                    "HorizontalAlignment": "Center",
+                    "Orientation": "Horizontal",
+                    "Items": [
+                        {
+                            "BlockType": "shape",
+                            "HorizontalAlignment": "Center",
+                            "VerticalAlignment": "Center",
+                            "Background": "{Item.Team.SecondaryColor}",
+                            "Height": 8,
+                            "Width": 8,
+                            "ShapeOptions": {
+                                "ShapeType": "rectangle",
+                                "Fill": "{Item.Team.Color}"
+                            },
+                            "Triggers": [
+                                {
+                                    "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+                                    "Property": "ShapeOptions.Fill",
+                                    "Value": "{Item.Car.Color}"
+                                }
+                            ]
+                        },
+                        {
+                            "BlockType": "text",
+                            "Padding": "5",
+                            "HorizontalAlignment": "Center",
+                            "VerticalAlignment": "Center",
+                            "Source": "[{Item.Team.Car.CarClass.Name, Converter=StringToUpperString}]",
+                            "Foreground": "{DarkBlue}",
+                            "FontSize": 12,
+                            "FontName": "{Font8}",
+                            "Triggers": [
+                                {
+                                    "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+                                    "Property": "Source",
+                                    "Value": "[{Item.Car.CarClass.Name, Converter=StringToUpperString}]"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "BlockType": "text",
+            "PositionX": 39,
+            "PositionY": 100,
+            "Source": "[{Item.Team.FullName, Converter=StringToUpperString}]",
+            "Width": 350,
+            "Foreground": "{DarkBlue}",
+            "FontName": "{Font9}",
+            "FontSize": 25,
+            "Padding": "5",
+            "TextOptions": {
+                "Wrap": true,
+                "TextAlignment": "Center"
+            },
+            "Triggers": [
+                {
+                    "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+                    "Property": "Source",
+                    "Value": "[{Item.Driver.Name, Converter=StringToUpperString}]"
+                }
+            ]
+        },
+        {
+            "BlockType": "dock",
+            "RenderIf": "{Season.LineupsBasedType, Converter=EnumEquals, Parameter=Teams}",
+            "PositionX": 2,
+            "PositionY": 180,
+            "Width": 428,
+            "Height": 150,
+            "Items": [
+                {
+                    "BlockType": "image",
+                    "Source": "{Item.Team.LiveryPath}",
+                    "Width": 380,
+                    "VerticalAlignment": "Center",
+                    "HorizontalAlignment": "Center"
+                }
+            ]
+        },
+        {
+            "BlockType": "dock",
+            "RenderIf": "{Season.LineupsBasedType, Converter=EnumEquals, Parameter=Cars}",
+            "PositionX": 2,
+            "PositionY": 180,
+            "Width": 428,
+            "Height": 150,
+            "Items": [
+                {
+                    "BlockType": "image",
+                    "Source": "{Item.Car.LiveryPath}",
+                    "Width": 380,
+                    "VerticalAlignment": "Center",
+                    "HorizontalAlignment": "Center"
+                }
+            ]
+        },
+        {
+            "BlockType": "dock",
+            "PositionY": 340,
+            "PositionX": 2,
+            "Width": 428,
+            "Items": [
+                {
+                    "BlockType": "stack",
+                    "HorizontalAlignment": "Center",
+                    "Items": [
+                        {
+                            "BlockType": "text",
+                            "Source": "[#]",
+                            "Padding": "5,5,0,0",
+                            "Foreground": "{DarkBlue}",
+                            "FontSize": 25,
+                            "FontName": "{Font8}",
+                            "HorizontalAlignment": "Center"
+                        },
+                        {
+                            "BlockType": "text",
+                            "Source": "[{Item.Driver.RaceNumber}]",
+                            "Padding": "0,5,5,0",
+                            "Foreground": "{DarkBlue}",
+                            "FontSize": 25,
+                            "FontName": "{Font8}",
+                            "HorizontalAlignment": "Center",
+                            "Triggers": [
+                                {
+                                    "Trigger": "NumberAbrevi"
+                                },
+                                {
+                                    "Trigger": "NumberBadge"
+                                },
+                                {
+                                    "Trigger": "NumberDriver"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

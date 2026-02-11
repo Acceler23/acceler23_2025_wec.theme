@@ -1,11 +1,12 @@
 {
     "ComponentName": "session_stats_cell",
     "BlockType": "stack",
+    "Background": "{DarkBlue}",
     "MaxHeight": "{TableLineHeight}",
     "Items": [
         {
             "BlockType": "text",
-            "Source": "<{data.Value}>",
+            "Source": "[<{data.Value}>]",
             "PaddingLeft": 20,
             "PaddingRight": 20,
             "Background": "{DarkBlue}",
@@ -50,7 +51,7 @@
                             "Height": 20,
                             "MaxHeight": 72,
                             "Style": "Session_Style",
-                            "Padding": "10,10,0,0"
+                            "Padding": "10,0,0,0"
                         },
                         {
                             "BlockType": "text",
@@ -67,12 +68,18 @@
                                             "Value": "{Item.Percentage, Converter=StringAdd, Parameter=%}"
                                         }
                                     ]
+                                },
+                                {
+                                    "Trigger": "LeaderColorTeam"
+                                },
+                                {
+                                    "Trigger": "LeaderColorCar"
                                 }
                             ]
                         }
                     ]
                 }
             }
-        },
+        }
     ]
 }

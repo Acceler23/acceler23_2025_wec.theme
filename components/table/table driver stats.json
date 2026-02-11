@@ -3,7 +3,7 @@
     "BlockType": "stack",
     "RenderIf": "<renderDriver1>",
     "Background": "{DarkBlue}",
-    "Width": 250,
+    "Width": 300,
     "MaxHeight": "{TableLineHeight}",
     "Items": [
         {
@@ -24,7 +24,7 @@
         },
         {
             "BlockType": "text",
-            "Source": "{Item.Driver.Name, Converter=StringToUpperString}",
+            "Source": "[{Item.Driver.Name, Converter=StringToUpperString}]",
             "Background": "{DarkBlue}",
             "Style": "Session_Style",
             "Height": "{TableLineHeight}",

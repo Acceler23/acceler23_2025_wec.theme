@@ -16,7 +16,7 @@
       "Orientation": "Vertical",
       "HorizontalAlignment": "Center",
       "Width": "{TableWidth}",
-      "Height": "{TableHeight}",
+      //"Height": "{TableHeight}",
       "BackgroundImage": "Session/table_shade.png",
       "ColorizeBackground": {
         "Color": "{LightBlue}"
@@ -28,7 +28,7 @@
           "Margin": "120,60,60,0",
           "ComponentOptions": {
             "Vars": {
-              "sessionInfo": "{Session.SessionType, Converter=StringToUpperString}"
+              "sessionInfo": "{Session.SessionType}"
             }
           }
         },
@@ -51,17 +51,26 @@
           "Items": [
             {
               "BlockType": "text",
-              "Source": "{Session.RacingClass.Name}",
+              "Source": "[{Session.RacingClass.Name}]",
+              "VerticalAlignment": "Center",
               "HorizontalAlignment": "Left",
               "FontSize": 25,
-              "FontName": "{FontNameWideItalic}"
+              "Padding": "5,10,5,0",
+              "FontName": "{CardHeadFont}",
+              "Background": "{Session.RacingClass.Color}",
+              "Foreground": "{Session.RacingClass.SecondaryColor}",
+              "TextOptions": {
+                "VerticalAlignment": "Bottom"
+              }
             },
             {
               "BlockType": "text",
               "HorizontalAlignment": "Right",
-              "Source": "{RaceSponsor, Converter=StringToUpperString} {RaceName, Converter=StringToUpperString} {Session.Track.Name, Converter=StringToUpperString}",
+              "Source": "[{Session.Track.CircuitFullName, Converter=StringToUpperString}]",
+              "VerticalAlignment": "Center",
               "FontSize": 25,
-              "FontName": "{FontNameWideItalic}",
+              "Padding": "5",
+              "FontName": "{CardHeadFont}",
               "Triggers": [
                 {
                   "Trigger": "NameDescription"
@@ -72,8 +81,8 @@
         },
         {
           "BlockType": "table",
-          "Margin": "60,35,60,0",
-          "Height": 615,
+          "Margin": "60,15,60,0",
+          "Height": 620,
           "Triggers": [
             {
               "Trigger": "TableParts"
@@ -152,7 +161,7 @@
                   "Component": "table_session",
                   "ComponentOptions": {
                     "Vars": {
-                      "sessionInfo": "{Item.Time}"
+                      "sessionInfo": "{Item.Time, Converter=StringToUpperString}"
                     }
                   }
                 }
@@ -162,71 +171,17 @@
         },
         {
           "BlockType": "component",
-          "Component": "fastest_lap"
+          "Component": "fastest_lap",
+          "Height": "{TableLineHeight}"
         },
         {
-          "BlockType": "dock",
-          "Orientation": "Horizontal",
-          "Margin": "60,15,70,0",
-          "Items": [
+          "BlockType": "component",
+          "Component": "bottom_table",
+          "Triggers": [
             {
-              "BlockType": "stack",
-              "VerticalAlignment": "Center",
-              "HorizontalAlignment": "Left",
-              "Orientation": "Horizontal",
-              "Items": [
-                {
-                  "BlockType": "text",
-                  "Source": "FIAWEC.TV",
-                  "FontSize": 18,
-                  "Foreground": "{DarkBlue}",
-                  "Background": "{LightBlue}",
-                  "Padding": "5,2,5,0",
-                  "VerticalAlignment": "Bottom",
-                  "Height": 20
-                },
-                {
-                  "BlockType": "text",
-                  "Source": "THE OFFICIAL STREAMING APP",
-                  "FontSize": 15,
-                  "FontName": "{FontNameBold}",
-                  "VerticalAlignment": "Center",
-                  "Foreground": "{LightBlue}",
-                  "Padding": "10,5,0,0"
-                }
-              ]
-            },
-            {
-              "BlockType": "stack",
-              "HorizontalAlignment": "Right",
-              "VerticalAlignment": "Center",
-              "Items": [
-                {
-                  "BlockType": "image",
-                  "Source": "instagram.png",
-                  "VerticalAlignment": "Center",
-                  "Height": 25
-                },
-                {
-                  "BlockType": "text",
-                  "Source": "{Instagram}",
-                  "VerticalAlignment": "Center",
-                  "FontSize": "{FontSizeSmall}"
-                },
-                {
-                  "BlockType": "image",
-                  "MarginLeft": 20,
-                  "Source": "tiktok",
-                  "VerticalAlignment": "Center",
-                  "Height": 25
-                },
-                {
-                  "BlockType": "text",
-                  "Source": "{TikTok}",
-                  "VerticalAlignment": "Center",
-                  "FontSize": "{FontSizeSmall}"
-                }
-              ]
+              "Condition": "{Session.SessionType, Converter=StringNotEquals, Parameter=Race}",
+              "Property": "MarginTop",
+              "Value": 80
             }
           ]
         }
