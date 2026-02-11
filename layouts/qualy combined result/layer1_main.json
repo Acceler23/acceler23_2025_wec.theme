@@ -72,7 +72,7 @@
                                 "Items": [
                                     {
                                         "BlockType": "text",
-                                        "Source": "[{Session.RacingClass.Name}]",
+                                        "Source": "[{Session.RacingClass.Name, Converter=StringToUpperString}]",
                                         "HorizontalAlignment": "Left",
                                         "FontSize": 25,
                                         "FontName": "{CardHeadFont}",
@@ -212,4 +212,5 @@
 
         ]
     }
+
 }
