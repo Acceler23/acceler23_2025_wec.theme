@@ -51,7 +51,7 @@
           "Items": [
             {
               "BlockType": "text",
-              "Source": "[{Session.RacingClass.Name}]",
+              "Source": "[{Session.RacingClass.Name, Converter=StringToUpperString}]",
               "VerticalAlignment": "Center",
               "HorizontalAlignment": "Left",
               "FontSize": 25,
@@ -189,3 +189,4 @@
     }
   ]
 }
+
