@@ -50,7 +50,7 @@
         "TriggerName": "TeamtoCarName",
         "Condition":"{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
         "Property": "Source",
-        "Value": "{Item.Car.Name, Converter=StringToUpperString}"
+        "Value": "[{Item.Car.Name, Converter=StringToUpperString}]"
     },
     {
         "TriggerName": "TeamtoCarLivery",

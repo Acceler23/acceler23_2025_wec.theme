@@ -3,7 +3,7 @@
   "Name": "2025 WEC Theme",
   "Author": "Acceler23",
   "Description": "Theme Based on the second half 2025 season",
-  "Version": "1.4.0",
+  "Version": "1.4.1",
   "Links": [],
   "DefaultLocalizationId": "en-US",
   "ForceLiveriesLoading": true,
@@ -44,5 +44,4 @@
       "SetVariantByDefault": false
     }
   ]
-
 }

@@ -4,6 +4,13 @@
         "Condition": "{DescriptionName}",
         "ConditionAnd": "{Event.Description, Converter=EmptyObjectToFalse}",
         "Property": "Source",
-        "Value": "{Event.Description, Converter=StringToUpperString}"
+        "Value": "[{Event.Description, Converter=StringToUpperString}]"
+    },
+    {
+        "TriggerName": "NameDescription2",
+        "Condition": "{DescriptionName}",
+        "ConditionAnd": "{Standings.LastEvent.Description, Converter=EmptyObjectToFalse}",
+        "Property": "Source",
+        "Value": "[{Standings.LastEvent.Description, Converter=StringToUpperString}]"
     }
 ]
