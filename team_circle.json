@@ -1,0 +1,401 @@
+{
+    "ComponentName": "teams_circle",
+    "BlockType": "canvas",
+    "Width": 950,
+    "Height": 950,
+    //"Background": "#a0ff0000",
+    "Items": [
+        {
+            "BlockType": "itemstack",
+            "Triggers": [
+                {
+                    "Condition": "{PageRender, Converter=NumberNotEquals, Parameter=1}",
+                    "Property": "ItemStackOptions.IndexStart",
+                    "Value": "{0, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}"
+                }
+            ],
+            "ItemStackOptions": {
+                "ItemSource": "{Lineups.Teams}",
+                "IndexStart": 0,
+                "Limit": 1,
+                "ItemTemplate": {
+                    "BlockType": "canvas",
+                    "RenderIf": "{TeamMax, Converter=NumberGreater, Parameter={0, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}}",
+                    "Items": [
+                        {
+                            "BlockType": "component",
+                            //"Background": "#dddddd",
+                            "Component": "team_template_circle",
+                            "PositionY": 20,
+                            "PositionX": 405
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "BlockType": "itemstack",
+            "Triggers": [
+                {
+                    "Condition": "{PageRender, Converter=NumberNotEquals, Parameter=1}",
+                    "Property": "ItemStackOptions.IndexStart",
+                    "Value": "{1, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}"
+                }
+            ],
+            "ItemStackOptions": {
+                "ItemSource": "{Lineups.Teams}",
+                "IndexStart": 1,
+                "Limit": 1,
+                "ItemTemplate": {
+                    "BlockType": "canvas",
+                    "RenderIf": "{TeamMax, Converter=NumberGreater, Parameter={1, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}}",
+                    "Items": [
+                        {
+                            "BlockType": "component",
+                            //"Background": "#dddddd",
+                            "Component": "team_template_circle",
+                            "PositionY": 790,
+                            "PositionX": 405
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "BlockType": "itemstack",
+            "Triggers": [
+                {
+                    "Condition": "{PageRender, Converter=NumberNotEquals, Parameter=1}",
+                    "Property": "ItemStackOptions.IndexStart",
+                    "Value": "{2, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}"
+                }
+            ],
+            "ItemStackOptions": {
+                "ItemSource": "{Lineups.Teams}",
+                "IndexStart": 2,
+                "Limit": 1,
+                "ItemTemplate": {
+                    "BlockType": "canvas",
+                    "RenderIf": "{TeamMax, Converter=NumberGreater, Parameter={2, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}}",
+                    "Items": [
+                        {
+                            "BlockType": "component",
+                            //"Background": "#dddddd",
+                            "Component": "team_template_circle",
+                            "PositionY": 280,
+                            "PositionX": 35
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "BlockType": "itemstack",
+            "Triggers": [
+                {
+                    "Condition": "{PageRender, Converter=NumberNotEquals, Parameter=1}",
+                    "Property": "ItemStackOptions.IndexStart",
+                    "Value": "{3, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}"
+                }
+            ],
+            "ItemStackOptions": {
+                "ItemSource": "{Lineups.Teams}",
+                "IndexStart": 3,
+                "Limit": 1,
+                "ItemTemplate": {
+                    "BlockType": "canvas",
+                    "RenderIf": "{TeamMax, Converter=NumberGreater, Parameter={3, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}}",
+                    "Items": [
+                        {
+                            "BlockType": "component",
+                            //"Background": "#dddddd",
+                            "Component": "team_template_circle",
+                            "PositionY": 540,
+                            "PositionX": 775
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "BlockType": "itemstack",
+            "Triggers": [
+                {
+                    "Condition": "{PageRender, Converter=NumberNotEquals, Parameter=1}",
+                    "Property": "ItemStackOptions.IndexStart",
+                    "Value": "{4, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}"
+                }
+            ],
+            "ItemStackOptions": {
+                "ItemSource": "{Lineups.Teams}",
+                "IndexStart": 4,
+                "Limit": 1,
+                "ItemTemplate": {
+                    "BlockType": "canvas",
+                    "RenderIf": "{TeamMax, Converter=NumberGreater, Parameter={4, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}}",
+                    "Items": [
+                        {
+                            "BlockType": "component",
+                            //"Background": "#dddddd",
+                            "Component": "team_template_circle",
+                            "PositionY": 280,
+                            "PositionX": 775
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "BlockType": "itemstack",
+            "Triggers": [
+                {
+                    "Condition": "{PageRender, Converter=NumberNotEquals, Parameter=1}",
+                    "Property": "ItemStackOptions.IndexStart",
+                    "Value": "{5, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}"
+                }
+            ],
+            "ItemStackOptions": {
+                "ItemSource": "{Lineups.Teams}",
+                "IndexStart": 5,
+                "Limit": 1,
+                "ItemTemplate": {
+                    "BlockType": "canvas",
+                    "RenderIf": "{TeamMax, Converter=NumberGreater, Parameter={5, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}}",
+                    "Items": [
+                        {
+                            "BlockType": "component",
+                            //"Background": "#dddddd",
+                            "Component": "team_template_circle",
+                            "PositionY": 540,
+                            "PositionX": 35
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "BlockType": "itemstack",
+            "Triggers": [
+                {
+                    "Condition": "{PageRender, Converter=NumberNotEquals, Parameter=1}",
+                    "Property": "ItemStackOptions.IndexStart",
+                    "Value": "{6, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}"
+                }
+            ],
+            "ItemStackOptions": {
+                "ItemSource": "{Lineups.Teams}",
+                "IndexStart": 6,
+                "Limit": 1,
+                "ItemTemplate": {
+                    "BlockType": "canvas",
+                    "RenderIf": "{TeamMax, Converter=NumberGreater, Parameter={6, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}}",
+                    "Items": [
+                        {
+                            "BlockType": "component",
+                            //"Background": "#dddddd",
+                            "Component": "team_template_circle",
+                            "PositionY": 140,
+                            "PositionX": 130
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "BlockType": "itemstack",
+            "Triggers": [
+                {
+                    "Condition": "{PageRender, Converter=NumberNotEquals, Parameter=1}",
+                    "Property": "ItemStackOptions.IndexStart",
+                    "Value": "{7, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}"
+                }
+            ],
+            "ItemStackOptions": {
+                "ItemSource": "{Lineups.Teams}",
+                "IndexStart": 7,
+                "Limit": 1,
+                "ItemTemplate": {
+                    "BlockType": "canvas",
+                    "RenderIf": "{TeamMax, Converter=NumberGreater, Parameter={7, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}}",
+                    "Items": [
+                        {
+                            "BlockType": "component",
+                            //"Background": "#dddddd",
+                            "Component": "team_template_circle",
+                            "PositionY": 680,
+                            "PositionX": 680
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "BlockType": "itemstack",
+            "Triggers": [
+                {
+                    "Condition": "{PageRender, Converter=NumberNotEquals, Parameter=1}",
+                    "Property": "ItemStackOptions.IndexStart",
+                    "Value": "{8, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}"
+                }
+            ],
+            "ItemStackOptions": {
+                "ItemSource": "{Lineups.Teams}",
+                "IndexStart": 8,
+                "Limit": 1,
+                "ItemTemplate": {
+                    "BlockType": "canvas",
+                    "RenderIf": "{TeamMax, Converter=NumberGreater, Parameter={8, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}}",
+                    "Items": [
+                        {
+                            "BlockType": "component",
+                            //"Background": "#dddddd",
+                            "Component": "team_template_circle",
+                            "PositionY": 140,
+                            "PositionX": 680
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "BlockType": "itemstack",
+            "Triggers": [
+                {
+                    "Condition": "{PageRender, Converter=NumberNotEquals, Parameter=1}",
+                    "Property": "ItemStackOptions.IndexStart",
+                    "Value": "{9, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}"
+                }
+            ],
+            "ItemStackOptions": {
+                "ItemSource": "{Lineups.Teams}",
+                "IndexStart": 9,
+                "Limit": 1,
+                "ItemTemplate": {
+                    "BlockType": "canvas",
+                    "RenderIf": "{TeamMax, Converter=NumberGreater, Parameter={9, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}}",
+                    "Items": [
+                        {
+                            "BlockType": "component",
+                            //"Background": "#dddddd",
+                            "Component": "team_template_circle",
+                            "PositionY": 680,
+                            "PositionX": 130
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "BlockType": "itemstack",
+            "Triggers": [
+                {
+                    "Condition": "{PageRender, Converter=NumberNotEquals, Parameter=1}",
+                    "Property": "ItemStackOptions.IndexStart",
+                    "Value": "{10, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}"
+                }
+            ],
+            "ItemStackOptions": {
+                "ItemSource": "{Lineups.Teams}",
+                "IndexStart": 10,
+                "Limit": 1,
+                "ItemTemplate": {
+                    "BlockType": "canvas",
+                    "RenderIf": "{TeamMax, Converter=NumberGreater, Parameter={10, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}}",
+                    "Items": [
+                        {
+                            "BlockType": "component",
+                            //"Background": "#dddddd",
+                            "Component": "team_template_circle",
+                            "PositionY": 60,
+                            "PositionX": 265
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "BlockType": "itemstack",
+            "Triggers": [
+                {
+                    "Condition": "{PageRender, Converter=NumberNotEquals, Parameter=1}",
+                    "Property": "ItemStackOptions.IndexStart",
+                    "Value": "{11, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}"
+                }
+            ],
+            "ItemStackOptions": {
+                "ItemSource": "{Lineups.Teams}",
+                "IndexStart": 11,
+                "Limit": 1,
+                "ItemTemplate": {
+                    "BlockType": "canvas",
+                    "RenderIf": "{TeamMax, Converter=NumberGreater, Parameter={11, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}}",
+                    "Items": [
+                        {
+                            "BlockType": "component",
+                            //"Background": "#dddddd",
+                            "Component": "team_template_circle",
+                            "PositionY": 760,
+                            "PositionX": 545
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "BlockType": "itemstack",
+            "Triggers": [
+                {
+                    "Condition": "{PageRender, Converter=NumberNotEquals, Parameter=0}",
+                    "Property": "ItemStackOptions.IndexStart",
+                    "Value": "{12, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}"
+                }
+            ],
+            "ItemStackOptions": {
+                "ItemSource": "{Lineups.Teams}",
+                "IndexStart": 12,
+                "Limit": 1,
+                "ItemTemplate": {
+                    "BlockType": "canvas",
+                    "RenderIf": "{TeamMax, Converter=NumberGreater, Parameter={12, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}}",
+                    "Items": [
+                        {
+                            "BlockType": "component",
+                            //"Background": "#dddddd",
+                            "Component": "team_template_circle",
+                            "PositionY": 60,
+                            "PositionX": 545
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "BlockType": "itemstack",
+            "Triggers": [
+                {
+                    "Condition": "{PageRender, Converter=NumberNotEquals, Parameter=0}",
+                    "Property": "ItemStackOptions.IndexStart",
+                    "Value": "{13, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}"
+                }
+            ],
+            "ItemStackOptions": {
+                "ItemSource": "{Lineups.Teams}",
+                "IndexStart": 13,
+                "Limit": 1,
+                "ItemTemplate": {
+                    "BlockType": "canvas",
+                    "RenderIf": "{TeamMax, Converter=NumberGreater, Parameter={13, Converter=NumberAdd, Parameter={{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=14}}}",
+                    "Items": [
+                        {
+                            "BlockType": "component",
+                            //"Background": "#dddddd",
+                            "Component": "team_template_circle",
+                            "PositionY": 760,
+                            "PositionX": 270
+                        }
+                    ]
+                }
+            }
+        },
+    ]
+}
