@@ -1,15 +1,26 @@
 {
     "ComponentName": "table_session",
     "BlockType": "stack",
-    "MaxHeight": "{TableLineHeight}",
+    "Width": 160,
+    "Background": "{DarkBlue}",
+    "Height": "{TableLineHeight}",
+    "Triggers": [
+        {
+            "Trigger": "LeaderColorTeam"
+        },
+        {
+            "Trigger": "LeaderColorCar"
+        }
+    ],
     "Items": [
         {
             "BlockType": "text",
             "Source": "[<sessionInfo>]",
-            "Background": "{DarkBlue}",
-            "Height": "{TableLineHeight}",
             "Style": "Session_Style",
-            "Width": 200,
+            "FontName": "{FontTiming}",
+            "TextOptions": {
+                "HorizontalAlignment": "Left"
+            },
             "Triggers": [
                 {
                     "Trigger": "LeaderColorTeam"
@@ -19,6 +30,12 @@
                 },
                 {
                     "Trigger": "LeaderToLaps"
+                },
+                {
+                    "Condition": "<sessionInfo>",
+                    "ConditionValue": "DNF",
+                    "Property": "Source",
+                    "Value": "[RETIRED]"
                 }
             ]
         }

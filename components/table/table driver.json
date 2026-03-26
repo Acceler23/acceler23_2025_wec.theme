@@ -3,32 +3,15 @@
     "BlockType": "stack",
     "RenderIf": "<renderDriver1>",
     "Background": "{DarkBlue}",
-    "Width": 850,
-    "MaxHeight": "{TableLineHeight}",
+    "StretchWidth": true,
+    "Height": "{TableLineHeight}",
     "Items": [
         {
-            "BlockType": "shape",
-            "Height": "{TableLineHeight}",
-            "Width": 5,
-            "HorizontalAlignment": "Left",
-            "VerticalAlignment": "Center",
-            "ShapeOptions": {
-                "Fill": "{Item.Team.Color}",
-                "ShapeType": "rectangle"
-            },
-            "Triggers": [
-                {
-                    "Trigger": "ShapeCarColorForeground"
-                }
-            ]
-        },
-        {
             "BlockType": "text",
-            "Source": "[{Item.Driver.Name, Converter=StringToUpperString}]",
+            "Source": "[{Item.Driver.{NameConvention}, Converter=StringToUpperString}]",
             "Background": "{DarkBlue}",
             "Style": "Session_Style",
-            "Height": "{TableLineHeight}",
-            "Padding": "20",
+            "PaddingLeft": 20,
             "Triggers": [
                 {
                     "Trigger": "LeaderColorTeam"

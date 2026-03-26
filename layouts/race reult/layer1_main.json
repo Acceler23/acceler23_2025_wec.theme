@@ -13,7 +13,7 @@
                 "ComponentOptions": {
                     "Vars": {
                         "sessionLeader": "WINNER",
-                        "fontSize": 70,
+                        "fontSize": 100,
                         "sessionInfo": "{Item.Team.Name, Converter=StringToUpperString}",
                         "sessionColor": "{Item.Team.SecondaryColor}",
                         "sessionColor2": "{Item.Team.Color}"
@@ -25,6 +25,9 @@
                 "Component": "result_session",
                 "ComponentOptions": {
                     "Vars": {
+                        "CarWidth": 0,
+                        "DriverWidth": 840,
+                        "TeamWidth": 0,
                         "renderDriver": true,
                         "renderTeam": false,
                         "renderCar": false

@@ -1,0 +1,92 @@
+{
+    "ComponentName": "media_bg",
+    "BlockType": "canvas",
+    "Items": [
+        {
+            "BlockType": "shape",
+            "Height": 3000,
+            "Width": 2000,
+            "ShapeOptions": {
+                "Fill": "{DarkBlue}",
+                //"Fill": "{White}",
+                "ShapeType": "rectangle"
+            }
+        },
+        {
+            "BlockType": "image",
+            "Source": "Session/table_shade.png",
+            "Width": 3000
+        },
+        {
+            "BlockType": "dock",
+            "Orientation": "Horizontal",
+            "PositionX": -450,
+            "Width": 2000,
+            "Items": [
+                {
+                    "BlockType": "dock",
+                    //"Background": "#dddddd",
+                    "Height": 1600,
+                    "Width": 1000,
+                    "HorizontalAlignment": "Left",
+                    "VerticalAlignment": "Center",
+                    "Items": [
+                        {
+                            "BlockType": "image",
+                            //"Background": "#dddddd",
+                            "Width": 900,
+                            "Padding": "100, 0, 100, 300",
+                            "HorizontalAlignment": "Center",
+                            "VerticalAlignment": "Top",
+                            "Source": "{Season.LeagueInfo.LeagueLogo}",
+                            "ImageOptions": {
+                                "Rotation": 90,
+                                "Opacity": 10
+                            },
+                            "Colorize": {
+                                "Color": "{LightBlue}",
+                                "ColorBlendingMode": "HardLight",
+                                "BlendPercentage": 80
+                            }
+                        }
+                    ]
+                },
+                /*
+                {
+                    "BlockType": "shape",
+                    "Width": 10,
+                    "Height": 2000,
+                    "HorizontalAlignment": "Center"
+                },
+                */
+                {
+                    "BlockType": "dock",
+                    //"Background": "#dddddd",
+                    "Height": 1600,
+                    "Width": 1000,
+                    "HorizontalAlignment": "Right",
+                    "VerticalAlignment": "Center",
+                    "Items": [
+                        {
+                            "BlockType": "image",
+                            "Padding": "100, 300, 100, 300",
+                            "Width": 900,
+                            "HorizontalAlignment": "Center",
+                            "VerticalAlignment": "Bottom",
+                            "Source": "{Season.LogotypePath}",
+                            "ImageOptions": {
+                                "Rotation": 270,
+                                "Opacity": 10
+                            },
+                            "Colorize": {
+                                "Color": "{LightBlue}",
+                                "ColorBlendingMode": "HardLight",
+                                "BlendPercentage": 80
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "ComponentName": "media_standings",
+    "BlockType": "canvas",
+    "Height": 1500,
+    "Width": 1200,
+    "Items": [
+        {
+            "PositionX": 36,
+            "PositionY": 238,
+            "BlockType": "image",
+            "Source": "media/standings_stripes",
+            "Height": 712
+        },
+        {
+            "PositionX": 36,
+            "PositionY": 947,
+            "BlockType": "image",
+            "Source": "media/standings_stripes",
+            "Height": 712
+        },
+        {
+            "PositionX": 0,
+            "PositionY": 0,
+            "BlockType": "image",
+            "Source": "media/standings_stripes_shade",
+            "Height": 1500,
+            "Width": 1200
+        },
+        {
+            "PositionX": 0,
+            "PositionY": 0,
+            "BlockType": "image",
+            "Source": "media/standings_stripes_shade",
+            "Height": 1500,
+            "Width": 1200
+        },
+        {
+            "PositionX": 25,
+            "PositionY": 65,
+            "PositionZ": 2,
+            "BlockType": "component",
+            "Component": "standings_banner"
+        },
+        {
+            "PositionX": 80,
+            "PositionY": 200,
+            "PositionZ": 2,
+            "BlockType": "component",
+            "Component": "table_media",
+            "HorizontalAlignment": "Center",
+            "ComponentOptions": {
+                "Vars": {
+                    "info1": "<infor4>",
+                    "pgLimit": "<info5>",
+                    "pgstart": "<info6>",
+                    "pos": "<pos1>",
+                    "isRace": "<raceIs>",
+                    "nameSource": "<sourceName>"
+                }
+            }
+        }
+    ]
+}

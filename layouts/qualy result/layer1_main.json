@@ -25,6 +25,9 @@
                 "Component": "result_session",
                 "ComponentOptions": {
                     "Vars": {
+                        "CarWidth": 840,
+                        "DriverWidth": 0,
+                        "TeamWidth": 0,
                         "renderDriver": false,
                         "renderTeam": false,
                         "renderCar": true

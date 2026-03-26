@@ -6,7 +6,20 @@
         "Height": 1500,
         "Width": 1200,
         "Items": [
-           {
+            {
+                "BlockType": "dock",
+                "RenderIf": "{PageRender, Converter=NumberEquals, Parameter=1}",
+                "VerticalAlignment": "Top",
+                "Width": 1200,
+                "Items": [
+                    {
+                        "BlockType": "component",
+                        "HorizontalAlignment": "Center",
+                        "Component": "card_head_standings_media"
+                    }
+                ]
+            },
+            {
                 "RenderIf": "{PageRender, Converter=NumberEquals, Parameter=1}",
                 "BlockType": "component",
                 "Component": "media_standings_p1",
@@ -20,7 +33,7 @@
                         "info6": 0,
                         "raceIs": false,
                         "stanSes": "Standings",
-                        "sourceName": "Item.Driver.Name"
+                        "sourceName": "Item.Driver.{NameConvention}"
                     }
                 }
             },
@@ -38,7 +51,7 @@
                         "info6": 0,
                         "raceIs": false,
                         "stanSes": "Standings",
-                        "sourceName": "Item.Driver.Name"
+                        "sourceName": "Item.Driver.{NameConvention}"
                     }
                 }
             },

@@ -2,7 +2,17 @@
     "ComponentName": "session_stats_cell",
     "BlockType": "stack",
     "Background": "{DarkBlue}",
-    "MaxHeight": "{TableLineHeight}",
+    "Height": "{TableLineHeight}",
+    "Width": "*",
+    "Padding": "10, 0",
+    "Triggers": [
+        {
+            "Trigger": "LeaderColorTeam"
+        },
+        {
+            "Trigger": "LeaderColorCar"
+        }
+    ],
     "Items": [
         {
             "BlockType": "text",
@@ -10,9 +20,9 @@
             "PaddingLeft": 20,
             "PaddingRight": 20,
             "Background": "{DarkBlue}",
-            "Height": "{TableLineHeight}",
             "Style": "Session_Style",
-            "Width": "*",
+            "FontName": "{FontTiming}",
+            "HorizontalAlignment": "Right",
             "Triggers": [
                 {
                     "Trigger": "LeaderColorTeam"
@@ -28,7 +38,6 @@
             "PaddingLeft": 20,
             "PaddingRight": 20,
             "Background": "{DarkBlue}",
-            "Height": "{TableLineHeight}",
             "Width": "*",
             "Style": "Session_Style",
             "Triggers": [
@@ -43,7 +52,9 @@
                 "ItemSource": "<{data.Stints}>",
                 "ItemTemplate": {
                     "BlockType": "stack",
+                    "Height": "{TableLineHeight}",
                     "VerticalAlignment": "Center",
+                    "Orientation": "Horizontal",
                     "Items": [
                         {
                             "BlockType": "image",
@@ -56,9 +67,10 @@
                         {
                             "BlockType": "text",
                             "Style": "Session_Style",
-                            "Padding": "5,16,10,16",
+                            "Foreground": "#ffffff",
                             "Source": "{Item.Laps}",
-                            "Height": "{TableLineHeight}",
+                            "FontName": "{FontTiming}",
+                            "Padding": "5, 0, 0, 0",
                             "Triggers": [
                                 {
                                     "Condition": "{Item.IsPercentage}",
@@ -70,10 +82,24 @@
                                     ]
                                 },
                                 {
-                                    "Trigger": "LeaderColorTeam"
+                                    "Condition": "{Item.Tyres, Converter=StringEquals, Parameter=Hard}",
+                                    "Property": "Foreground",
+                                    "Value": "#FF0000"
                                 },
                                 {
-                                    "Trigger": "LeaderColorCar"
+                                    "Condition": "{Item.Tyres, Converter=StringEquals, Parameter=Medium}",
+                                    "Property": "Foreground",
+                                    "Value": "#949400"
+                                },
+                                {
+                                    "Condition": "{Item.Tyres, Converter=StringEquals, Parameter=Soft}",
+                                    "Property": "Foreground",
+                                    "Value": "#FF8B8B8B"
+                                },
+                                {
+                                    "Condition": "{Item.Tyres, Converter=StringEquals, Parameter=Wet}",
+                                    "Property": "Foreground",
+                                    "Value": "#0059FF"
                                 }
                             ]
                         }

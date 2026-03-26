@@ -1,16 +1,13 @@
 {
     "ComponentName": "card_head",
     "BlockType": "canvas",
-    "Orientation": "Vertical",
-    //"Margin": "50",
     "Items": [
         {
             "BlockType": "image",
             "Source": "Session/racename_bg.png",
             "Width": 240,
-            "Height": 165,
-            "PositionX": 10,
-            "PositionY": 25,
+            "PositionX": 0,
+            "PositionY": 38,
             "Colorize": {
                 "Color": "{LightBlue}",
                 "ColorBlendingMode": "Normal"
@@ -34,42 +31,73 @@
             ]
         },
         {
-
-            "BlockType": "text",
-            "Source": "[{Season.LeagueInfo.LeagueFullName, Converter=StringToUpperString}]\nCHAMPIONSHIP",
-            "FontSize": 12,
+            "BlockType": "stack",
+            "Orientation": "Vertical",
             "PositionY": 20,
-            "PositionX": 93
+            "PositionX": 93,
+            "Items": [
+                {
+                    "BlockType": "stack",
+                    "Orientation": "Horizontal",
+                    "Items": [
+                        {
+                            "BlockType": "text",
+                            "Source": "[{Season.LeagueInfo.LeagueName, Converter=StringToUpperString}]",
+                            "FontName": "{FontLeagueCard}",
+                            "Foreground": "{White}",
+                            "FontSize": 11
+                        },
+                        {
+                            "BlockType": "text",
+                            "Source": " [{Season.Name, Converter=StringToUpperString}]",
+                            "FontName": "{FontLeagueCard}",
+                            "Foreground": "{LightBlue}",
+                            "FontSize": 11
+                        }
+                    ]
+                },
+                {
+                    "BlockType": "text",
+                    "Source": "CHAMPIONSHIP",
+                    "FontName": "{FontLeagueCard}",
+                    "Foreground": "{White}",
+                    "FontSize": 11
+                }
+            ]
         },
         {
             "BlockType": "text",
             "Source": "[{Session.Track.CircuitFullName, Converter=StringToUpperString}]",
-            "FontName": "{CardHeadFont}",
+            "FontName": "{FontTrackName}",
             "FontSize": "{CardFontSize}",
             "Padding": "10",
             "HorizontalAlignment": "Left",
-            "VerticalAlignment": "Top",
+            "VerticalAlignment": "Center",
             "Width": "{CardMaxWidth}",
-            "PositionY": 50,
+            "Height": 62,
+            "PositionY": 45,
             "PositionX": -10,
+            "MarginTop": 5,
             "Triggers": [
                 {
                     "Trigger": "NameDescription"
                 }
             ],
             "TextOptions": {
-                "Wrap": true
+                "Wrap": true,
+                "TextAlignment": "Start",
+                "VerticalAlignment": "Center"
             }
         },
         {
             "BlockType": "text",
             "Source": "{Event.DateLocal, Converter=DateCustomFormat, Parameter=yyyy}",
-            "FontName": "{FontMainTitle}",
-            "Foreground": "{DarkBlue}",
-            "FontSize": 15,
+            "FontName": "{FontYear}",
+            "Foreground": "{White}",
+            "FontSize": 17,
             "Padding": "5",
-            "PositionY": 152,
-            "PositionX": 100
+            "PositionY": 130,
+            "PositionX": 5
         }
     ]
 }

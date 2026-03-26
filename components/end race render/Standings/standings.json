@@ -1,0 +1,183 @@
+{
+  "ComponentName": "standings_table",
+  "BlockType": "stack",
+  "HorizontalAlignment": "Right",
+  "Width": "{TableOuterWidth}",
+  "Height": "{TableHeight}",
+  "BackgroundImage": "Session/Session_bg.png",
+  "BackgroundImageOpacity": 60,
+  "ColorizeBackground": {
+    "Color": "{DarkBlue}"
+  },
+  "Orientation": "Vertical",
+  "Items": [
+    {
+      "BlockType": "canvas",
+      "Orientation": "Vertical",
+      "HorizontalAlignment": "Center",
+      "Width": "{TableOuterWidth}",
+      "BackgroundImage": "Session/table_shade.png",
+      "ColorizeBackground": {
+        "Color": "{LightBlue}"
+      },
+      "Items": [
+        {
+          "BlockType": "component",
+          "Component": "standings_head",
+          "PositionX": 118,
+          "PositionY": 60,
+          "ComponentOptions": {
+            "Vars": {
+              "sessionInfo": "<sessionInfo2>"
+            }
+          }
+        },
+        {
+          "BlockType": "shape",
+          "PositionX": 120,
+          "PositionY": 213,
+          "Width": 1145,
+          "Height": 2,
+          "Opacity": 30,
+          "ShapeOptions": {
+            "Fill": "{LightBlue}",
+            "ShapeType": "rectangle"
+          }
+        },
+        {
+          "BlockType": "stack",
+          "Width": "{TableWidth}",
+          "Height": 636,
+          "PositionX": 60,
+          "PositionY": 236,
+          "Items": [
+            {
+              "BlockType": "table",
+              "Width": 1205,
+              "Height": 636,
+              "Triggers": [
+                {
+                  "Trigger": "TableParts"
+                }
+              ],
+              "TableOptions": {
+                "ItemsSource": "{Standings.Drivers}",
+                "IndexStart": 0,
+                "IndexEnd": 9,
+                "RowSpacing": 12,
+                "HeaderTemplate": {
+                  "BlockType": "text",
+                  "FontName": "{FontTiming}",
+                  "Height": 22,
+                  "HorizontalAlignment": "Center",
+                  "MarginLeft": 20,
+                  "MarginBottom": 10,
+                },
+                "Columns": [
+                  {
+                    "Header": "",
+                    "Template": {
+                      "BlockType": "component",
+                      "Component": "table_position"
+                    }
+                  },
+                  {
+                    "Header": "",
+                    "Template": {
+                      "BlockType": "component",
+                      "Component": "table_logo"
+                    }
+                  },
+                  {
+                    "Header": "",
+                    "Template": {
+                      "BlockType": "component",
+                      "Component": "table_number"
+                    }
+                  },
+                  {
+                    "Header": "",
+                    "Template": {
+                      "BlockType": "component",
+                      "Component": "teamcar_color"
+                    }
+                  },
+                  {
+                    "Header": "",
+                    "Width": "<CarWidth>",
+                    "Template": {
+                      "BlockType": "component",
+                      "Component": "table_car",
+                      //"Width": 840,
+                      "Width": "<CarWidth>",
+                      "ComponentOptions": {
+                        "Vars": {
+                          "renderCar1": "<renderCar>"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Header": "",
+                    "Width": "<DriverWidth>",
+                    "Template": {
+                      "BlockType": "component",
+                      "Component": "table_driver",
+                      //"Width": 840,
+                      "Width": "<DriverWidth>",
+                      "ComponentOptions": {
+                        "Vars": {
+                          "renderDriver1": "<renderDriver>"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Header": "",
+                    "Width": "<TeamWidth>",
+                    "Template": {
+                      "BlockType": "component",
+                      "Component": "table_team",
+                      //"Width": 840,
+                      "Width": "<TeamWidth>",
+                      "ComponentOptions": {
+                        "Vars": {
+                          "renderTeam1": "<renderTeam>"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Header": "Points",
+                    "Template": {
+                      "BlockType": "component",
+                      "Component": "table_standing"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "BlockType": "shape",
+          "PositionX": 70,
+          "PositionY": 906,
+          "Width": 1235,
+          "Height": 2,
+          "Opacity": 30,
+          "ShapeOptions": {
+            "Fill": "{White}",
+            "ShapeType": "rectangle"
+          }
+        },
+        {
+          "BlockType": "component",
+          "Component": "bottom_table",
+          "PositionX": 70,
+          "PositionY": 928
+        }
+      ]
+    }
+  ]
+}

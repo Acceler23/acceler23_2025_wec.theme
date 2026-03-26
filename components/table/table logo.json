@@ -1,10 +1,9 @@
 {
     "ComponentName": "table_logo",
     "BlockType": "dock",
-    "MaxHeight": "{TableLineHeight}",
+    "Height": "{TableLineHeight}",
     "Background": "{Item.Team.Color}",
-    "Height": 50,
-    "Width": 50,
+    "Width": 57,
     "Triggers": [
         {
             "Trigger": "CarColorRender"
@@ -16,19 +15,15 @@
     "Items": [
         {
             "BlockType": "image",
-            //"Source": "{Item.Team.DarkLogotypePath}",
+            "Source": "{Item.Team.LogotypePath}",
             "HorizontalAlignment": "Center",
             "VerticalAlignment": "Center",
             "Width": 30,
-            //"MaxHeight": 30,
             "Triggers": [
                 {
                     "Trigger": "CarLogoRender"
                 }
-            ],
-            "ImageOptions": {
-                "Path": "{Item.Team.DarkLogotypePath}"
-            }
+            ]
         }
     ]
 }

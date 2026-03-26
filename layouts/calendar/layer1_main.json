@@ -84,25 +84,18 @@
                         "Items": [
                             {
                                 "BlockType": "text",
-                                "Source": "[{Season.Name, Converter=StringToUpperString}]",
-                                "FontName": "{Font3}",
+                                "Source": "[{Season.MainLeagueCategory.ShortName, Converter=StringToUpperString}]",
+                                "FontName": "{FontCalendar}",
                                 "VerticalAlignment": "Center",
                                 "FontSize": "{CalendarFontSize}",
                                 "PaddingTop": 20,
                                 "Width": "*",
-                                "Foreground": "{LightBlue}",
-                                "Triggers": [
-                                    {
-                                        "Condition": "{SeasonShort, Converter=EmptyObjectToFalse}",
-                                        "Property": "Source",
-                                        "Value": "{SeasonShort}"
-                                    }
-                                ]
+                                "Foreground": "{LightBlue}"
                             },
                             {
                                 "BlockType": "text",
                                 "Source": "[CALENDAR]",
-                                "FontName": "{Font3}",
+                                "FontName": "{FontCalendar}",
                                 "VerticalAlignment": "Center",
                                 "FontSize": "{CalendarFontSize}",
                                 "PaddingTop": 20,
@@ -169,7 +162,7 @@
                                 "PositionX": 50,
                                 "PositionY": 30,
                                 "Source": "[R]{Item.Position, Converter=NumberSubtract, Parameter={Season.SeasonOverallNumberEvents, Converter=NumberSubtract, Parameter={Season.SeasonOverallNumberEventsExcludingNonChampionship}}}",
-                                "FontName": "{Font7}",
+                                "FontName": "{FontYear}",
                                 "Padding": "10",
                                 "FontSize": 45,
                                 "TextOptions": {
@@ -190,10 +183,6 @@
                                             {
                                                 "Property": "FontSize",
                                                 "Value": 17
-                                            },
-                                            {
-                                                "Property": "FontName",
-                                                "Value": "{Font0}"
                                             },
                                             {
                                                 "Property": "PositionX",
@@ -233,17 +222,19 @@
                                                 "Source": "[{Item.Track.CountryName, Converter=StringToUpperString}]",
                                                 "VerticalAlignment": "Center",
                                                 "Width": 350,
-                                                "FontName": "{Font5}",
+                                                "FontName": "{FontNationCalendar}",
                                                 "Padding": "0,5,10,0",
                                                 "FontSize": 28
                                             },
                                             {
                                                 "BlockType": "text",
-                                                "Width": 250,
+                                                "Width": 280,
                                                 "Source": "[{Item.Track.CircuitFullName, Converter=StringToUpperString}]",
+                                                "Foreground": "#90ffffff",
                                                 "VerticalAlignment": "Center",
                                                 "MarginTop": -10,
                                                 "Padding": "0,15,10,0",
+                                                "FontName": "{FontTrackCalendar}",
                                                 "FontSize": 18,
                                                 "TextOptions": {
                                                     "Wrap": true,
@@ -280,16 +271,16 @@
                                                 "BlockType": "text",
                                                 "VerticalAlignment": "Center",
                                                 "Source": "[{Item.DateLocal, Converter=DateCustomFormat, Parameter=MMM}]",
-                                                "FontName": "{Font5}",
+                                                "FontName": "{FontNationCalendar}",
                                                 "FontSize": 28,
                                                 "Padding": "5"
                                             },
                                             {
                                                 "BlockType": "text",
-                                                "MarginLeft": -5,
+                                                "MarginLeft": -3,
                                                 "VerticalAlignment": "Center",
                                                 "Source": "[{Item.DateLocal, Converter=DateToDayOfMonth}]",
-                                                "FontName": "{Font5}",
+                                                "FontName": "{FontTableBottom}",
                                                 "FontSize": 17,
                                                 "Padding": "3",
                                                 "Foreground": "{LightBlue}"
@@ -301,8 +292,8 @@
                                         "RenderIf": "{Item.CompletedStatus, Converter=EnumEquals, Parameter=Completed}",
                                         "VerticalAlignment": "Center",
                                         "HorizontalAlignment": "Center",
-                                        "Source": "[{Item.WinnerString}]",
-                                        "FontName": "{Font5}",
+                                        "Source": "[{Item.WinnerString, Converter=StringToUpperString}]",
+                                        "FontName": "{FontTiming}",
                                         "FontSize": 20,
                                         "Padding": "5"
                                     }

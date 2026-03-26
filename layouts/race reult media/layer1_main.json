@@ -1,10 +1,10 @@
 {
     "BlockRoot": {
         "Name": "mainStack",
-        "BlockType": "stack",
+        "BlockType": "canvas",
+        "Orientation": "Vertical",
         "Width": 1200,
         "Height": 1500,
-        "Orientation": "Vertical",
         "Items": [
             {
                 "BlockType": "dock",
@@ -15,19 +15,13 @@
                     {
                         "BlockType": "component",
                         "HorizontalAlignment": "Center",
-                        "Component": "card_head_media",
-                        "ComponentOptions": {
-                            "Vars": {
-                                "date": "{Event.DateLocal, Converter=DateToYear}"
-                            }
-                        }
+                        "Component": "card_head_media"
                     }
                 ]
             },
             {
                 "RenderIf": "{PageRender, Converter=NumberEquals, Parameter=1}",
                 "BlockType": "component",
-                "MarginTop": -150,
                 "VerticalAlignment": "Center",
                 "Component": "media_table_p1",
                 "ComponentOptions": {

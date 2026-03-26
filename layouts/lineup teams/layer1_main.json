@@ -12,9 +12,9 @@
                 "Items": [
                     {
                         "BlockType": "text",
-                        "Source": "{Season.Name}",
-                        "FontName": "{Font7}",
-                        "FontSize": 45,
+                        "Source": "{Season.Name, Converter=StringToUpperString}",
+                        "FontName": "{FontTrackName}",
+                        "FontSize": 50,
                         "Foreground": "{LightBlue}",
                         "HorizontalAlignment": "Center",
                         "VerticalAlignment": "Top",
@@ -24,12 +24,13 @@
                     {
                         "BlockType": "text",
                         "Source": "[SEASON]",
-                        "FontName": "{Font7}",
-                        "FontSize": 45,
+                        "FontName": "{FontTrackName}",
+                        "FontSize": 50,
                         "Foreground": "{White}",
                         "HorizontalAlignment": "Center",
                         "VerticalAlignment": "Bottom",
                         "Padding": "5",
+                        "MarginTop": -15,
                         "Width": 1200
                     }
                 ]
@@ -61,7 +62,7 @@
                         "HorizontalAlignment": "Center",
                         "VerticalAlignment": "Center",
                         "Source": "{Season.SeasonOverallNumberEventsExcludingNonChampionship} [RACES]",
-                        "FontName": "{Font5}",
+                        "FontName": "{FontLineupCircle}",
                         "FontSize": 20,
                         "Padding": "5"
                     }
@@ -79,7 +80,7 @@
                         "HorizontalAlignment": "Center",
                         "VerticalAlignment": "Center",
                         "Source": "{TeamMax} [TEAMS]",
-                        "FontName": "{Font5}",
+                        "FontName": "{FontLineupCircle}",
                         "FontSize": 20,
                         "Padding": "5"
                     }

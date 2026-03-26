@@ -3,32 +3,15 @@
     "BlockType": "stack",
     "RenderIf": "<renderTeam1>",
     "Background": "{DarkBlue}",
-    "Width": 850,
-    "MaxHeight": "{TableLineHeight}",
+    "StretchWidth": true,
+    "Height": "{TableLineHeight}",
     "Items": [
-        {
-            "BlockType": "shape",
-            "Height": "{TableLineHeight}",
-            "Width": 5,
-            "HorizontalAlignment": "Left",
-            "VerticalAlignment": "Center",
-            "ShapeOptions": {
-                "Fill": "{Item.Team.Color}",
-                "ShapeType": "rectangle"
-            },
-            "Triggers": [
-                {
-                    "Trigger": "ShapeCarColorForeground"
-                }
-            ]
-        },
         {
             "BlockType": "text",
             "Source": "[{Item.Team.FullName, Converter=StringToUpperString}]",
             "Background": "{DarkBlue}",
             "Style": "Session_Style",
-            "Height": "{TableLineHeight}",
-            "Padding": "20",
+            "PaddingLeft": 20,
             "Triggers": [
                 {
                     "Trigger": "LeaderColorTeam"
@@ -40,16 +23,6 @@
                     "Trigger": "TeamtoCarName"
                 }
             ]
-        },
-        {
-            "BlockType": "itemstack",
-            "ItemStackOptions": {
-                "ItemSource": "{Item.Drivers}",
-                "ItemTemplate": {
-                    "BlockType": "text",
-                    "Source": "{Item.Teammates}"
-                }
-            }
         }
     ],
     "Triggers": [

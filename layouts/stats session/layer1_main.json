@@ -59,9 +59,9 @@
                                         "BlockType": "text",
                                         "HorizontalAlignment": "Right",
                                         "Source": "[{Session.Track.CircuitFullName, Converter=StringToUpperString}]",
+                                        "FontName": "{FontTrackName}",
                                         "FontSize": 25,
-                                        "Padding": "5",
-                                        "FontName": "{FontNameWideItalic}"
+                                        "Padding": "5"
                                     }
                                 ]
                             },
@@ -83,7 +83,8 @@
                                         "BlockType": "text",
                                         "Padding": "5",
                                         "VerticalAlignment": "Bottom",
-                                        "HorizontalAlignment": "Center"
+                                        "HorizontalAlignment": "Center",
+                                        "FontName": "{FontTiming}"
                                     },
                                     "Columns": [
                                         {
@@ -111,7 +112,15 @@
                                             "Header": "",
                                             "Template": {
                                                 "BlockType": "component",
-                                                "Component": "table_driver_stats",
+                                                "Component": "teamcar_color"
+                                            }
+                                        },
+                                        {
+                                            "Header": "",
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "table_driver",
+                                                "Width": 700,
                                                 "ComponentOptions": {
                                                     "Vars": {
                                                         "renderDriver1": "<renderDriver>"
@@ -326,70 +335,9 @@
                                 }
                             },
                             {
-                                "BlockType": "dock",
-                                "Orientation": "Horizontal",
+                                "BlockType": "component",
                                 "Margin": "60,15,70,0",
-                                "Items": [
-                                    {
-                                        "BlockType": "stack",
-                                        "VerticalAlignment": "Center",
-                                        "HorizontalAlignment": "Left",
-                                        "Orientation": "Horizontal",
-                                        "Items": [
-                                            {
-                                                "BlockType": "text",
-                                                "Source": "[FIAWEC.TV]",
-                                                "FontSize": 18,
-                                                "Foreground": "{DarkBlue}",
-                                                "Background": "{LightBlue}",
-                                                "Padding": "5,2,5,0",
-                                                "VerticalAlignment": "Bottom",
-                                                "Height": 20
-                                            },
-                                            {
-                                                "BlockType": "text",
-                                                "Source": "[THE OFFICIAL STREAMING APP]",
-                                                "FontSize": 15,
-                                                "FontName": "{FontNameBold}",
-                                                "VerticalAlignment": "Center",
-                                                "Foreground": "{LightBlue}",
-                                                "Padding": "10,5,0,0"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "BlockType": "stack",
-                                        "HorizontalAlignment": "Right",
-                                        "VerticalAlignment": "Center",
-                                        "Items": [
-                                            {
-                                                "BlockType": "image",
-                                                "Source": "instagram.png",
-                                                "VerticalAlignment": "Center",
-                                                "Height": 25
-                                            },
-                                            {
-                                                "BlockType": "text",
-                                                "Source": "[{Instagram}]",
-                                                "VerticalAlignment": "Center",
-                                                "FontSize": "{FontSizeSmall}"
-                                            },
-                                            {
-                                                "BlockType": "image",
-                                                "MarginLeft": 20,
-                                                "Source": "tiktok",
-                                                "VerticalAlignment": "Center",
-                                                "Height": 25
-                                            },
-                                            {
-                                                "BlockType": "text",
-                                                "Source": "[{TikTok}]",
-                                                "VerticalAlignment": "Center",
-                                                "FontSize": "{FontSizeSmall}"
-                                            }
-                                        ]
-                                    }
-                                ]
+                                "Component": "bottom_table"
                             }
                         ]
                     }

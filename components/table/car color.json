@@ -1,0 +1,17 @@
+{
+    "ComponentName": "teamcar_color",
+    "BlockType": "shape",
+    "Height": "{TableLineHeight}",
+    "Width": 5,
+    "HorizontalAlignment": "Left",
+    "VerticalAlignment": "Center",
+    "ShapeOptions": {
+        "Fill": "{Item.Team.Color}",
+        "ShapeType": "rectangle"
+    },
+    "Triggers": [
+        {
+            "Trigger": "ShapeCarColorForeground"
+        }
+    ]
+}

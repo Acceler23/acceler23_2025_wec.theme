@@ -1,0 +1,27 @@
+{
+    "ComponentName": "standings_head",
+    "BlockType": "stack",
+    "Orientation": "Vertical",
+    "Spacing": -13,
+    "Height": 135,
+    "Items": [
+        {
+            "BlockType": "text",
+            "Source": "[{Season.LeagueInfo.LeagueFullName, Converter=StringToUpperString}] [{Standings.RacingClass.Name, Converter=StringToUpperString}] [{Season.Name, Converter=StringToUpperString}]",
+            "FontName": "{FontSessionHead}",
+            "FontSize": 79,
+            "Foreground": "{White}",
+            "Padding": "5",
+            "MarginTop": -2
+        },
+        {
+            "BlockType": "text",
+            "Source": "[<sessionInfo>]",
+            "FontName": "{FontSessionHead}",
+            "FontSize": 79,
+            "Foreground": "{LightBlue}",
+            "Padding": "5",
+            "MarginTop": -2
+        }
+    ]
+}

@@ -17,6 +17,9 @@
                 "ComponentOptions": {
                     "Vars": {
                         "sessionInfo2": "TEAM'S CHAMPIONSHIP",
+                        "CarWidth": 0,
+                        "DriverWidth": 0,
+                        "TeamWidth": 840,
                         "renderDriver": false,
                         "renderTeam": true,
                         "renderCar": false

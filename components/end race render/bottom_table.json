@@ -1,0 +1,90 @@
+{
+    "ComponentName": "bottom_table",
+    "BlockType": "dock",
+    "Orientation": "Horizontal",
+    "VerticalAlignment": "Center",
+    "Height": 22,
+    "Width": 1185,
+    "Items": [
+        {
+            "BlockType": "stack",
+            "VerticalAlignment": "Center",
+            "HorizontalAlignment": "Left",
+            "Orientation": "Horizontal",
+            "Items": [
+                {
+                    "BlockType": "text",
+                    "Source": "[{TVsite}]",
+                    "FontSize": 22,
+                    "Foreground": "{DarkBlue}",
+                    "Background": "{LightBlue}",
+                    "Padding": "3",
+                    "VerticalAlignment": "Center",
+                    "Height": 22,
+                    "MarginTop": 3,
+                    "FontName": "{FontSessionHead}"
+                },
+                {
+                    "BlockType": "text",
+                    "Source": "[{TVDescription}]",
+                    "FontSize": 15,
+                    "FontName": "{FontTableBottom}",
+                    "VerticalAlignment": "Center",
+                    "Foreground": "{LightBlue}",
+                    "Padding": "10,5,0,0"
+                }
+            ]
+        },
+        {
+            "BlockType": "stack",
+            "HorizontalAlignment": "Right",
+            "VerticalAlignment": "Center",
+            "Items": [
+                {
+                    "BlockType": "image",
+                    "Source": "instagram.png",
+                    "VerticalAlignment": "Center",
+                    "Height": 20
+                },
+                {
+                    "BlockType": "text",
+                    "MarginLeft": 5,
+                    "Source": "[{Instagram}]",
+                    "VerticalAlignment": "Center",
+                    "FontName": "{FontTableBottom}",
+                    "FontSize": "{FontSizeSmall}"
+                },
+                {
+                    "BlockType": "image",
+                    "Source": "youtube",
+                    "VerticalAlignment": "Center",
+                    "MarginLeft": 20,
+                    "Height": 20
+                },
+                {
+                    "BlockType": "text",
+                    "MarginLeft": 5,
+                    "Source": "[{Youtube}]",
+                    "VerticalAlignment": "Center",
+                    "FontName": "{FontTableBottom}",
+                    "FontSize": "{FontSizeSmall}"
+                },
+                {
+                    "BlockType": "image",
+                    "Source": "tiktok",
+                    "VerticalAlignment": "Center",
+                    "MarginLeft": 20,
+                    "Height": 20
+                },
+                {
+                    "BlockType": "text",
+                    "MarginLeft": 5,
+                    "Source": "[{TikTok}]",
+                    "VerticalAlignment": "Center",
+                    "FontName": "{FontTableBottom}",
+                    "FontSize": "{FontSizeSmall}"
+                }
+            ]
+        }
+    ]
+}

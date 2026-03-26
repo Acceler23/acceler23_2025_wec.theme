@@ -75,7 +75,7 @@
                                         "Source": "[{Session.RacingClass.Name, Converter=StringToUpperString}]",
                                         "HorizontalAlignment": "Left",
                                         "FontSize": 25,
-                                        "FontName": "{CardHeadFont}",
+                                        
                                         "Padding": "5",
                                         "Background": "{Session.RacingClass.Color}",
                                         "Foreground": "{Session.RacingClass.SecondaryColor}",
@@ -90,7 +90,7 @@
                                         "VerticalAlignment": "Center",
                                         "FontSize": 25,
                                         "Padding": "5,10,5,0",
-                                        "FontName": "{CardHeadFont}",
+                                        
                                         "Triggers": [
                                             {
                                                 "Trigger": "NameDescription"

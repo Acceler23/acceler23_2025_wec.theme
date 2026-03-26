@@ -155,6 +155,24 @@
         "LE MANS HYPERCARS": "HYPERCAR",
         "Le Mans Hypercars": "HYPERCAR",
         "Le Mans GT3": "LMGT3",
-        "GT3": "LMGT3"
+        "GT3": "LMGT3",
+
+        //Vendors
+        "Short Alpine": "ALP",
+        "Short Aston Martin": "AST",
+        "Short BMW": "BMW",
+        "Short Cadillac": "CAD",
+        "Short Chevrolet": "COR",
+        "Short Ferrari": "FER",
+        "Short Ford Motor": "FOR",
+        "Short Genesis": "GEN",
+        "Short Glickenhaus": "GLI",
+        "Short Lamborghini": "LAM",
+        "Short Lexus": "LEX",
+        "Short McLaren": "MCL",
+        "Short Mercedes-Benz": "MER",
+        "Short Peugeot": "PEU",
+        "Short Porsche AG": "POR",
+        "Short Toyota": "TOY",
     }
 }

@@ -22,10 +22,11 @@
         {
             "BlockType": "component",
             "Component": "card_head",
+            "PositionZ": 2,
             "PositionX": 50,
-            "PositionY": 40,
-            "PositionZ": 2
-        }, {
+            "PositionY": 60
+        },
+        {
             "BlockType": "itemstack",
             "HorizontalAlignment": "Center",
             "Width": 343,
@@ -78,17 +79,23 @@
             }
         },
         {
-            "BlockType": "text",
+            "BlockType": "dock",
+            "Width": 343,
             "PositionX": 0,
             "PositionY": 620,
             "PositionZ": 3,
-            "Source": "[<sessionLeader>]",
-            "FontSize": "<fontSize>",
-            "Width": 343,
-            "FontName": "{FontNameRegularItalic}",
-            "Foreground": "{LightBlue}",
-            "HorizontalAlignment": "Center",
-            "VerticalAlignment": "Bottom"
+            "Items": [
+                {
+                    "BlockType": "text",
+                    "Source": "[<sessionLeader>]",
+                    "FontSize": "<fontSize>",
+                    "FontName": "{FontSessionHead}",
+                    "Padding": "5",
+                    "Foreground": "{LightBlue}",
+                    "HorizontalAlignment": "Center",
+                    "VerticalAlignment": "Top"
+                }
+            ]
         },
         {
             "BlockType": "itemstack",
@@ -102,7 +109,7 @@
                     "BlockType": "text",
                     "Source": "[<sessionInfo>]",
                     "HorizontalAlignment": "Center",
-                    "FontName": "{FontNameBoldItalic}",
+                    "FontName": "{FontTiming}",
                     "Width": 343,
                     "Padding": "5,10,5,10",
                     "FontSize": 40,
@@ -148,7 +155,7 @@
                     "Items": [
                         {
                             "BlockType": "text",
-                            "Source": "[{Item.Driver.Name, Converter=StringToUpperString}]",
+                            "Source": "[{Item.Driver.{NameConvention}, Converter=StringToUpperString}]",
                             "HorizontalAlignment": "Center",
                             "Width": 343,
                             "Padding": "10",
@@ -163,13 +170,13 @@
                                     "BlockType": "stack",
                                     "Orientation": "Horizontal",
                                     "HorizontalAlignment": "Center",
-                                    "Spacing": 20,
-                                    "Padding": "5",
+                                    "Spacing": 10,
                                     "Items": [
                                         {
                                             "BlockType": "image",
                                             "Source": "{Item.Team.LogotypePath}",
                                             "Height": 70,
+                                            "PaddingLeft": 10,
                                             "HorizontalAlignment": "Center",
                                             "VerticalAlignment": "Center",
                                             "Triggers": [
@@ -180,22 +187,14 @@
                                         },
                                         {
                                             "BlockType": "text",
-                                            "Source": "[{Item.Team.Abbreviation, Converter=StringToUpperString}]",
-                                            "FontSize": 50,
+                                            "Source": "[{Item.{CarNumber}, Converter=StringToUpperString}]",
+                                            "FontSize": 80,
                                             "HorizontalAlignment": "Center",
                                             "VerticalAlignment": "Center",
-                                            "FontName": "{FontNameBoldItalic}",
-                                            "Triggers": [
-                                                {
-                                                    "Trigger": "NumberAbrevi"
-                                                },
-                                                {
-                                                    "Trigger": "NumberBadge"
-                                                },
-                                                {
-                                                    "Trigger": "NumberDriver"
-                                                }
-                                            ]
+                                            "FontName": "{FontNumeration}",
+                                            "PaddingRight": 10,
+                                            "MarginTop": 10,
+                                            "Padding": "5"
                                         }
                                     ]
                                 }
@@ -211,7 +210,7 @@
             "PositionY": 950,
             "PositionZ": 3,
             "Width": 343,
-            "Source": "#[{Session.Track.CircuitFullName, Converter=StringToUpperString}]",
+            "Source": "#[{Session.Track.Name, Converter=StringToUpperString}]",
             "FontSize": 14,
             "Triggers": [
                 {

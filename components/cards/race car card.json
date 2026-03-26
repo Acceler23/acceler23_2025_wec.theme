@@ -71,8 +71,7 @@
             "BlockType": "component",
             "Component": "card_head",
             "PositionX": 50,
-            "PositionY": 30,
-            "PositionZ": 2
+            "PositionY": 40
         },
         {
             "BlockType": "itemstack",
@@ -89,13 +88,11 @@
                     "Orientation": "Vertical",
                     "Items": [
                         {
-                            "BlockType": "stack",
+                            "BlockType": "dock",
                             "HorizontalAlignment": "Center",
                             "Width": 343,
-                            "Padding": "0,10,0,10",
-                            "FontSize": "{FontSizeMedium}",
+                            "Height": 95,
                             "BackgroundImage": "Session/leader_info.png",
-                            "Foreground": "{Item.Team.SecondaryColor}",
                             "ColorizeBackground": {
                                 "Color": "{Item.Team.Color}"
                             },
@@ -106,50 +103,37 @@
                             ],
                             "Items": [
                                 {
-                                    "BlockType": "dock",
-                                    "Width": 343,
+                                    "BlockType": "stack",
+                                    "Orientation": "Horizontal",
+                                    "HorizontalAlignment": "Center",
+                                    "VerticalAlignment": "Center",
+                                    "Spacing": 10,
                                     "Items": [
                                         {
-                                            "BlockType": "stack",
-                                            "Orientation": "Horizontal",
+                                            "BlockType": "image",
+                                            "Source": "{Item.Team.LogotypePath}",
+                                            "Height": 70,
                                             "HorizontalAlignment": "Center",
-                                            "Spacing": 10,
-                                            "Items": [
+                                            "VerticalAlignment": "Center",
+                                            "Triggers": [
                                                 {
-                                                    "BlockType": "image",
-                                                    "Source": "{Item.Team.LogotypePath}",
-                                                    "Height": "{CardLogoSize}",
-                                                    "HorizontalAlignment": "Center",
-                                                    "VerticalAlignment": "Center",
-                                                    "Triggers": [
-                                                        {
-                                                            "Trigger": "CarLogoRender"
-                                                        }
-                                                    ]
-                                                },
+                                                    "Trigger": "CarLogoRender"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "BlockType": "text",
+                                            "Source": "[{Item.{CarNumber}, Converter=StringToUpperString}]",
+                                            "Foreground": "{Item.Team.SecondaryColor}",
+                                            "FontName": "{FontNumeration}",
+                                            "FontSize": 90,
+                                            "Padding": "5",
+                                            "HorizontalAlignment": "Center",
+                                            "VerticalAlignment": "Center",
+                                            "MarginTop": 10,
+                                            "Triggers": [
                                                 {
-                                                    "BlockType": "text",
-                                                    "Source": "[{Item.Team.Abbreviation, Converter=StringToUpperString}]",
-                                                    "Foreground": "{Item.Team.SecondaryColor}",
-                                                    "FontSize": "{CardLogoSize}",
-                                                    "Padding": "5",
-                                                    "HorizontalAlignment": "Center",
-                                                    "VerticalAlignment": "Center",
-                                                    "FontName": "{FontNameRegularItalic}",
-                                                    "Triggers": [
-                                                        {
-                                                            "Trigger": "NumberAbrevi"
-                                                        },
-                                                        {
-                                                            "Trigger": "NumberBadge"
-                                                        },
-                                                        {
-                                                            "Trigger": "NumberDriver"
-                                                        },
-                                                        {
-                                                            "Trigger": "LeaderInfoColor"
-                                                        }
-                                                    ]
+                                                    "Trigger": "LeaderInfoColor"
                                                 }
                                             ]
                                         }
@@ -163,12 +147,12 @@
         },
         {
             "BlockType": "text",
-            "PositionY": 355,
+            "PositionY": 365,
             "PositionZ": 2,
             "Source": "[<sessionLeader>]",
             "FontSize": 100,
             "Width": 343,
-            "FontName": "{FontNameRegularItalic}",
+            "FontName": "{FontSessionHead}",
             "Foreground": "{LightBlue}",
             "HorizontalAlignment": "Center",
             "VerticalAlignment": "Bottom"
@@ -245,8 +229,8 @@
                             "Source": "[{Item.Team.FullName, Converter=StringToUpperString}]",
                             "VerticalAlignment": "Top",
                             "HorizontalAlignment": "Center",
-                            "FontName": "{FontNameBoldItalic}",
-                            "FontSize": 50,
+                            "FontName": "{FontTeamName}",
+                            "FontSize": 30,
                             "Width": 300,
                             "Height": 170,
                             "Padding": "5",
@@ -277,7 +261,7 @@
                 {
                     "BlockType": "text",
                     "HorizontalAlignment": "Center",
-                    "Source": "#[{Session.Track.CircuitFullName, Converter=StringToUpperString}]",
+                    "Source": "#[{Session.Track.Name, Converter=StringToUpperString}]",
                     "FontSize": 14,
                     "Triggers": [
                         {

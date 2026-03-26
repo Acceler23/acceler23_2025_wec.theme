@@ -1,0 +1,129 @@
+{
+    "ComponentName": "card_head_media",
+    "BackgroundImage": "media/standings_header",
+    "BlockType": "stack",
+    "Height": 150,
+    "Items": [
+        {
+            "BlockType": "dock",
+            "Padding": "100, 15",
+            "Orientation": "Horizontal",
+            "Items": [
+                {
+                    "BlockType": "stack",
+                    "Spacing": 10,
+                    "VerticalAlignment": "Center",
+                    "HorizontalAlignment": "Center",
+                    "Items": [
+                        {
+                            "BlockType": "stack",
+                            "Orientation": "Vertical",
+                            "VerticalAlignment": "Center",
+                            "HorizontalAlignment": "Center",
+                            "Height": 120,
+                            "Items": [
+                                {
+                                    "BlockType": "dock",
+                                    //"Background": "#dddddd",
+                                    "Height": 98,
+                                    "Width": 125,
+                                    "Items": [
+                                        {
+                                            "BlockType": "image",
+                                            "Source": "{Season.LogotypePath}",
+                                            "HorizontalAlignment": "Center",
+                                            "Height": 95
+                                        }
+                                    ]
+                                },
+                                {
+                                    "BlockType": "stack",
+                                    "Orientation": "Vertical",
+                                    "Items": [
+                                        {
+                                            "BlockType": "stack",
+                                            "Orientation": "Horizontal",
+                                            "Items": [
+                                                {
+                                                    "BlockType": "text",
+                                                    "Source": "[{Season.LeagueInfo.LeagueName, Converter=StringToUpperString}]",
+                                                    "FontName": "{FontLeagueCard}",
+                                                    "Foreground": "{White}",
+                                                    "FontSize": 11
+                                                },
+                                                {
+                                                    "BlockType": "text",
+                                                    "Source": " [{Season.Name, Converter=StringToUpperString}]",
+                                                    "FontName": "{FontLeagueCard}",
+                                                    "Foreground": "{LightBlue}",
+                                                    "FontSize": 11
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "BlockType": "text",
+                                            "Source": "CHAMPIONSHIP",
+                                            "FontName": "{FontLeagueCard}",
+                                            "Foreground": "{White}",
+                                            "FontSize": 11
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "BlockType": "canvas",
+                            "Items": [
+                                {
+                                    "BlockType": "image",
+                                    "Source": "Media/standings_head_name.png",
+                                    "Width": 240,
+                                    "PositionX": 0,
+                                    "PositionY": 0,
+                                    "Colorize": {
+                                        "Color": "{LightBlue}",
+                                        "ColorBlendingMode": "Normal"
+                                    }
+                                },
+                                {
+                                    "BlockType": "text",
+                                    "Source": "[{Session.Track.CircuitFullName, Converter=StringToUpperString}]",
+                                    "FontName": "{FontTrackName}",
+                                    "FontSize": "{CardFontSize}",
+                                    "Padding": "10",
+                                    "HorizontalAlignment": "Left",
+                                    "VerticalAlignment": "Center",
+                                    "Width": "{CardMaxWidth}",
+                                    "Height": 62,
+                                    "PositionY": 7,
+                                    "PositionX": -10,
+                                    "MarginTop": 5,
+                                    "Triggers": [
+                                        {
+                                            "Trigger": "NameDescription"
+                                        }
+                                    ],
+                                    "TextOptions": {
+                                        "Wrap": true,
+                                        "TextAlignment": "Start",
+                                        "VerticalAlignment": "Center"
+                                    }
+                                },
+                                {
+                                    "BlockType": "text",
+                                    "Source": "{Event.DateLocal, Converter=DateToYear}",
+                                    "FontName": "{FontYear}",
+                                    "Foreground": "{White}",
+                                    "FontSize": 17,
+                                    "Padding": "5",
+                                    "PositionY": 92,
+                                    "PositionX": 5
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

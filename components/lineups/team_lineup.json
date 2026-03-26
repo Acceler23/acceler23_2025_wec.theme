@@ -9,7 +9,7 @@
             "Source": "[{Item.Team.Name, Converter=StringToUpperString}]",
             "Foreground": "{DarkBlue}",
             "FontSize": 32,
-            "FontName": "{Font9}",
+            "FontName": "{FontGrid}",
             "HorizontalAlignment": "Center"
         },
         {

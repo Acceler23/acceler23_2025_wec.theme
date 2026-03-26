@@ -50,20 +50,6 @@
         },
         {
             "Category": "Fix & Tweaks",
-            "Name": "MediaFontSize",
-            "PublicName": "Media Font Size",
-            "Type": "Integer",
-            "DefaultValue": 25
-        },
-        {
-            "Category": "Fix & Tweaks",
-            "Name": "MediaMaxWidth",
-            "PublicName": "Media Text Max Width",
-            "Type": "Integer",
-            "DefaultValue": 200
-        },
-        {
-            "Category": "Fix & Tweaks",
             "Name": "DescriptionName",
             "PublicName": "Use Event Description as Event Name",
             "Type": "Bool",
@@ -71,10 +57,17 @@
         },
         {
             "Category": "Fix & Tweaks",
-            "Name": "TikTok",
-            "PublicName": "Tik Tok",
+            "Name": "TVsite",
+            "PublicName": "TV Site",
             "Type": "String",
-            "DefaultValue": "FIAWEC"
+            "DefaultValue": "FIAWEC.TV"
+        },
+        {
+            "Category": "Fix & Tweaks",
+            "Name": "TVDescription",
+            "PublicName": "TV Description",
+            "Type": "String",
+            "DefaultValue": "THE OFFICIAL STREAMING APP"
         },
         {
             "Category": "Fix & Tweaks",
@@ -82,6 +75,20 @@
             "PublicName": "Instagram",
             "Type": "String",
             "DefaultValue": "@FIAWEC_OFFICIAL"
+        },
+        {
+            "Category": "Fix & Tweaks",
+            "Name": "Youtube",
+            "PublicName": "YouTube",
+            "Type": "String",
+            "DefaultValue": "@FIAWEC"
+        },
+        {
+            "Category": "Fix & Tweaks",
+            "Name": "TikTok",
+            "PublicName": "Tik Tok",
+            "Type": "String",
+            "DefaultValue": "@FIAWEC"
         },
         {
             "Category": "Fix & Tweaks",
@@ -98,11 +105,12 @@
             "PublicName": "Car Number as",
             "Type": "Enum",
             "EnumValues": [
-                "Driver",
-                "Abbreviation",
-                "Badge"
+                "Driver.RaceNumber",
+                "Driver.Abbreviation",
+                "Driver.TextBadge",
+                "Team.Abbreviation"
             ],
-            "DefaultValue": "Abbreviation"
+            "DefaultValue": "Driver.RaceNumber"
         },
         //Calendar
         {
@@ -137,6 +145,22 @@
             "DefaultValue": 5,
             "MinimumValue": 1,
             "MaximumValue": 10
+        },
+        {
+            "Category": "Lineups",
+            "Name": "NameConvention",
+            "PublicName": "Driver Name Convention",
+            "Type": "Enum",
+            "EnumValues": [
+                "Name",
+                "RealName",
+                "InGameName",
+                "DiscordName",
+                "SteamName",
+                "BadgeText",
+                "Description"
+            ],
+            "DefaultValue": "Name"
         }
     ]
 }

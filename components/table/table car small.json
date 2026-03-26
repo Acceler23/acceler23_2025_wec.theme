@@ -5,31 +5,15 @@
     "Background": "{DarkBlue}",
     "Width": "*",
     "StretchWidth": true,
-    "MaxHeight": "{TableLineHeight}",
+    "Height": "{TableLineHeight}",
     "Items": [
-        {
-            "BlockType": "shape",
-            "Height": "{TableLineHeight}",
-            "Width": 5,
-            "HorizontalAlignment": "Left",
-            "VerticalAlignment": "Center",
-            "ShapeOptions": {
-                "Fill": "{Item.Team.Color}",
-                "ShapeType": "rectangle"
-            },
-            "Triggers": [
-                {
-                    "Trigger": "ShapeCarColorForeground"
-                }
-            ]
-        },
         {
             "BlockType": "text",
             "Source": "[{Item.Car.Vendor.Name, Converter=StringToUpperString}]",
             "HorizontalAlignment": "Left",
             "Background": "{DarkBlue}",
             "Style": "Session_Style",
-            "FontName": "{FontNameWideItalic}",
+            
             "Height": "{TableLineHeight}",
             "Width": 150,
             "PaddingLeft": 20,
@@ -44,7 +28,7 @@
         },
         {
             "BlockType": "text",
-            "Source": "[{Item.Driver.Name, Converter=StringToUpperString}]",
+            "Source": "[{Item.Driver.{NameConvention}, Converter=StringToUpperString}]",
             "Background": "{DarkBlue}",
             "Style": "Session_Style",
             "Height": "{TableLineHeight}",

@@ -41,7 +41,7 @@
                         {
                             "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
                             "Property": "Source",
-                            "Value": "{Item.Car.Vendor.LogotypePath}"
+                            "Value": "{Item.Car.Vendor.DarkLogotypePath}"
                         }
                     ]
                 }
@@ -85,7 +85,7 @@
                             "Source": "[{Item.Team.Car.CarClass.Name, Converter=StringToUpperString}]",
                             "Foreground": "{DarkBlue}",
                             "FontSize": 12,
-                            "FontName": "{Font8}",
+                            "FontName": "{FontLineups}",
                             "Triggers": [
                                 {
                                     "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
@@ -105,7 +105,7 @@
             "Source": "[{Item.Team.FullName, Converter=StringToUpperString}]",
             "Width": 350,
             "Foreground": "{DarkBlue}",
-            "FontName": "{Font9}",
+            "FontName": "{FontGrid}",
             "FontSize": 25,
             "Padding": "5",
             "TextOptions": {
@@ -116,7 +116,7 @@
                 {
                     "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
                     "Property": "Source",
-                    "Value": "[{Item.Driver.Name, Converter=StringToUpperString}]"
+                    "Value": "[{Item.Driver.{NameConvention}, Converter=StringToUpperString}]"
                 }
             ]
         },
@@ -170,28 +170,17 @@
                             "Padding": "5,5,0,0",
                             "Foreground": "{DarkBlue}",
                             "FontSize": 25,
-                            "FontName": "{Font8}",
+                            "FontName": "{FontLineups}",
                             "HorizontalAlignment": "Center"
                         },
                         {
                             "BlockType": "text",
-                            "Source": "[{Item.Driver.RaceNumber}]",
+                            "Source": "[{Item.{CarNumber}}]",
                             "Padding": "0,5,5,0",
                             "Foreground": "{DarkBlue}",
                             "FontSize": 25,
-                            "FontName": "{Font8}",
-                            "HorizontalAlignment": "Center",
-                            "Triggers": [
-                                {
-                                    "Trigger": "NumberAbrevi"
-                                },
-                                {
-                                    "Trigger": "NumberBadge"
-                                },
-                                {
-                                    "Trigger": "NumberDriver"
-                                }
-                            ]
+                            "FontName": "{FontLineups}",
+                            "HorizontalAlignment": "Center"
                         }
                     ]
                 }

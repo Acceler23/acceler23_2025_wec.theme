@@ -1,0 +1,239 @@
+{
+  "ComponentName": "result_session",
+  "BlockType": "stack",
+  "HorizontalAlignment": "Right",
+  "Width": "{TableOuterWidth}",
+  "Height": "{TableHeight}",
+  "BackgroundImage": "Session/Session_bg.png",
+  "BackgroundImageOpacity": 60,
+  "ColorizeBackground": {
+    "Color": "{DarkBlue}"
+  },
+  "Orientation": "Vertical",
+  "Items": [
+    {
+      "BlockType": "canvas",
+      "Orientation": "Vertical",
+      "HorizontalAlignment": "Center",
+      "Width": "{TableOuterWidth}",
+      "BackgroundImage": "Session/table_shade.png",
+      "ColorizeBackground": {
+        "Color": "{LightBlue}"
+      },
+      "Items": [
+        {
+          "BlockType": "component",
+          "Component": "session_head",
+          "PositionX": 118,
+          "PositionY": 60,
+          "ComponentOptions": {
+            "Vars": {
+              "sessionInfo": "{Session.SessionType}"
+            }
+          }
+        },
+        {
+          "BlockType": "shape",
+          "PositionX": 120,
+          "PositionY": 140,
+          "Width": 1145,
+          "Height": 2,
+          "Opacity": 30,
+          "ShapeOptions": {
+            "Fill": "{LightBlue}",
+            "ShapeType": "rectangle"
+          }
+        },
+        {
+          "BlockType": "dock",
+          "PositionX": 120,
+          "PositionY": 173,
+          "Width": 1145,
+          "Height": 38,
+          "Items": [
+            {
+              "BlockType": "text",
+              "Source": "[{Session.RacingClass.Name, Converter=StringToUpperString}]",
+              "FontName": "{FontTrackName}",
+              "FontSize": 25,
+              "Height": 38,
+              "MarginTop": 4,
+              "VerticalAlignment": "Center",
+              "HorizontalAlignment": "Left",
+              "Padding": "7",
+              "Background": "{Session.RacingClass.Color}",
+              "Foreground": "{Session.RacingClass.SecondaryColor}",
+              "TextOptions": {
+                "VerticalAlignment": "Bottom"
+              }
+            },
+            {
+              "BlockType": "text",
+              "Source": "[{Session.Track.CircuitFullName, Converter=StringToUpperString}]",
+              "FontName": "{FontTrackName}",
+              "FontSize": 25,
+              "Height": 38,
+              "VerticalAlignment": "Center",
+              "HorizontalAlignment": "Right",
+              "MarginTop": 4,
+              "Padding": "5",
+              "Triggers": [
+                {
+                  "Trigger": "NameDescription"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "BlockType": "stack",
+          "Width": "{TableWidth}",
+          "Height": 592,
+          "PositionX": 60,
+          "PositionY": 236,
+          "Items": [
+            {
+              "BlockType": "table",
+              "HorizontalAlignment": "Left",
+              "StretchWidth": true,
+              "Width": 1205,
+              "Height": 592,
+              "Triggers": [
+                {
+                  "Trigger": "TableParts"
+                }
+              ],
+              "TableOptions": {
+                "ItemsSource": "{Session.Drivers}",
+                "IndexStart": 0,
+                "IndexEnd": 9,
+                "RowSpacing": 12,
+                "HeaderTemplate": {
+                  "BlockType": "text"
+                },
+                "Columns": [
+                  {
+                    "Header": "",
+                    "Template": {
+                      "BlockType": "component",
+                      "Component": "table_position"
+                    }
+                  },
+                  {
+                    "Header": "",
+                    "Template": {
+                      "BlockType": "component",
+                      "Component": "table_logo"
+                    }
+                  },
+                  {
+                    "Header": "",
+                    "Template": {
+                      "BlockType": "component",
+                      "Component": "table_number"
+                    }
+                  },
+                  {
+                    "Header": "",
+                    "Template": {
+                      "BlockType": "component",
+                      "Component": "teamcar_color"
+                    }
+                  },
+                  {
+                    "Header": "",
+                    "Width": "<CarWidth>",
+                    "Template": {
+                      "BlockType": "component",
+                      "Component": "table_car",
+                      "Width": 840,
+                      "ComponentOptions": {
+                        "Vars": {
+                          "renderCar1": "<renderCar>"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Header": "",
+                    "Width": "<DriverWidth>",
+                    "Template": {
+                      "BlockType": "component",
+                      "Component": "table_driver",
+                      "Width": 840,
+                      "ComponentOptions": {
+                        "Vars": {
+                          "renderDriver1": "<renderDriver>"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Header": "",
+                    "Width": "<TeamWidth>",
+                    "Template": {
+                      "BlockType": "component",
+                      "Component": "table_team",
+                      "Width": 840,
+                      "ComponentOptions": {
+                        "Vars": {
+                          "renderTeam1": "<renderTeam>"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Header": "",
+                    "Template": {
+                      "BlockType": "component",
+                      "Component": "table_session",
+                      "ComponentOptions": {
+                        "Vars": {
+                          "sessionInfo": "{Item.Time, Converter=StringToUpperString}"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "BlockType": "component",
+          "Component": "fastest_lap",
+          "PositionX": 60,
+          "PositionY": 848,
+          "RenderIf": false,
+          "Triggers": [
+            {
+              "Condition": "{Session.SessionType, Converter=StringEquals, Parameter=Race}",
+              "ConditionAnd": "{Session.IsHaveRacingClass, Converter=BoolReverse}",
+              "Property": "RenderIf",
+              "Value": true
+            }
+          ]
+        },
+        {
+          "BlockType": "shape",
+          "PositionX": 70,
+          "PositionY": 906,
+          "Width": 1235,
+          "Height": 2,
+          "Opacity": 30,
+          "ShapeOptions": {
+            "Fill": "{White}",
+            "ShapeType": "rectangle"
+          }
+        },
+        {
+          "BlockType": "component",
+          "Component": "bottom_table",
+          "PositionX": 70,
+          "PositionY": 928
+        }
+      ]
+    }
+  ]
+}
+

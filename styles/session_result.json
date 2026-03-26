@@ -2,7 +2,18 @@
     {
         "StyleName": "Session_Style",
         "Foreground": "{White}",
-        "HorizontalAlignment": "Center",
+        "HorizontalAlignment": "Left",
+        "VerticalAlignment": "Bottom",
+        "FontName": "{FontTableRegular}",
+        "FontSize": 24,
+        "Padding": "10,12"
+    },
+    {
+        "StyleName": "FL_Stile",
+        "FontName": "{FontTiming}",
+        "Foreground": "{White}",
+        "Height": "{TableLineHeight}",
+        "HorizontalAlignment": "Left",
         "VerticalAlignment": "Center"
     }
 ]

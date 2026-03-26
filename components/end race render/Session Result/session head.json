@@ -1,0 +1,27 @@
+{
+    "ComponentName": "session_head",
+    "BlockType": "stack",
+    "Orientation": "Horizontal",
+    "Spacing": -10,
+    "Height": 60,
+    "Items": [
+        {
+            "BlockType": "text",
+            "Source": "[<sessionInfo>] [CLASSIFICATION]",
+            "FontName": "{FontSessionHead}",
+            "FontSize": 79,
+            "Foreground": "{White}",
+            "Padding": "5",
+            "MarginTop": -2
+        },
+        {
+            "BlockType": "text",
+            "Source": " [FINISH]",
+            "FontName": "{FontSessionHead}",
+            "FontSize": 79,
+            "Foreground": "{LightBlue}",
+            "Padding": "5",
+            "MarginTop": -2
+        }
+    ]
+}

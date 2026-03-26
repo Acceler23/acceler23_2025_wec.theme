@@ -56,6 +56,12 @@
                             "Component": "team_template_circle",
                             "PositionY": 790,
                             "PositionX": 405
+                        },
+                        {
+                            "BlockType": "text",
+                            "Source": "{Item.Team.UniqueId}",
+                            "PositionY": 790,
+                            "PositionX": 405
                         }
                     ]
                 }

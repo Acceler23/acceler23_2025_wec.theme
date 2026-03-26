@@ -145,6 +145,7 @@
                                     "Height": 90,
                                     "HorizontalAlignment": "Right",
                                     "VerticalAlignment": "Center",
+                                    "PaddingLeft": 10,
                                     "Triggers": [
                                         {
                                             "Trigger": "CarLogoRender"
@@ -153,24 +154,13 @@
                                 },
                                 {
                                     "BlockType": "text",
-                                    "Source": "[{Item.Team.Abbreviation, Converter=StringToUpperString}]",
+                                    "Source": "[{Item.{CarNumber}, Converter=StringToUpperString}]",
+                                    "FontName": "{FontNumeration}",
                                     "Foreground": "{White}",
                                     "FontSize": 70,
-                                    "Padding": "5,0,5,0",
+                                    "Padding": "5,0,10,0",
                                     "HorizontalAlignment": "Right",
-                                    "VerticalAlignment": "Center",
-                                    "FontName": "{FontNameBoldItalic}",
-                                    "Triggers": [
-                                        {
-                                            "Trigger": "NumberAbrevi"
-                                        },
-                                        {
-                                            "Trigger": "NumberBadge"
-                                        },
-                                        {
-                                            "Trigger": "NumberDriver"
-                                        }
-                                    ]
+                                    "VerticalAlignment": "Center"
                                 }
                             ]
                         }
@@ -182,9 +172,10 @@
         },
         {
             "BlockType": "itemstack",
+            "Background": "#dddddd",
             "Width": 343,
             "PositionX": 0,
-            "PositionY": 750,
+            "PositionY": 800,
             "PositionZ": 2,
             "HorizontalAlignment": "Center",
             "ItemStackOptions": {
@@ -194,19 +185,19 @@
                     "BlockType": "dock",
                     "VerticalAlignment": "Top",
                     "HorizontalAlignment": "Center",
-                    "Width": 303,
-                    "Margin": "20,0,20,0",
+                    "Background": "#ff0000",
+                    "Width": 343,
                     "Orientation": "Horizontal",
                     "Items": [
                         {
                             "BlockType": "text",
+                            "Background": "#00ff00",
                             "Source": "[{Item.Team.FullName, Converter=StringToUpperString}]",
                             "VerticalAlignment": "Top",
                             "HorizontalAlignment": "Center",
-                            "FontName": "{FontNameBoldItalic}",
-                            "FontSize": 50,
-                            "MaxWidth": 303,
-                            "Height": 150,
+                            "FontName": "{FontTeamName}",
+                            "FontSize": 40,
+                            "Width": 250,
                             "Padding": "5",
                             "TextOptions": {
                                 "Wrap": true,
@@ -237,14 +228,11 @@
                     "Padding": "10",
                     "VerticalAlignment": "Bottom",
                     "HorizontalAlignment": "Center",
-                    "Source": "#[{Standings.LastEvent.Track.CircuitFullName, Converter=StringToUpperString}]",
+                    "Source": "#[{Standings.LastEvent.Track.Name, Converter=StringToUpperString}]",
                     "FontSize": 14,
                     "Triggers": [
                         {
-                            "Condition": "{DescriptionName}",
-                            "ConditionAnd": "{Standings.LastEvent.Description, Converter=EmptyObjectToFalse}",
-                            "Property": "Source",
-                            "Value": "{Standings.LastEvent.Description, Converter=StringToUpperString}"
+                            "Trigger": "NameDescription2"
                         }
                     ],
                     "TextOptions": {

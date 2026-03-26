@@ -3,34 +3,15 @@
     "BlockType": "stack",
     "RenderIf": "<renderCar1>",
     "Background": "{DarkBlue}",
-    "Width": 850,
-    "MaxHeight": "{TableLineHeight}",
+    "Height": "{TableLineHeight}",
+    "StretchWidth": true,
     "Items": [
         {
-            "BlockType": "shape",
-            "Height": "{TableLineHeight}",
-            "Width": 5,
-            "HorizontalAlignment": "Left",
-            "VerticalAlignment": "Center",
-            "ShapeOptions": {
-                "Fill": "{Item.Team.Color}",
-                "ShapeType": "rectangle"
-            },
-            "Triggers": [
-                {
-                    "Trigger": "ShapeCarColorForeground"
-                }
-            ]
-        },
-        {
             "BlockType": "text",
-            "Source": "[{Item.Car.Vendor.Name, Converter=StringToUpperString}]",
-            "HorizontalAlignment": "Left",
-            "Background": "{DarkBlue}",
+            "Source": "[Short {Item.Car.Vendor.Name}]",
             "Style": "Session_Style",
-            "FontName": "{FontNameWideItalic}",
-            "Height": "{TableLineHeight}",
-            "Width": 180,
+            "FontName": "{FontRaceNumber}",
+            "Width": 60,
             "PaddingLeft": 20,
             "Triggers": [
                 {
@@ -43,10 +24,9 @@
         },
         {
             "BlockType": "text",
-            "Source": "[{Item.Driver.Name, Converter=StringToUpperString}]",
-            "Background": "{DarkBlue}",
+            "Source": "[{Item.Driver.{NameConvention}, Converter=StringToUpperString}]",
             "Style": "Session_Style",
-            "Height": "{TableLineHeight}",
+            "FontName": "{FontRaceNumber}",
             "PaddingLeft": 20,
             "Triggers": [
                 {
