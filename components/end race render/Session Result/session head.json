@@ -3,12 +3,12 @@
     "BlockType": "stack",
     "Orientation": "Horizontal",
     "Spacing": -10,
-    "Height": 60,
+    "Height": 70,
     "Items": [
         {
             "BlockType": "text",
             "Source": "[<sessionInfo>] [CLASSIFICATION]",
-            "FontName": "{FontSessionHead}",
+            "FontName": "{Druk_Medium_Italic}",
             "FontSize": 79,
             "Foreground": "{White}",
             "Padding": "5",
@@ -17,7 +17,7 @@
         {
             "BlockType": "text",
             "Source": " [FINISH]",
-            "FontName": "{FontSessionHead}",
+            "FontName": "{Druk_Medium_Italic}",
             "FontSize": 79,
             "Foreground": "{LightBlue}",
             "Padding": "5",

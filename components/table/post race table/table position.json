@@ -1,0 +1,55 @@
+{
+    "ComponentName": "table_position",
+    "BlockType": "dock",
+    "HorizontalAlignment": "Center",
+    "VerticalAlignment": "Center",
+    "Height": "{TableLineHeight}",
+    "Width": 63,
+    "Items": [
+        {
+            "BlockType": "text",
+            "Width": 63,
+            "RenderIf": "{Item.Position, Converter=NumberNotEquals, Parameter=1}",
+            "Source": "{Item.Position}",
+            "Background": "{DarkBlue}",
+            "Style": "Session_Style",
+            "HorizontalAlignment": "Center"
+        },
+        {
+            "BlockType": "dock",
+            "Orientation": "Horizontal",
+            "Width": 63,
+            "Height": "{TableLineHeight}",
+            "RenderIf": "{Item.Position, Converter=NumberEquals, Parameter=1}",
+            "Items": [
+                {
+                    "BlockType": "stack",
+                    "HorizontalAlignment": "Center",
+                    "VerticalAlignment": "Center",
+                    "Items": [
+                        {
+                            "BlockType": "text",
+                            "Source": "{Item.Position}",
+                            "FontName": "{Archivo_Condensed_BlackItalic}",
+                            "Foreground": "{White}",
+                            "FontSize": 55,
+                            "HorizontalAlignment": "Center",
+                            "VerticalAlignment": "Center",
+                            "MarginTop": 3
+                        },
+                        {
+                            "BlockType": "text",
+                            "Source": "[st]",
+                            "Foreground": "{White}",
+                            "HorizontalAlignment": "Center",
+                            "VerticalAlignment": "Top",
+                            "MarginTop": 16,
+                            "FontSize": 22,
+                            "FontName": "{Archivo_SemiExp_Italic}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

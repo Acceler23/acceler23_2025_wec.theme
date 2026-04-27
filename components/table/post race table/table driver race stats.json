@@ -1,0 +1,20 @@
+{
+    "ComponentName": "table_driver_racestats",
+    "BlockType": "text",
+    "Height": "{TableLineHeight}",
+    "Source": "<data>",
+    "Background": "{DarkBlue}",
+    "Style": "Session_Style",
+    "Padding": "0",
+    "VerticalAlignment": "Center",
+    "HorizontalAlignment": "Center",
+    "FontName": "{Archivo_SemiBold_Italic}",
+    "Triggers": [
+        {
+            "Trigger": "LeaderColorTeam"
+        },
+        {
+            "Trigger": "LeaderColorCar"
+        }
+    ]
+}

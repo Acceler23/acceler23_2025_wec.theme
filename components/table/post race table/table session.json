@@ -1,0 +1,43 @@
+{
+    "ComponentName": "table_session",
+    "BlockType": "stack",
+    "Width": 160,
+    "Background": "{DarkBlue}",
+    "Height": "{TableLineHeight}",
+    "Triggers": [
+        {
+            "Trigger": "LeaderColorTeam"
+        },
+        {
+            "Trigger": "LeaderColorCar"
+        }
+    ],
+    "Items": [
+        {
+            "BlockType": "text",
+            "Source": "[<sessionInfo>]",
+            "Style": "Session_Style",
+            "FontName": "{Archivo_SemiBold_Italic}",
+            "TextOptions": {
+                "HorizontalAlignment": "Left"
+            },
+            "Triggers": [
+                {
+                    "Trigger": "LeaderColorTeam"
+                },
+                {
+                    "Trigger": "LeaderColorCar"
+                },
+                {
+                    "Trigger": "LeaderToLaps"
+                },
+                {
+                    "Condition": "<sessionInfo>",
+                    "ConditionValue": "DNF",
+                    "Property": "Source",
+                    "Value": "[RETIRED]"
+                }
+            ]
+        }
+    ]
+}

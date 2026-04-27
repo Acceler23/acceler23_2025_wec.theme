@@ -1,0 +1,105 @@
+{
+    "ComponentName": "table_pp",
+    "BlockType": "table",
+    "Triggers": [
+        {
+            "Condition": "{PageRender, Converter=NumberNotEquals, Parameter=1}",
+            "Setters": [
+                {
+                    "Property": "TableOptions.IndexStart",
+                    "Value": "{{{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=15}, Converter=NumberSubtract, Parameter=5}"
+                },
+                {
+                    "Property": "TableOptions.IndexEnd",
+                    "Value": "{{{PageRender, Converter=NumberSubtract, Parameter=1}, Converter=NumberMultiply, Parameter=15}, Converter=NumberAdd, Parameter=9}"
+                }
+            ]
+        }
+    ],
+    "TableOptions": {
+        "ItemsSource": "{Standings.Drivers}",
+        "IndexStart": 0,
+        "IndexEnd": 9,
+        "HeaderTemplate": {
+            "BlockType": "text"
+        },
+        "Columns": [
+            {
+                "Header": "",
+                "Template": {
+                    "BlockType": "component",
+                    "Component": "table_position_pp"
+                }
+            },
+            {
+                "Header": "",
+                "Template": {
+                    "BlockType": "component",
+                    "Component": "pp_separator"
+                }
+            },
+            {
+                "Header": "",
+                "Template": {
+                    "BlockType": "component",
+                    "Component": "table_logo_pp"
+                }
+            },
+            {
+                "Header": "",
+                "Template": {
+                    "BlockType": "component",
+                    "Component": "table_driver_pp"
+                }
+            },
+            {
+                "MultiColumnHeadersSource": "{Standings.Events}",
+                "MultiColumnItemsSource": "{Item.Events}",
+                "MultiColumnHeaderTemplate": {
+                    "BlockType": "stack",
+                    "HorizontalAlignment": "Center",
+                    "Orientation": "Horizontal",
+                    "PaddingBottom": 40,
+                    "Spacing": 5,
+                    "Items": [
+                        {
+                            "BlockType": "text",
+                            "Source": "[R]{Item.Position}",
+                            "FontName": "{Archivo_Condensed_BoldItalic}",
+                            "FontSize": 52,
+                            "Triggers": [
+                                {
+                                    "Condition": "{Season.SeasonCurrentNumberEvent}",
+                                    "ConditionValue": "{Item.Position}",
+                                    "Property": "Foreground",
+                                    "Value": "{LightBlue}"
+                                }
+                            ]
+                        },
+                        {
+                            "BlockType": "image",
+                            "Source": "{Item.Track.Nation.LogotypePath}",
+                            "Height": 38,
+                            "VerticalAlignment": "Bottom",
+                            "PaddingBottom": 3
+                        }
+                    ]
+                },
+                "Template": {
+                    "BlockType": "stack",
+                    "Orientation": "Horizontal",
+                    "Items": [
+                        {
+                            "BlockType": "component",
+                            "Component": "pp_separator"
+                        },
+                        {
+                            "BlockType": "Component",
+                            "Component": "table_points_pp"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

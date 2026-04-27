@@ -9,7 +9,14 @@
             "Source": "{Item.Team.LogotypePath}",
             "Height": 100,
             "HorizontalAlignment": "Center",
-            "VerticalAlignment": "Center"
+            "VerticalAlignment": "Center",
+            "Triggers": [
+                {
+                    "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+                    "Property": "Source",
+                    "Value": "{Item.Car.Vendor.LogotypePath}"
+                }
+            ]
         }
     ]
 }

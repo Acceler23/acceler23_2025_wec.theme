@@ -1,0 +1,34 @@
+{
+    "ComponentName": "table_spacer",
+    "BlockType": "stack",
+    "Background": "{DarkBlue}",
+    "Height": "{TableLineHeight}",
+    "Triggers": [
+        {
+            "Trigger": "LeaderColorTeam"
+        },
+        {
+            "Trigger": "LeaderColorCar"
+        }
+    ],
+    "Items": [
+        {
+            "BlockType": "shape",
+            "Height": 48,
+            "ShapeOptions": {
+                "Fill": "{Item.Team.Color}",
+                "ShapeType": "rectangle"
+            },
+            "Triggers": [
+                {
+                    "Trigger": "ShapeCarColorForeground"
+                },
+                {
+                    "Condition": "{Item.Position, Converter=NumberNotEquals, Parameter=1}",
+                    "Property": "ShapeOptions.Fill",
+                    "Value": "{DarkBlue}"
+                }
+            ]
+        }
+    ]
+}

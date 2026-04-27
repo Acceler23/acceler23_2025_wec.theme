@@ -36,7 +36,7 @@
                     "BlockType": "text",
                     "Source": "> > >",
                     "Padding": "15,0,15,0",
-                    "FontName": "{FontTiming}",
+                    "FontName": "{Archivo_SemiBold_Italic}",
                     "HorizontalAlignment": "Left",
                     "VerticalAlignment": "Bottom",
                     "MarginTop": 5
@@ -45,7 +45,7 @@
                     "BlockType": "text",
                     "Source": "[{Session.RacingClass.Name, Converter=StringToUpperString}]",
                     "Padding": "15,0,15,0",
-                    "FontName": "{FontTiming}",
+                    "FontName": "{Archivo_SemiBold_Italic}",
                     "HorizontalAlignment": "Left",
                     "VerticalAlignment": "Center",
                     "Triggers": [
@@ -60,7 +60,7 @@
                     "BlockType": "text",
                     "Source": "[PT]<pageNum>",
                     "Padding": "0,0,15,0",
-                    "FontName": "{FontTiming}",
+                    "FontName": "{Archivo_SemiBold_Italic}",
                     "HorizontalAlignment": "Left",
                     "VerticalAlignment": "Center",
                     "FontSize": 15
@@ -84,7 +84,7 @@
                             "Padding": "5",
                             "HorizontalAlignment": "Right",
                             "VerticalAlignment": "Center",
-                            "FontName": "{FontTiming}"
+                            "FontName": "{Archivo_SemiBold_Italic}"
                         },
                         {
                             "BlockType": "text",
@@ -94,7 +94,7 @@
                             "Source": "[ROUND] {Season.SeasonCurrentNumberEventExcludingNonChampionship} - [{Event.DateLocal, Converter=DateCustomFormat, Parameter=MMM}]. [{Event.DateLocal, Converter=DateCustomFormat, Parameter=dd}]",
                             "HorizontalAlignment": "Right",
                             "VerticalAlignment": "Center",
-                            "FontName": "{FontMediaRound}",
+                            "FontName": "{Druk_Heavy_Italic}",
                             "FontSize": 40,
                             "TextOptions": {
                                 "TextAlignment": "End"

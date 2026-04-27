@@ -1,0 +1,64 @@
+{
+    "ComponentName": "table_team",
+    "BlockType": "dock",
+    "RenderIf": "<renderTeam1>",
+    "Background": "{DarkBlue}",
+    "StretchWidth": true,
+    "Height": "{TableLineHeight}",
+    "Items": [
+        {
+            "BlockType": "text",
+            "Source": "[{Item.Team.FullName, Converter=StringToUpperString}]",
+            "Background": "{DarkBlue}",
+            "Style": "Session_Style",
+            "PaddingLeft": 20,
+            "Triggers": [
+                {
+                    "Trigger": "LeaderColorTeam"
+                },
+                {
+                    "Trigger": "LeaderColorCar"
+                },
+                {
+                    "Trigger": "TeamtoCarName"
+                }
+            ]
+        },
+        {
+            "BlockType": "text",
+            "Source": "",
+            "Background": "{DarkBlue}",
+            "Style": "Session_Style",
+            "HorizontalAlignment":"Right",
+            "PaddingRight": 50,
+            "Triggers": [
+                {
+                    "Condition": "{Item.Car.CarClass.Name, Converter=StringEquals, Parameter=Le Mans Hypercar}",
+                    "ConditionAnd": "{Item.Car.Name, Converter=StringNotEquals, Parameter=Aston Martin Valkyrie}",
+                    "Property": "Source",
+                    "Value": "HY"
+                },
+                {
+                    "Condition": "{Item.Team.Car.CarClass.Name, Converter=StringEquals, Parameter=Le Mans Hypercar}",
+                    "ConditionAnd": "{Item.Team.Car.Name, Converter=StringNotEquals, Parameter=Aston Martin Valkyrie}",
+                    "Property": "Source",
+                    "Value": "HY"
+                },
+                {
+                    "Trigger": "LeaderColorTeam"
+                },
+                {
+                    "Trigger": "LeaderColorCar"
+                }
+            ]
+        }
+    ],
+    "Triggers": [
+        {
+            "Trigger": "LeaderColorTeam"
+        },
+        {
+            "Trigger": "LeaderColorCar"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "ComponentName": "table_position_pp",
+    "BlockType": "dock",
+    "Height": 92,
+    "Width": 120,
+    "Background": "{GreyBlue}",
+    "Triggers": [
+        {
+            "Condition": "{Item.Index, Converter=NumberIsOdd}",
+            "Property": "Background",
+            "Value": "{DarkBlue}"
+        }
+    ],
+    "Items": [
+        {
+            "BlockType": "text",
+            "Source": "[P]{Item.Position}",
+            "FontName": "{Archivo_Condensed_BoldItalic}",
+            "FontSize": 60,
+            "Height": 45,
+            "Width": 90,
+            "Margin": "20, 0, 0, 0",
+            "VerticalAlignment": "Center",
+            "HorizontalAlignment": "Left",
+            "TextOptions": {
+                "TextAlignment": "Start"
+            },
+            "Triggers": [
+                {
+                    "Condition": "{Item.Position, Converter=NumberEquals, Parameter=0}",
+                    "Property": "Source",
+                    "Value": "[NR]"
+                }
+            ]
+        }
+    ]
+}

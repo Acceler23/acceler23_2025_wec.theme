@@ -1,0 +1,32 @@
+{
+    "ComponentName": "table_number",
+    "BlockType": "dock",
+    "Background": "{DarkBlue}",
+    "Width": 80,
+    "Height": "{TableLineHeight}",
+    "Items": [
+        {
+            "BlockType": "text",
+            "Source": "{Item.{CarNumber}}",
+            "FontName": "{Archivo_BlackItalic}",
+            "Style": "Session_Style",
+            "HorizontalAlignment": "Center",
+            "Triggers": [
+                {
+                    "Trigger": "LeaderColorTeam"
+                },
+                {
+                    "Trigger": "LeaderColorCar"
+                }
+            ]
+        }
+    ],
+    "Triggers": [
+        {
+            "Trigger": "LeaderColorTeam"
+        },
+        {
+            "Trigger": "LeaderColorCar"
+        }
+    ]
+}

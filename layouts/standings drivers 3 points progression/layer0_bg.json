@@ -1,0 +1,34 @@
+{
+    "BlockRoot": {
+        "BlockType": "itemstack",
+        "ItemStackOptions": {
+            "Limit": 1,
+            "IndexStart": 0,
+            "ItemSource": "{Standings.Drivers}",
+            "ItemTemplate": {
+                "BlockType": "image",
+                "Width": 3000,
+                "Source": "media/standings_bg_shade",
+                "Colorize": {
+                    "Color": "{LightBlue}",
+                    "ColorBlendingMode": "Multiply"
+                },
+                "Triggers": [
+                    {
+                        "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Teams}",
+                        "ConditionAnd": "{Item.Team.Color, Converter=EmptyObjectToFalse}",
+                        "Property": "Colorize.Color",
+                        "Value": "{Item.Team.Color}"
+                    },
+                    {
+                        "Condition": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Cars}",
+                        "ConditionAnd": "{Item.Car.Color, Converter=EmptyObjectToFalse}",
+                        "Property": "Colorize.Color",
+                        "Value": "{Item.Car.Color}"
+                    }
+                ]
+            }
+        }
+
+    }
+}

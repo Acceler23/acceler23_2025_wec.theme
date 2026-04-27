@@ -1,0 +1,54 @@
+{
+    "ComponentName": "table_logo_pp",
+    "BlockType": "canvas",
+    "Height": 92,
+    "Width": 100,
+    "HorizontalAlignment": "Left",
+    "VerticalAlignment": "Center",
+    "Background": "{GreyBlue}",
+    "Triggers": [
+        {
+            "Condition": "{Item.Index, Converter=NumberIsOdd}",
+            "Property": "Background",
+            "Value": "{DarkBlue}"
+        }
+    ],
+    "Items": [
+        {
+            "BlockType": "shape",
+            "Height": 92,
+            "Width": 100,
+            "ShapeOptions": {
+                "ShapeType": "rectangle",
+                "Fill": "{GreyBlue}"
+            },
+            "Triggers": [
+                {
+                    "Condition": "{Item.Index, Converter=NumberIsOdd}",
+                    "Property": "ShapeOptions.Fill",
+                    "Value": "{DarkBlue}"
+                }
+            ]
+        },
+        {
+            "BlockType": "dock",
+            "Height": 92,
+            "Width": 100,
+            "Items": [
+                {
+                    "BlockType": "image",
+                    "Source": "{Item.Team.LightLogotypePath}",
+                    "HorizontalAlignment": "Center",
+                    "VerticalAlignment": "Center",
+                    "Height": 50,
+                    "Triggers": [
+                        {
+                            "Trigger": "CarLogoRender"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+
+}

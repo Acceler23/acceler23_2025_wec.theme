@@ -1,0 +1,31 @@
+{
+    "ComponentName": "table_driver_pp",
+    "BlockType": "stack",
+    "Orientation": "Horizontal",
+    "Height": 92,
+    "MinWidth": 450,
+    "Width": 600,
+    "Background": "{GreyBlue}",
+    "Triggers": [
+        {
+            "Condition": "{Item.Index, Converter=NumberIsOdd}",
+            "Property": "Background",
+            "Value": "{DarkBlue}"
+        }
+    ],
+    "Items": [
+        {
+            "BlockType": "text",
+            "Source": "[{Item.Driver.{NameConvention}, Converter=StringToUpperString}]",
+            "FontName": "{Archivo_Condensed_LightItalic}",
+            "FontSize": 40,
+            "Height": 45,
+            "Margin": "20, 0, 0, 0",
+            "HorizontalAlignment": "Left",
+            "VerticalAlignment": "Center",
+            "TextOptions": {
+                "TextAlignment": "Start"
+            }
+        }
+    ]
+}

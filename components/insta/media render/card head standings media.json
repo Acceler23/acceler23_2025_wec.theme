@@ -31,7 +31,7 @@
                                     "Items": [
                                         {
                                             "BlockType": "image",
-                                            "Source": "{Season.LogotypePath}",
+                                            "Source": "{Season.LightLogotypePath}",
                                             "HorizontalAlignment": "Center",
                                             "Height": 95
                                         }
@@ -49,25 +49,25 @@
                                                 {
                                                     "BlockType": "text",
                                                     "Source": "[{Season.LeagueInfo.LeagueName, Converter=StringToUpperString}]",
-                                                    "FontName": "{FontLeagueCard}",
+                                                    "FontName": "{Archivo_Bold}",
                                                     "Foreground": "{White}",
-                                                    "FontSize": 11
+                                                    "FontSize": "{Font_CardHead_Championship}"
                                                 },
                                                 {
                                                     "BlockType": "text",
                                                     "Source": " [{Season.Name, Converter=StringToUpperString}]",
-                                                    "FontName": "{FontLeagueCard}",
+                                                    "FontName": "{Archivo_Bold}",
                                                     "Foreground": "{LightBlue}",
-                                                    "FontSize": 11
+                                                    "FontSize": "{Font_CardHead_Championship}"
                                                 }
                                             ]
                                         },
                                         {
                                             "BlockType": "text",
-                                            "Source": "CHAMPIONSHIP",
-                                            "FontName": "{FontLeagueCard}",
+                                            "Source": "[CHAMPIONSHIP]",
+                                            "FontName": "{Archivo_Bold}",
                                             "Foreground": "{White}",
-                                            "FontSize": 11
+                                            "FontSize": "{Font_CardHead_Championship}"
                                         }
                                     ]
                                 }
@@ -90,7 +90,7 @@
                                 {
                                     "BlockType": "text",
                                     "Source": "[{Standings.LastEvent.Track.CircuitFullName, Converter=StringToUpperString}]",
-                                    "FontName": "{FontTrackName}",
+                                    "FontName": "{Druk_Wide_Bold_Italic}",
                                     "FontSize": "{CardFontSize}",
                                     "Padding": "10",
                                     "HorizontalAlignment": "Left",
@@ -114,7 +114,7 @@
                                 {
                                     "BlockType": "text",
                                     "Source": "{Standings.LastEvent.DateLocal, Converter=DateToYear}",
-                                    "FontName": "{FontYear}",
+                                    "FontName": "{Druk_Bold_Italic}",
                                     "Foreground": "{White}",
                                     "FontSize": 17,
                                     "Padding": "5",

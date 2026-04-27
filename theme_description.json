@@ -8,6 +8,9 @@
   "DefaultLocalizationId": "en-US",
   "ForceLiveriesLoading": true,
   "RequiredLogotypeVariants": {
+    "Championship":[
+      "Light"
+    ],
     "Team": 
     [
       "Dark",
@@ -46,6 +49,13 @@
       "UseFallbackSource": true,
       "UseFallbackVariant": true,
       "SetVariantByDefault": false
+    },
+    {
+      "Category": "Championship",
+      "Variant": "Light",
+      "UseFallbackSource": true,
+      "UseFallbackVariant": true,
+      "SetVariantByDefault": true
     }
   ]
 }

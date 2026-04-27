@@ -6,18 +6,42 @@
     "Height": 135,
     "Items": [
         {
-            "BlockType": "text",
-            "Source": "[{Season.LeagueInfo.LeagueFullName, Converter=StringToUpperString}] [{Standings.RacingClass.Name, Converter=StringToUpperString}] [{Season.Name, Converter=StringToUpperString}]",
-            "FontName": "{FontSessionHead}",
-            "FontSize": 79,
-            "Foreground": "{White}",
-            "Padding": "5",
-            "MarginTop": -2
+            "BlockType": "stack",
+            "Orientation": "Horizontal",
+            "Items": [
+                {
+                    "BlockType": "text",
+                    "Source": "[{Season.LeagueInfo.LeagueFullName, Converter=StringToUpperString}]",
+                    "FontName": "{Druk_Medium_Italic}",
+                    "FontSize": 79,
+                    "Foreground": "{White}",
+                    "Padding": "5",
+                    "MarginTop": -2
+                },
+                {
+                    "BlockType": "text",
+                    "Source": "[{Standings.RacingClass.Name, Converter=StringToUpperString}]",
+                    "FontName": "{Druk_Medium_Italic}",
+                    "FontSize": 79,
+                    "Foreground": "{White}",
+                    "Padding": "5",
+                    "MarginTop": -2
+                },
+                {
+                    "BlockType": "text",
+                    "Source": "[{Season.Name, Converter=StringToUpperString}]",
+                    "FontName": "{Druk_Medium_Italic}",
+                    "FontSize": 79,
+                    "Foreground": "{White}",
+                    "Padding": "5",
+                    "MarginTop": -2
+                }
+            ]
         },
         {
             "BlockType": "text",
             "Source": "[<sessionInfo>]",
-            "FontName": "{FontSessionHead}",
+            "FontName": "{Druk_Medium_Italic}",
             "FontSize": 79,
             "Foreground": "{LightBlue}",
             "Padding": "5",

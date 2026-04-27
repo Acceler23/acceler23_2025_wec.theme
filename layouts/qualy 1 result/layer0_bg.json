@@ -1,0 +1,6 @@
+{
+    "BlockRoot": {
+        "BlockType": "image",
+        "Source": "Track_images/{Session.Track.CircuitName}.png"
+    }
+}

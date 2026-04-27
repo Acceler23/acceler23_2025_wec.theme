@@ -7,7 +7,7 @@
             "BlockType": "text",
             "Source": "[{Season.Name, Converter=StringToUpperString}] [<type>]",
             "Foreground": "{DarkBlue}",
-            "FontName": "{FontGrid}",
+            "FontName": "{Druk_Wide_Bold}",
             "FontSize": 64,
             "Padding": "20",
             "HorizontalAlignment": "Center"
@@ -21,7 +21,7 @@
                     "BlockType": "text",
                     "Source": "[{Season.GridSize, Converter=StringToUpperString}] [DRIVERS]",
                     "Foreground": "{DarkBlue}",
-                    "FontName": "{FontLineups}",
+                    "FontName": "{Archivo_Expanded_SemiBold}",
                     "FontSize": 16,
                     "Padding": "24,{lineupSize}",
                     "VerticalAlignment": "Center"
@@ -39,7 +39,7 @@
                     "BlockType": "text",
                     "Source": "[{Season.SeasonOverallNumberEventsExcludingNonChampionship, Converter=StringToUpperString}] [RACES]",
                     "Foreground": "{DarkBlue}",
-                    "FontName": "{FontLineups}",
+                    "FontName": "{Archivo_Expanded_SemiBold}",
                     "FontSize": 16,
                     "Padding": "24,{lineupSize}",
                     "VerticalAlignment": "Center"

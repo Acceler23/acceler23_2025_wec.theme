@@ -7,7 +7,7 @@
             "BlockType": "text",
             "Source": "[{Season.Name, Converter=StringToUpperString}] [GRID]",
             "Foreground": "{DarkBlue}",
-            "FontName": "{FontGrid}",
+            "FontName": "{Druk_Wide_Bold}",
             "FontSize": 64,
             "Padding": "20",
             "HorizontalAlignment": "Center"
@@ -28,7 +28,7 @@
                             "BlockType": "text",
                             "Source": "[{Item.Team.Name, Converter=StringToUpperString}]",
                             "Foreground": "{DarkBlue}",
-                            "FontName": "{FontLineups}",
+                            "FontName": "{Archivo_Expanded_SemiBold}",
                             "FontSize": 16,
                             "Padding": "24,8",
                             "VerticalAlignment": "Center"
@@ -62,7 +62,7 @@
                             "BlockType": "text",
                             "Source": "[{Item.Team.Name, Converter=StringToUpperString}]",
                             "Foreground": "{DarkBlue}",
-                            "FontName": "{FontLineups}",
+                            "FontName": "{Archivo_Expanded_SemiBold}",
                             "FontSize": 16,
                             "Padding": "24,8",
                             "VerticalAlignment": "Center"

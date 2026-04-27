@@ -54,7 +54,7 @@
             {
               "BlockType": "text",
               "Source": "[{Session.RacingClass.Name, Converter=StringToUpperString}]",
-              "FontName": "{FontTrackName}",
+              "FontName": "{Druk_Wide_Bold_Italic}",
               "FontSize": 25,
               "Height": 38,
               "MarginTop": 4,
@@ -70,7 +70,7 @@
             {
               "BlockType": "text",
               "Source": "[{Session.Track.CircuitFullName, Converter=StringToUpperString}]",
-              "FontName": "{FontTrackName}",
+              "FontName": "{Druk_Wide_Bold_Italic}",
               "FontSize": 25,
               "Height": 38,
               "VerticalAlignment": "Center",

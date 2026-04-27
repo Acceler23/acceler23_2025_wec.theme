@@ -11,10 +11,10 @@
             "VerticalAlignment": "Center",
             "Padding": "10,43,10,0",
             "Height": 90,
-            "FontSize": 120,
+            "FontSize": "{Font_MediaHeader}",
             "Source": "[<info1>]",
             "Foreground": "{White}",
-            "FontName": "{FontMediaHead}"
+            "FontName": "{Druk_Wide_Super_Italic}"
         },
         {
             "BlockType": "text",
@@ -22,10 +22,10 @@
             "Padding": "10,43,10,0",
             "HorizontalAlignment": "Center",
             "VerticalAlignment": "Center",
-            "FontSize": 120,
+            "FontSize": "{Font_MediaHeader}",
             "Source": "[<info2>]",
             "Foreground": "{LightBlue}",
-            "FontName": "{FontMediaHead}"
+            "FontName": "{Druk_Wide_Super_Italic}"
         }
     ]
 }

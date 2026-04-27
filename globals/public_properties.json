@@ -7,6 +7,9 @@
             "Name": "Results"
         },
         {
+            "Name": "Free Stats"
+        },
+        {
             "Name": "Championship"
         },
         {
@@ -112,6 +115,193 @@
             ],
             "DefaultValue": "Driver.RaceNumber"
         },
+
+        //Free Stats
+        {
+            "Category": "Free Stats",
+            "Name": "RaceStatsCollum1",
+            "PublicName": "Race Stats Collum 1",
+            "Type": "Enum",
+            "EnumValues": [
+                "none",
+                "Time",
+                "IntervalRace",
+                "AbsoluteTime",
+                "FastestLapTime",
+                "FastestLapNumLap",
+                "FastestLapSector1",
+                "FastestLapSector2",
+                "FastestLapSector3",
+                "PenaltyTimeIngame",
+                "PenaltyPosIngame",
+                "PenaltyTimeStewards",
+                "PenaltyPosStewards",
+                "PenaltyTimeTotal",
+                "PenaltyPosTotal",
+                "PenaltyPoints",
+                "DriverPointsString",
+                "TeamPoints",
+                "LapsCount",
+                "GridPosition",
+                "PositionJump",
+                "PitsCount",
+                "OvertakesCount",
+                "LosePositionsCount",
+                "MaxSpeed",
+                "LeadLaps",
+                "LeadDistance",
+                "RaceDistancePercentage"
+            ],
+            "DefaultValue": "Time"
+        },
+        {
+            "Category": "Free Stats",
+            "Name": "RaceStatsCollum2",
+            "PublicName": "Race Stats Collum 2",
+            "Type": "Enum",
+            "EnumValues": [
+                "none",
+                "Time",
+                "IntervalRace",
+                "AbsoluteTime",
+                "FastestLapTime",
+                "FastestLapNumLap",
+                "FastestLapSector1",
+                "FastestLapSector2",
+                "FastestLapSector3",
+                "PenaltyTimeIngame",
+                "PenaltyPosIngame",
+                "PenaltyTimeStewards",
+                "PenaltyPosStewards",
+                "PenaltyTimeTotal",
+                "PenaltyPosTotal",
+                "PenaltyPoints",
+                "DriverPointsString",
+                "TeamPoints",
+                "LapsCount",
+                "GridPosition",
+                "PositionJump",
+                "PitsCount",
+                "OvertakesCount",
+                "LosePositionsCount",
+                "MaxSpeed",
+                "LeadLaps",
+                "LeadDistance",
+                "RaceDistancePercentage"
+            ],
+            "DefaultValue": "IntervalRace"
+        },
+        {
+            "Category": "Free Stats",
+            "Name": "RaceStatsCollum3",
+            "PublicName": "Race Stats Collum 3",
+            "Type": "Enum",
+            "EnumValues": [
+                "none",
+                "Time",
+                "IntervalRace",
+                "AbsoluteTime",
+                "FastestLapTime",
+                "FastestLapNumLap",
+                "FastestLapSector1",
+                "FastestLapSector2",
+                "FastestLapSector3",
+                "PenaltyTimeIngame",
+                "PenaltyPosIngame",
+                "PenaltyTimeStewards",
+                "PenaltyPosStewards",
+                "PenaltyTimeTotal",
+                "PenaltyPosTotal",
+                "PenaltyPoints",
+                "DriverPointsString",
+                "TeamPoints",
+                "LapsCount",
+                "GridPosition",
+                "PositionJump",
+                "PitsCount",
+                "OvertakesCount",
+                "LosePositionsCount",
+                "MaxSpeed",
+                "LeadLaps",
+                "LeadDistance",
+                "RaceDistancePercentage"
+            ],
+            "DefaultValue": "AbsoluteTime"
+        },
+        {
+            "Category": "Free Stats",
+            "Name": "RaceStatsCollum4",
+            "PublicName": "Race Stats Collum 4",
+            "Type": "Enum",
+            "EnumValues": [
+                "none",
+                "Time",
+                "IntervalRace",
+                "AbsoluteTime",
+                "FastestLapTime",
+                "FastestLapNumLap",
+                "FastestLapSector1",
+                "FastestLapSector2",
+                "FastestLapSector3",
+                "PenaltyTimeIngame",
+                "PenaltyPosIngame",
+                "PenaltyTimeStewards",
+                "PenaltyPosStewards",
+                "PenaltyTimeTotal",
+                "PenaltyPosTotal",
+                "PenaltyPoints",
+                "DriverPointsString",
+                "TeamPoints",
+                "LapsCount",
+                "GridPosition",
+                "PositionJump",
+                "PitsCount",
+                "OvertakesCount",
+                "LosePositionsCount",
+                "MaxSpeed",
+                "LeadLaps",
+                "LeadDistance",
+                "RaceDistancePercentage"
+            ],
+            "DefaultValue": "FastestLapTime"
+        },
+        {
+            "Category": "Free Stats",
+            "Name": "RaceStatsCollum5",
+            "PublicName": "Race Stats Collum 5",
+            "Type": "Enum",
+            "EnumValues": [
+                "none",
+                "Time",
+                "IntervalRace",
+                "AbsoluteTime",
+                "FastestLapTime",
+                "FastestLapNumLap",
+                "FastestLapSector1",
+                "FastestLapSector2",
+                "FastestLapSector3",
+                "PenaltyTimeIngame",
+                "PenaltyPosIngame",
+                "PenaltyTimeStewards",
+                "PenaltyPosStewards",
+                "PenaltyTimeTotal",
+                "PenaltyPosTotal",
+                "PenaltyPoints",
+                "DriverPointsString",
+                "TeamPoints",
+                "LapsCount",
+                "GridPosition",
+                "PositionJump",
+                "PitsCount",
+                "OvertakesCount",
+                "LosePositionsCount",
+                "MaxSpeed",
+                "LeadLaps",
+                "LeadDistance",
+                "RaceDistancePercentage"
+            ],
+            "DefaultValue": "FastestLapNumLap"
+        },
         //Calendar
         {
             "Category": "Calendar",
@@ -161,6 +351,118 @@
                 "Description"
             ],
             "DefaultValue": "Name"
+        },
+        {
+            "Category": "Lineups",
+            "Name": "LineupPosition1",
+            "PublicName": "Circle Linup Position 1",
+            "Description": "Top Center Position in the Lineup Circle for Cars",
+            "Type": "String",
+            "DefaultValue": "Alpine"
+        },
+        {
+            "Category": "Lineups",
+            "Name": "LineupPosition2",
+            "PublicName": "Circle Linup Position 2",
+            "Description": "Bottom Center Position in the Lineup Circle for Cars",
+            "Type": "String",
+            "DefaultValue": "Genesis"
+        },
+        {
+            "Category": "Lineups",
+            "Name": "LineupPosition3",
+            "PublicName": "Circle Linup Position 3",
+            "Description": "Left Above Center Position in the Lineup Circle for Cars",
+            "Type": "String",
+            "DefaultValue": "Peugeot"
+        },
+        {
+            "Category": "Lineups",
+            "Name": "LineupPosition4",
+            "PublicName": "Circle Linup Position 4",
+            "Description": "Right Below Center Position in the Lineup Circle for Cars",
+            "Type": "String",
+            "DefaultValue": "Chevrolet"
+        },
+        {
+            "Category": "Lineups",
+            "Name": "LineupPosition5",
+            "PublicName": "Circle Linup Position 5",
+            "Description": "Right Above Center Position in the Lineup Circle for Cars",
+            "Type": "String",
+            "DefaultValue": "Cadillac"
+        },
+        {
+            "Category": "Lineups",
+            "Name": "LineupPosition6",
+            "PublicName": "Circle Linup Position 6",
+            "Description": "Left Below Center Position in the Lineup Circle for Cars",
+            "Type": "String",
+            "DefaultValue": "Mercedes-Benz"
+        },
+        {
+            "Category": "Lineups",
+            "Name": "LineupPosition7",
+            "PublicName": "Circle Linup Position 7",
+            "Description": "Left Top Below Position in the Lineup Circle for Cars",
+            "Type": "String",
+            "DefaultValue": "Porsche AG"
+        },
+        {
+            "Category": "Lineups",
+            "Name": "LineupPosition8",
+            "PublicName": "Circle Linup Position 8",
+            "Description": "Right Bottom Above Position in the Lineup Circle for Cars",
+            "Type": "String",
+            "DefaultValue": "Ferrari"
+        },
+        {
+            "Category": "Lineups",
+            "Name": "LineupPosition9",
+            "PublicName": "Circle Linup Position 9",
+            "Description": "Right Top Below Position in the Lineup Circle for Cars",
+            "Type": "String",
+            "DefaultValue": "BMW"
+        },
+        {
+            "Category": "Lineups",
+            "Name": "LineupPosition10",
+            "PublicName": "Circle Linup Position 10",
+            "Description": "Left Bottom Above Position in the Lineup Circle for Cars",
+            "Type": "String",
+            "DefaultValue": "McLaren"
+        },
+        {
+            "Category": "Lineups",
+            "Name": "LineupPosition11",
+            "PublicName": "Circle Linup Position 11",
+            "Description": "Left Top Above Position in the Lineup Circle for Cars",
+            "Type": "String",
+            "DefaultValue": "Toyota"
+        },
+        {
+            "Category": "Lineups",
+            "Name": "LineupPosition12",
+            "PublicName": "Circle Linup Position 12",
+            "Description": "Right Bottom Below Position in the Lineup Circle for Cars",
+            "Type": "String",
+            "DefaultValue": "Ford Motor"
+        },
+        {
+            "Category": "Lineups",
+            "Name": "LineupPosition13",
+            "PublicName": "Circle Linup Position 13",
+            "Description": "Right Top Above Position in the Lineup Circle for Cars",
+            "Type": "String",
+            "DefaultValue": "Aston Martin"
+        },
+        {
+            "Category": "Lineups",
+            "Name": "LineupPosition14",
+            "PublicName": "Circle Linup Position 14",
+            "Description": "Left Bottom Below Position in the Lineup Circle for Cars",
+            "Type": "String",
+            "DefaultValue": "Lexus"
         }
     ]
 }
