@@ -65,261 +65,680 @@
                                 ]
                             },
                             {
-                                "BlockType": "table",
-                                "Margin": "60, 5, 60, 35",
-                                "Height": 650,
-                                "Width": 1200,
-                                "Triggers": [
+                                "BlockType": "dock",
+                                "Margin": "60, 0",
+                                "Orientation": "Horizontal",
+                                "Background": "#1000B9FF",
+                                "Width": 1500,
+                                "Items": [
                                     {
-                                        "Trigger": "TableParts"
-                                    }
-                                ],
-                                "TableOptions": {
-                                    "ItemsSource": "{Statistics.Drivers}",
-                                    "IndexStart": 0,
-                                    "IndexEnd": 9,
-                                    "RowSpacing": 15,
-                                    "HeaderTemplate": {
-                                        "BlockType": "text",
-                                        "Padding": "5",
-                                        "VerticalAlignment": "Bottom",
-                                        "HorizontalAlignment": "Center",
-                                        "FontName": "{Archivo_SemiBold_Italic}"
-                                    },
-                                    "Columns": [
-                                        {
-                                            "Header": "",
-                                            "Template": {
-                                                "BlockType": "component",
-                                                "Component": "table_position"
-                                            }
-                                        },
-                                        {
-                                            "Header": "",
-                                            "Template": {
-                                                "BlockType": "component",
-                                                "Component": "table_number"
-                                            }
-                                        },
-                                        {
-                                            "Header": "",
-                                            "Template": {
-                                                "BlockType": "component",
-                                                "Component": "teamcar_color"
-                                            }
-                                        },
-                                        {
-                                            "Header": "",
-                                            "Template": {
-                                                "BlockType": "component",
-                                                "Component": "table_driver",
-                                                "ComponentOptions": {
-                                                    "Vars": {
-                                                        "renderDriver1": "<renderDriver>"
+                                        "BlockType": "itemstack",
+                                        "Orientation": "Vertical",
+                                        "HorizontalAlignment": "Left",
+                                        "Spacing": 15,
+                                        "ItemStackOptions": {
+                                            "ItemSource": "{Statistics.Drivers}",
+                                            "IndexStart": 0,
+                                            "Limit": 10,
+                                            "ItemTemplate": {
+                                                "BlockType": "stack",
+                                                "Orientation": "Vertical",
+                                                "Items": [
+                                                    {
+                                                        "BlockType": "text",
+                                                        "Opacity": 0,
+                                                        "Height": 25,
+                                                        "Padding": "5",
+                                                        "Source": "Hide",
+                                                        "VerticalAlignment": "Bottom",
+                                                        "HorizontalAlignment": "Center",
+                                                        "FontName": "{Archivo_SemiBold_Italic}",
+                                                        "RenderIf": "{Item.Index, Converter=NumberEquals, Parameter=0}"
+                                                    },
+                                                    {
+                                                        "BlockType": "component",
+                                                        "Component": "table_position"
                                                     }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "Header": "",
-                                            "Template": {
-                                                "BlockType": "component",
-                                                "Component": "table_spacer"
-                                            }
-                                        },
-                                        //column 0
-                                        {
-                                            "Header": "[{Statistics.Column0.Header}]",
-                                            //"IsSeparator": "{Statistics.Column0.Type, Converter=EnumEquals, Parameter=Separator}",
-                                            "GroupId": "{Statistics.Column0.GroupId}",
-                                            "Template": {
-                                                "BlockType": "component",
-                                                "Component": "session_stats_cell",
-                                                "ComponentOptions": {
-                                                    "Vars": {
-                                                        "data": "Item.Value0"
-                                                    }
-                                                }
-                                            }
-                                        },
-
-                                        //column 1
-                                        {
-                                            "Header": "[{Statistics.Column1.Header}]",
-                                            //"IsSeparator": "{Statistics.Column1.Type, Converter=EnumEquals, Parameter=Separator}",
-                                            "GroupId": "{Statistics.Column1.GroupId}",
-                                            "Template": {
-                                                "BlockType": "component",
-                                                "Component": "session_stats_cell",
-                                                "ComponentOptions": {
-                                                    "Vars": {
-                                                        "data": "Item.Value1"
-                                                    }
-                                                }
-                                            }
-                                        },
-
-                                        //column 2
-                                        {
-                                            "Header": "[{Statistics.Column2.Header}]",
-                                            //"IsSeparator": "{Statistics.Column2.Type, Converter=EnumEquals, Parameter=Separator}",
-                                            "GroupId": "{Statistics.Column2.GroupId}",
-                                            "Template": {
-                                                "BlockType": "component",
-                                                "Component": "session_stats_cell",
-                                                "ComponentOptions": {
-                                                    "Vars": {
-                                                        "data": "Item.Value2"
-                                                    }
-                                                }
-                                            }
-                                        },
-
-                                        //column 3
-                                        {
-                                            "Header": "[{Statistics.Column3.Header}]",
-                                            //"IsSeparator": "{Statistics.Column3.Type, Converter=EnumEquals, Parameter=Separator}",
-                                            "GroupId": "{Statistics.Column3.GroupId}",
-                                            "Template": {
-                                                "BlockType": "component",
-                                                "Component": "session_stats_cell",
-                                                "ComponentOptions": {
-                                                    "Vars": {
-                                                        "data": "Item.Value3"
-                                                    }
-                                                }
-                                            }
-                                        },
-
-                                        //column 4
-                                        {
-                                            "Header": "[{Statistics.Column4.Header}]",
-                                            //"IsSeparator": "{Statistics.Column4.Type, Converter=EnumEquals, Parameter=Separator}",
-                                            "GroupId": "{Statistics.Column4.GroupId}",
-                                            "Template": {
-                                                "BlockType": "component",
-                                                "Component": "session_stats_cell",
-                                                "ComponentOptions": {
-                                                    "Vars": {
-                                                        "data": "Item.Value4"
-                                                    }
-                                                }
-                                            }
-                                        },
-
-                                        //column 5
-                                        {
-                                            "Header": "[{Statistics.Column5.Header}]",
-                                            //"IsSeparator": "{Statistics.Column5.Type, Converter=EnumEquals, Parameter=Separator}",
-                                            "GroupId": "{Statistics.Column5.GroupId}",
-                                            "Template": {
-                                                "BlockType": "component",
-                                                "Component": "session_stats_cell",
-                                                "ComponentOptions": {
-                                                    "Vars": {
-                                                        "data": "Item.Value5"
-                                                    }
-                                                }
-                                            }
-                                        },
-
-                                        //column 6
-                                        {
-                                            "Header": "[{Statistics.Column6.Header}]",
-                                            //"IsSeparator": "{Statistics.Column6.Type, Converter=EnumEquals, Parameter=Separator}",
-                                            "GroupId": "{Statistics.Column6.GroupId}",
-                                            "Template": {
-                                                "BlockType": "component",
-                                                "Component": "session_stats_cell",
-                                                "ComponentOptions": {
-                                                    "Vars": {
-                                                        "data": "Item.Value6"
-                                                    }
-                                                }
-                                            }
-                                        },
-
-                                        //column 7
-                                        {
-                                            "Header": "[{Statistics.Column7.Header}]",
-                                            //"IsSeparator": "{Statistics.Column7.Type, Converter=EnumEquals, Parameter=Separator}",
-                                            "GroupId": "{Statistics.Column7.GroupId}",
-                                            "Template": {
-                                                "BlockType": "component",
-                                                "Component": "session_stats_cell",
-                                                "ComponentOptions": {
-                                                    "Vars": {
-                                                        "data": "Item.Value7"
-                                                    }
-                                                }
-                                            }
-                                        },
-
-                                        //column 8
-                                        {
-                                            "Header": "[{Statistics.Column8.Header}]",
-                                            //"IsSeparator": "{Statistics.Column8.Type, Converter=EnumEquals, Parameter=Separator}",
-                                            "GroupId": "{Statistics.Column8.GroupId}",
-                                            "Template": {
-                                                "BlockType": "component",
-                                                "Component": "session_stats_cell",
-                                                "ComponentOptions": {
-                                                    "Vars": {
-                                                        "data": "Item.Value8"
-                                                    }
-                                                }
-                                            }
-                                        },
-
-                                        //column 9
-                                        {
-                                            "Header": "[{Statistics.Column9.Header}]",
-                                            //"IsSeparator": "{Statistics.Column9.Type, Converter=EnumEquals, Parameter=Separator}",
-                                            "GroupId": "{Statistics.Column9.GroupId}",
-                                            "Template": {
-                                                "BlockType": "component",
-                                                "Component": "session_stats_cell",
-                                                "ComponentOptions": {
-                                                    "Vars": {
-                                                        "data": "Item.Value9"
-                                                    }
-                                                }
-                                            }
-                                        },
-
-                                        //column 10
-                                        {
-                                            "Header": "[{Statistics.Column10.Header}]",
-                                            //"IsSeparator": "{Statistics.Column10.Type, Converter=EnumEquals, Parameter=Separator}",
-                                            "GroupId": "{Statistics.Column10.GroupId}",
-                                            "Template": {
-                                                "BlockType": "component",
-                                                "Component": "session_stats_cell",
-                                                "ComponentOptions": {
-                                                    "Vars": {
-                                                        "data": "Item.Value10"
-                                                    }
-                                                }
-                                            }
-                                        },
-
-                                        //column 11
-                                        {
-                                            "Header": "[{Statistics.Column11.Header}]",
-                                            //"IsSeparator": "{Statistics.Column11.Type, Converter=EnumEquals, Parameter=Separator}",
-                                            "GroupId": "{Statistics.Column11.GroupId}",
-                                            "Template": {
-                                                "BlockType": "component",
-                                                "Component": "session_stats_cell",
-                                                "ComponentOptions": {
-                                                    "Vars": {
-                                                        "data": "Item.Value11"
-                                                    }
-                                                }
+                                                ]
                                             }
                                         }
-                                    ]
-                                }
+                                    },
+                                    {
+                                        "BlockType": "itemstack",
+                                        "Orientation": "Vertical",
+                                        "HorizontalAlignment": "Left",
+                                        "Spacing": 15,
+                                        "ItemStackOptions": {
+                                            "ItemSource": "{Statistics.Drivers}",
+                                            "IndexStart": 0,
+                                            "Limit": 10,
+                                            "ItemTemplate": {
+                                                "BlockType": "stack",
+                                                "Orientation": "Vertical",
+                                                "Items": [
+                                                    {
+                                                        "BlockType": "text",
+                                                        "Height": 25,
+                                                        "Opacity": 0,
+                                                        "Padding": "5",
+                                                        "Source": "Hide",
+                                                        "VerticalAlignment": "Bottom",
+                                                        "HorizontalAlignment": "Center",
+                                                        "FontName": "{Archivo_SemiBold_Italic}",
+                                                        "RenderIf": "{Item.Index, Converter=NumberEquals, Parameter=0}"
+                                                    },
+                                                    {
+                                                        "BlockType": "text",
+                                                        "Source": "[{Item.Driver.{NameConvention}, Converter=StringToUpperString}]",
+                                                        "Background": "{DarkBlue}",
+                                                        "Style": "Session_Style",
+                                                        "PaddingLeft": 20,
+                                                        "Width": 600
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "BlockType": "stack",
+                                        "Orientation": "Vertical",
+                                        //"Background": "#ff0000",
+                                        "Width": "*",
+                                        "Spacing": 15,
+                                        "MarginTop": 35,
+                                        "Items": [
+                                            { "BlockType": "text", "Source": ".", "Background": "{DarkBlue}", "Foreground": "{DarkBlue}", "StretchWidth": true, "Height": 48 },
+                                            { "BlockType": "text", "Source": ".", "Background": "{DarkBlue}", "Foreground": "{DarkBlue}", "StretchWidth": true, "Height": 48 },
+                                            { "BlockType": "text", "Source": ".", "Background": "{DarkBlue}", "Foreground": "{DarkBlue}", "StretchWidth": true, "Height": 48 },
+                                            { "BlockType": "text", "Source": ".", "Background": "{DarkBlue}", "Foreground": "{DarkBlue}", "StretchWidth": true, "Height": 48 },
+                                            { "BlockType": "text", "Source": ".", "Background": "{DarkBlue}", "Foreground": "{DarkBlue}", "StretchWidth": true, "Height": 48 },
+                                            { "BlockType": "text", "Source": ".", "Background": "{DarkBlue}", "Foreground": "{DarkBlue}", "StretchWidth": true, "Height": 48 },
+                                            { "BlockType": "text", "Source": ".", "Background": "{DarkBlue}", "Foreground": "{DarkBlue}", "StretchWidth": true, "Height": 48 },
+                                            { "BlockType": "text", "Source": ".", "Background": "{DarkBlue}", "Foreground": "{DarkBlue}", "StretchWidth": true, "Height": 48 },
+                                            { "BlockType": "text", "Source": ".", "Background": "{DarkBlue}", "Foreground": "{DarkBlue}", "StretchWidth": true, "Height": 48 },
+                                            { "BlockType": "text", "Source": ".", "Background": "{DarkBlue}", "Foreground": "{DarkBlue}", "StretchWidth": true, "Height": 48 }
+                                        ]
+                                    },
+                                    {
+                                        "BlockType": "itemstack",
+                                        "Orientation": "Vertical",
+                                        "HorizontalAlignment": "Right",
+                                        "Spacing": 15,
+                                        "ItemStackOptions": {
+                                            "ItemSource": "{Statistics.Drivers}",
+                                            "IndexStart": 0,
+                                            "Limit": 10,
+                                            "ItemTemplate": {
+                                                "BlockType": "stack",
+                                                "Orientation": "Vertical",
+                                                "Width": "*",
+                                                "Triggers": [
+                                                    {
+                                                        "Condition": "{Statistics.Column0.Type, Converter=EnumEquals, Parameter=Separator}",
+                                                        "Property": "RenderIf",
+                                                        "Value": false
+                                                    }
+                                                ],
+                                                "Items": [
+                                                    {
+                                                        "BlockType": "text",
+                                                        "Height": 25,
+                                                        "Padding": "5",
+                                                        "Source": "[{Statistics.Column0.Header}]",
+                                                        "VerticalAlignment": "Bottom",
+                                                        "HorizontalAlignment": "Center",
+                                                        "FontName": "{Archivo_SemiBold_Italic}",
+                                                        "RenderIf": "{Item.Index, Converter=NumberEquals, Parameter=0}",
+                                                        "Width": "*"
+                                                    },
+                                                    {
+                                                        "BlockType": "stack",
+                                                        "Orientation": "Vertical",
+                                                        //"Background": "#0000ff",
+                                                        "Width": "*",
+                                                        "Background": "{DarkBlue}",
+                                                        "Height": "{TableLineHeight}",
+                                                        "Padding": "20, 0",
+                                                        "Items": [
+                                                            {
+                                                                "BlockType": "text",
+                                                                "Source": "{Item.Value0.Value}",
+                                                                //"Background": "#ffff00",
+                                                                "HorizontalAlignment": "Center",
+                                                                "Style": "Session_Style",
+                                                                "FontName": "{Archivo_SemiBold_Italic}",
+                                                                "Triggers": [
+                                                                    {
+                                                                        "Condition": "{Item.Value0.IsHighlighted}",
+                                                                        "Property": "Foreground",
+                                                                        "Value": "##AC24CE"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            //stint
+                                                            /*{
+                                                                "BlockType": "itemstack",
+                                                                "PaddingLeft": 20,
+                                                                "PaddingRight": 20,
+                                                                "Background": "{DarkBlue}",
+                                                                "Style": "Session_Style",
+                                                                "Triggers": [
+                                                                    {
+                                                                        "Trigger": "LeaderColorTeam"
+                                                                    },
+                                                                    {
+                                                                        "Trigger": "LeaderColorCar"
+                                                                    }
+                                                                ],
+                                                                "ItemStackOptions": {
+                                                                    "ItemSource": "{Item.Value0}",
+                                                                    "ItemTemplate": {
+                                                                        "BlockType": "stack",
+                                                                        "Height": "{TableLineHeight}",
+                                                                        "VerticalAlignment": "Center",
+                                                                        "Orientation": "Horizontal",
+                                                                        "Items": [
+                                                                            {
+                                                                                "BlockType": "image",
+                                                                                "Source": "tyres/tyres_{Item.Tyres}.png",
+                                                                                "VerticalAlignment": "Bottom",
+                                                                                "Height": 20,
+                                                                                "MaxHeight": 72,
+                                                                                "Style": "Session_Style",
+                                                                                "Padding": "10,0,0,0"
+                                                                            },
+                                                                            {
+                                                                                "BlockType": "text",
+                                                                                "Style": "Session_Style",
+                                                                                "VerticalAlignment": "Bottom",
+                                                                                "Foreground": "#ffffff",
+                                                                                "Source": "{Item.Laps}",
+                                                                                "FontName": "{Archivo_SemiBold_Italic}",
+                                                                                "Padding": "5, 0, 0, 0",
+                                                                                "MinWidth": 45,
+                                                                                "Triggers": [
+                                                                                    {
+                                                                                        "Condition": "{Item.IsPercentage}",
+                                                                                        "Setters": [
+                                                                                            {
+                                                                                                "Property": "Source",
+                                                                                                "Value": "{Item.Percentage, Converter=StringAdd, Parameter=%}"
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "Condition": "{Item.Tyres, Converter=StringEquals, Parameter=Hard}",
+                                                                                        "Property": "Foreground",
+                                                                                        "Value": "#FF0000"
+                                                                                    },
+                                                                                    {
+                                                                                        "Condition": "{Item.Tyres, Converter=StringEquals, Parameter=Medium}",
+                                                                                        "Property": "Foreground",
+                                                                                        "Value": "#949400"
+                                                                                    },
+                                                                                    {
+                                                                                        "Condition": "{Item.Tyres, Converter=StringEquals, Parameter=Soft}",
+                                                                                        "Property": "Foreground",
+                                                                                        "Value": "#FF8B8B8B"
+                                                                                    },
+                                                                                    {
+                                                                                        "Condition": "{Item.Tyres, Converter=StringEquals, Parameter=Wet}",
+                                                                                        "Property": "Foreground",
+                                                                                        "Value": "#0059FF"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }*/
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "BlockType": "itemstack",
+                                        "Orientation": "Vertical",
+                                        "HorizontalAlignment": "Right",
+                                        "Spacing": 15,
+                                        "ItemStackOptions": {
+                                            "ItemSource": "{Statistics.Drivers}",
+                                            "IndexStart": 0,
+                                            "Limit": 10,
+                                            "ItemTemplate": {
+                                                "BlockType": "stack",
+                                                "Orientation": "Vertical",
+                                                "Triggers": [
+                                                    {
+                                                        "Condition": "{Statistics.Column1.Type, Converter=EnumEquals, Parameter=Separator}",
+                                                        "Property": "RenderIf",
+                                                        "Value": false
+                                                    }
+                                                ],
+                                                "Items": [
+                                                    {
+                                                        "BlockType": "text",
+                                                        "Height": 25,
+                                                        "Padding": "5",
+                                                        "Source": "[{Statistics.Column1.Header}]",
+                                                        "VerticalAlignment": "Bottom",
+                                                        "HorizontalAlignment": "Center",
+                                                        "FontName": "{Archivo_SemiBold_Italic}",
+                                                        "RenderIf": "{Item.Index, Converter=NumberEquals, Parameter=0}"
+                                                    },
+                                                    {
+                                                        "BlockType": "component",
+                                                        "Component": "session_stats_cell",
+                                                        "StretchWidth": true,
+                                                        "ComponentOptions": {
+                                                            "Vars": {
+                                                                "data": "Item.Value1"
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "BlockType": "itemstack",
+                                        "Orientation": "Vertical",
+                                        "HorizontalAlignment": "Right",
+                                        "Spacing": 15,
+                                        "ItemStackOptions": {
+                                            "ItemSource": "{Statistics.Drivers}",
+                                            "IndexStart": 0,
+                                            "Limit": 10,
+                                            "ItemTemplate": {
+                                                "BlockType": "stack",
+                                                "Orientation": "Vertical",
+                                                "Triggers": [
+                                                    {
+                                                        "Condition": "{Statistics.Column2.Type, Converter=EnumEquals, Parameter=Separator}",
+                                                        "Property": "RenderIf",
+                                                        "Value": false
+                                                    }
+                                                ],
+                                                "Items": [
+                                                    {
+                                                        "BlockType": "text",
+                                                        "Height": 25,
+                                                        "Padding": "5",
+                                                        "Source": "[{Statistics.Column2.Header}]",
+                                                        "VerticalAlignment": "Bottom",
+                                                        "HorizontalAlignment": "Center",
+                                                        "FontName": "{Archivo_SemiBold_Italic}",
+                                                        "RenderIf": "{Item.Index, Converter=NumberEquals, Parameter=0}"
+                                                    },
+                                                    {
+                                                        "BlockType": "component",
+                                                        "Component": "session_stats_cell",
+                                                        "StretchWidth": true,
+                                                        "ComponentOptions": {
+                                                            "Vars": {
+                                                                "data": "Item.Value2"
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "BlockType": "itemstack",
+                                        "Orientation": "Vertical",
+                                        "HorizontalAlignment": "Right",
+                                        "Spacing": 15,
+                                        "ItemStackOptions": {
+                                            "ItemSource": "{Statistics.Drivers}",
+                                            "IndexStart": 0,
+                                            "Limit": 10,
+                                            "ItemTemplate": {
+                                                "BlockType": "stack",
+                                                "Orientation": "Vertical",
+                                                "Triggers": [
+                                                    {
+                                                        "Condition": "{Statistics.Column3.Type, Converter=EnumEquals, Parameter=Separator}",
+                                                        "Property": "RenderIf",
+                                                        "Value": false
+                                                    }
+                                                ],
+                                                "Items": [
+                                                    {
+                                                        "BlockType": "text",
+                                                        "Height": 25,
+                                                        "Padding": "5",
+                                                        "Source": "[{Statistics.Column3.Header}]",
+                                                        "VerticalAlignment": "Bottom",
+                                                        "HorizontalAlignment": "Center",
+                                                        "FontName": "{Archivo_SemiBold_Italic}",
+                                                        "RenderIf": "{Item.Index, Converter=NumberEquals, Parameter=0}"
+                                                    },
+                                                    {
+                                                        "BlockType": "component",
+                                                        "Component": "session_stats_cell",
+                                                        "StretchWidth": true,
+                                                        "ComponentOptions": {
+                                                            "Vars": {
+                                                                "data": "Item.Value3"
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "BlockType": "itemstack",
+                                        "Orientation": "Vertical",
+                                        "HorizontalAlignment": "Right",
+                                        "Spacing": 15,
+                                        "ItemStackOptions": {
+                                            "ItemSource": "{Statistics.Drivers}",
+                                            "IndexStart": 0,
+                                            "Limit": 10,
+                                            "ItemTemplate": {
+                                                "BlockType": "stack",
+                                                "Orientation": "Vertical",
+                                                "Triggers": [
+                                                    {
+                                                        "Condition": "{Statistics.Column4.Type, Converter=EnumEquals, Parameter=Separator}",
+                                                        "Property": "RenderIf",
+                                                        "Value": false
+                                                    }
+                                                ],
+                                                "Items": [
+                                                    {
+                                                        "BlockType": "text",
+                                                        "Height": 25,
+                                                        "Padding": "5",
+                                                        "Source": "[{Statistics.Column4.Header}]",
+                                                        "VerticalAlignment": "Bottom",
+                                                        "HorizontalAlignment": "Center",
+                                                        "FontName": "{Archivo_SemiBold_Italic}",
+                                                        "RenderIf": "{Item.Index, Converter=NumberEquals, Parameter=0}"
+                                                    },
+                                                    {
+                                                        "BlockType": "component",
+                                                        "Component": "session_stats_cell",
+                                                        "StretchWidth": true,
+                                                        "ComponentOptions": {
+                                                            "Vars": {
+                                                                "data": "Item.Value4"
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "BlockType": "itemstack",
+                                        "Orientation": "Vertical",
+                                        "HorizontalAlignment": "Right",
+                                        "Spacing": 15,
+                                        "ItemStackOptions": {
+                                            "ItemSource": "{Statistics.Drivers}",
+                                            "IndexStart": 0,
+                                            "Limit": 10,
+                                            "ItemTemplate": {
+                                                "BlockType": "stack",
+                                                "Orientation": "Vertical",
+                                                "Triggers": [
+                                                    {
+                                                        "Condition": "{Statistics.Column5.Type, Converter=EnumEquals, Parameter=Separator}",
+                                                        "Property": "RenderIf",
+                                                        "Value": false
+                                                    }
+                                                ],
+                                                "Items": [
+                                                    {
+                                                        "BlockType": "text",
+                                                        "Height": 25,
+                                                        "Padding": "5",
+                                                        "Source": "[{Statistics.Column5.Header}]",
+                                                        "VerticalAlignment": "Bottom",
+                                                        "HorizontalAlignment": "Center",
+                                                        "FontName": "{Archivo_SemiBold_Italic}",
+                                                        "RenderIf": "{Item.Index, Converter=NumberEquals, Parameter=0}"
+                                                    },
+                                                    {
+                                                        "BlockType": "component",
+                                                        "Component": "session_stats_cell",
+                                                        "StretchWidth": true,
+                                                        "ComponentOptions": {
+                                                            "Vars": {
+                                                                "data": "Item.Value5"
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "BlockType": "itemstack",
+                                        "Orientation": "Vertical",
+                                        "HorizontalAlignment": "Right",
+                                        "Spacing": 15,
+                                        "ItemStackOptions": {
+                                            "ItemSource": "{Statistics.Drivers}",
+                                            "IndexStart": 0,
+                                            "Limit": 10,
+                                            "ItemTemplate": {
+                                                "BlockType": "stack",
+                                                "Orientation": "Vertical",
+                                                "Triggers": [
+                                                    {
+                                                        "Condition": "{Statistics.Column6.Type, Converter=EnumEquals, Parameter=Separator}",
+                                                        "Property": "RenderIf",
+                                                        "Value": false
+                                                    }
+                                                ],
+                                                "Items": [
+                                                    {
+                                                        "BlockType": "text",
+                                                        "Height": 25,
+                                                        "Padding": "5",
+                                                        "Source": "[{Statistics.Column6.Header}]",
+                                                        "VerticalAlignment": "Bottom",
+                                                        "HorizontalAlignment": "Center",
+                                                        "FontName": "{Archivo_SemiBold_Italic}",
+                                                        "RenderIf": "{Item.Index, Converter=NumberEquals, Parameter=0}"
+                                                    },
+                                                    {
+                                                        "BlockType": "component",
+                                                        "Component": "session_stats_cell",
+                                                        "StretchWidth": true,
+                                                        "ComponentOptions": {
+                                                            "Vars": {
+                                                                "data": "Item.Value6"
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "BlockType": "itemstack",
+                                        "Orientation": "Vertical",
+                                        "HorizontalAlignment": "Right",
+                                        "Spacing": 15,
+                                        "ItemStackOptions": {
+                                            "ItemSource": "{Statistics.Drivers}",
+                                            "IndexStart": 0,
+                                            "Limit": 10,
+                                            "ItemTemplate": {
+                                                "BlockType": "stack",
+                                                "Orientation": "Vertical",
+                                                "Triggers": [
+                                                    {
+                                                        "Condition": "{Statistics.Column7.Type, Converter=EnumEquals, Parameter=Separator}",
+                                                        "Property": "RenderIf",
+                                                        "Value": false
+                                                    }
+                                                ],
+                                                "Items": [
+                                                    {
+                                                        "BlockType": "text",
+                                                        "Height": 25,
+                                                        "Padding": "5",
+                                                        "Source": "[{Statistics.Column7.Header}]",
+                                                        "VerticalAlignment": "Bottom",
+                                                        "HorizontalAlignment": "Center",
+                                                        "FontName": "{Archivo_SemiBold_Italic}",
+                                                        "RenderIf": "{Item.Index, Converter=NumberEquals, Parameter=0}"
+                                                    },
+                                                    {
+                                                        "BlockType": "component",
+                                                        "Component": "session_stats_cell",
+                                                        "StretchWidth": true,
+                                                        "ComponentOptions": {
+                                                            "Vars": {
+                                                                "data": "Item.Value7"
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "BlockType": "itemstack",
+                                        "Orientation": "Vertical",
+                                        "HorizontalAlignment": "Right",
+                                        "Spacing": 15,
+                                        "ItemStackOptions": {
+                                            "ItemSource": "{Statistics.Drivers}",
+                                            "IndexStart": 0,
+                                            "Limit": 10,
+                                            "ItemTemplate": {
+                                                "BlockType": "stack",
+                                                "Orientation": "Vertical",
+                                                "Triggers": [
+                                                    {
+                                                        "Condition": "{Statistics.Column8.Type, Converter=EnumEquals, Parameter=Separator}",
+                                                        "Property": "RenderIf",
+                                                        "Value": false
+                                                    }
+                                                ],
+                                                "Items": [
+                                                    {
+                                                        "BlockType": "text",
+                                                        "Height": 25,
+                                                        "Padding": "5",
+                                                        "Source": "[{Statistics.Column8.Header}]",
+                                                        "VerticalAlignment": "Bottom",
+                                                        "HorizontalAlignment": "Center",
+                                                        "FontName": "{Archivo_SemiBold_Italic}",
+                                                        "RenderIf": "{Item.Index, Converter=NumberEquals, Parameter=0}"
+                                                    },
+                                                    {
+                                                        "BlockType": "component",
+                                                        "Component": "session_stats_cell",
+                                                        "StretchWidth": true,
+                                                        "ComponentOptions": {
+                                                            "Vars": {
+                                                                "data": "Item.Value8"
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "BlockType": "itemstack",
+                                        "Orientation": "Vertical",
+                                        "HorizontalAlignment": "Right",
+                                        "Spacing": 15,
+                                        "ItemStackOptions": {
+                                            "ItemSource": "{Statistics.Drivers}",
+                                            "IndexStart": 0,
+                                            "Limit": 10,
+                                            "ItemTemplate": {
+                                                "BlockType": "stack",
+                                                "Orientation": "Vertical",
+                                                "Triggers": [
+                                                    {
+                                                        "Condition": "{Statistics.Column9.Type, Converter=EnumEquals, Parameter=Separator}",
+                                                        "Property": "RenderIf",
+                                                        "Value": false
+                                                    }
+                                                ],
+                                                "Items": [
+                                                    {
+                                                        "BlockType": "text",
+                                                        "Height": 25,
+                                                        "Padding": "5",
+                                                        "Source": "[{Statistics.Column9.Header}]",
+                                                        "VerticalAlignment": "Bottom",
+                                                        "HorizontalAlignment": "Center",
+                                                        "FontName": "{Archivo_SemiBold_Italic}",
+                                                        "RenderIf": "{Item.Index, Converter=NumberEquals, Parameter=0}"
+                                                    },
+                                                    {
+                                                        "BlockType": "component",
+                                                        "Component": "session_stats_cell",
+                                                        "StretchWidth": true,
+                                                        "ComponentOptions": {
+                                                            "Vars": {
+                                                                "data": "Item.Value9"
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "BlockType": "itemstack",
+                                        "Orientation": "Vertical",
+                                        "HorizontalAlignment": "Right",
+                                        "Spacing": 15,
+                                        "ItemStackOptions": {
+                                            "ItemSource": "{Statistics.Drivers}",
+                                            "IndexStart": 0,
+                                            "Limit": 10,
+                                            "ItemTemplate": {
+                                                "BlockType": "stack",
+                                                "Orientation": "Vertical",
+                                                "Triggers": [
+                                                    {
+                                                        "Condition": "{Statistics.Column10.Type, Converter=EnumEquals, Parameter=Separator}",
+                                                        "Property": "RenderIf",
+                                                        "Value": false
+                                                    }
+                                                ],
+                                                "Items": [
+                                                    {
+                                                        "BlockType": "text",
+                                                        "Height": 25,
+                                                        "Padding": "5",
+                                                        "Source": "[{Statistics.Column10.Header}]",
+                                                        "VerticalAlignment": "Bottom",
+                                                        "HorizontalAlignment": "Center",
+                                                        "FontName": "{Archivo_SemiBold_Italic}",
+                                                        "RenderIf": "{Item.Index, Converter=NumberEquals, Parameter=0}"
+                                                    },
+                                                    {
+                                                        "BlockType": "component",
+                                                        "Component": "session_stats_cell",
+                                                        "StretchWidth": true,
+                                                        "ComponentOptions": {
+                                                            "Vars": {
+                                                                "data": "Item.Value10"
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                ]
                             },
                             {
                                 "BlockType": "component",

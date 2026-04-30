@@ -1,7 +1,6 @@
 {
     "ComponentName": "table_spacer",
     "BlockType": "stack",
-    "Background": "{DarkBlue}",
     "Height": "{TableLineHeight}",
     "Triggers": [
         {
@@ -15,6 +14,7 @@
         {
             "BlockType": "shape",
             "Height": 48,
+            "Width": 10,
             "ShapeOptions": {
                 "Fill": "{Item.Team.Color}",
                 "ShapeType": "rectangle"
