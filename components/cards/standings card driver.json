@@ -152,7 +152,7 @@
                                                                     "Source": "[{Item.{CarNumber}, Converter=StringToUpperString}]",
                                                                     "Foreground": "{White}",
                                                                     "FontSize": 90,
-                                                                    "FontName": "{Druk_Condensed_Super}",
+                                                                    "FontName": "{FontNumeration}",
                                                                     "Padding": "5,5,10,5",
                                                                     "HorizontalAlignment": "Center",
                                                                     "VerticalAlignment": "Center"
@@ -188,7 +188,7 @@
                                                     "BlockType": "text",
                                                     "Source": "[{Item.Driver.{NameConvention}, Converter=StringToUpperString}]",
                                                     "VerticalAlignment": "Bottom",
-                                                    "FontName": "{Archivo_SemiCond_BlackItalic}",
+                                                    "FontName": "{FontTeamName}",
                                                     "Width": 260,
                                                     "FontSize": 40,
                                                     "TextOptions": {

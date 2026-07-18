@@ -1,12 +1,6 @@
 {
     "Name": "Spanish",
     "Id": "es-ES",
-    "Vars": {
-        "Font_CardHead_Championship": 11,
-        "Font_CardInfo_Winner": 100,
-        "Font_CardInfo_FL": 90,
-        "Font_MediaHeader": 95
-    },
     "Strings": {
         //Text
         "FASTEST DRIVER": "MAS RAPIDO",
@@ -24,7 +18,6 @@
         "RESULTS": "RESULTADOS",
         "TEAM": "EQUIPO",
         "TEAMS": "EQUIPOS",
-        "MANUFACTURES": "FABRICANTES",
         "GRID": "PARRILLA",
         "CHAMPIONSHIP": "CAMPEONATO",
         "#": "#",
@@ -79,35 +72,6 @@
         "RACES": "CARRERAS",
         "Pos.": "POS",
         "Quals": "CLASIF",
-
-        //Free stats
-        "TIME": "TIEMPO",
-        "INTERVALRACE": "INTERVALO",
-        "ABSOLUTETIME": "TIEMPO DE CARRERA",
-        "FASTESTLAPTIME": "VUELTA RAPIDA",
-        "FASTESTLAPNUMLAP": "NUM VR",
-        "FASTESTLAPSECTOR1": "VR S1",
-        "FASTESTLAPSECTOR2": "VR S2",
-        "FASTESTLAPSECTOR3": "VR S3",
-        "PENALTYTIMEINGAME": "TIEMPO PEN JUEGO",
-        "PENALTYPOSINGAME": "POS PEN JUEGO",
-        "PENALTYTIMESTEWARDS": "TIEMPO PEN",
-        "PENALTYPOSSTEWARDS": "POS PEN",
-        "PENALTYTIMETOTAL": "TIEMPO PEN TOTAL",
-        "PENALTYPOSTOTAL": "POS PEN TOTAL",
-        "PENALTYPOINTS": "PUNTOS PEN",
-        "DRIVERPOINTSSTRING": "PUNTOS PILOTO",
-        "TEAMPOINTS": "PUNTOS EQUIPO",
-        "LAPSCOUNT": "VUELTAS",
-        "GRIDPOSITION": "POS PARRILLA",
-        "POSITIONJUMP": "+/-",
-        "PITSCOUNT": "PITS",
-        "OVERTAKESCOUNT": "ADELANTAMIENTOS",
-        "LOSEPOSITIONSCOUNT": "POS PERDIDAS",
-        "MAXSPEED": "VEL MAX",
-        "LEADLAPS": "VUELTAS LIDER",
-        "LEADDISTANCE": "DISTANCIA LIDER",
-        "RACEDISTANCEPERCENTAGE": "PORCENTAJE CARRERA",
 
         //Days
         "01": "1",
@@ -190,26 +154,6 @@
         "LE MANS HYPERCARS": "HYPERCAR",
         "Le Mans Hypercars": "HYPERCAR",
         "Le Mans GT3": "LMGT3",
-        "GT3": "LMGT3",
-
-        //Vendors
-        "Short Alpine": "ALP",
-        "Short Aston Martin": "AST",
-        "Short BMW": "BMW",
-        "Short Cadillac": "CAD",
-        "Short Chevrolet": "COR",
-        "Short Ferrari": "FER",
-        "Short Ford Motor": "FOR",
-        "Short Genesis": "GEN",
-        "Short Glickenhaus": "GLI",
-        "Short Lamborghini": "LAM",
-        "Short Lexus": "LEX",
-        "Short McLaren": "MCL",
-        "Short Mercedes-Benz": "MER",
-        "Short Peugeot": "PEU",
-        "Short Porsche AG": "POR",
-        "Short Toyota": "TOY",
-        "Short Ginetta": "GIN",
-        "Short Ligier": "LIG"
+        "GT3": "LMGT3"
     }
 }

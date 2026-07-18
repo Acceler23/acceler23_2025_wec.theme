@@ -1,0 +1,36 @@
+{
+    "ComponentName": "table_team",
+    "BlockType": "stack",
+    "RenderIf": "<renderTeam1>",
+    "Background": "{DarkBlue}",
+    "StretchWidth": true,
+    "Height": "{TableLineHeight}",
+    "Items": [
+        {
+            "BlockType": "text",
+            "Source": "[{Item.Team.FullName, Converter=StringToUpperString}]",
+            "Background": "{DarkBlue}",
+            "Style": "Session_Style",
+            "PaddingLeft": 20,
+            "Triggers": [
+                {
+                    "Trigger": "LeaderColorTeam"
+                },
+                {
+                    "Trigger": "LeaderColorCar"
+                },
+                {
+                    "Trigger": "TeamtoCarName"
+                }
+            ]
+        }
+    ],
+    "Triggers": [
+        {
+            "Trigger": "LeaderColorTeam"
+        },
+        {
+            "Trigger": "LeaderColorCar"
+        }
+    ]
+}

@@ -43,32 +43,32 @@
                         {
                             "BlockType": "text",
                             "Source": "[{Season.LeagueInfo.LeagueName, Converter=StringToUpperString}]",
-                            "FontName": "{Archivo_Bold}",
+                            "FontName": "{FontLeagueCard}",
                             "Foreground": "{White}",
-                            "FontSize": "{Font_CardHead_Championship}"
+                            "FontSize": 11
                         },
                         {
                             "BlockType": "text",
                             "Source": " [{Season.Name, Converter=StringToUpperString}]",
-                            "FontName": "{Archivo_Bold}",
+                            "FontName": "{FontLeagueCard}",
                             "Foreground": "{LightBlue}",
-                            "FontSize": "{Font_CardHead_Championship}"
+                            "FontSize": 11
                         }
                     ]
                 },
                 {
                     "BlockType": "text",
-                    "Source": "[CHAMPIONSHIP]",
-                    "FontName": "{Archivo_Bold}",
+                    "Source": "CHAMPIONSHIP",
+                    "FontName": "{FontLeagueCard}",
                     "Foreground": "{White}",
-                    "FontSize": "{Font_CardHead_Championship}"
+                    "FontSize": 11
                 }
             ]
         },
         {
             "BlockType": "text",
             "Source": "[{Session.Track.CircuitFullName, Converter=StringToUpperString}]",
-            "FontName": "{Druk_Wide_Bold_Italic}",
+            "FontName": "{FontTrackName}",
             "FontSize": "{CardFontSize}",
             "Padding": "10",
             "HorizontalAlignment": "Left",
@@ -92,7 +92,7 @@
         {
             "BlockType": "text",
             "Source": "{Event.DateLocal, Converter=DateCustomFormat, Parameter=yyyy}",
-            "FontName": "{Druk_Bold_Italic}",
+            "FontName": "{FontYear}",
             "Foreground": "{White}",
             "FontSize": 17,
             "Padding": "5",

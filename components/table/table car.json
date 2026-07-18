@@ -1,0 +1,49 @@
+{
+    "ComponentName": "table_car",
+    "BlockType": "stack",
+    "RenderIf": "<renderCar1>",
+    "Background": "{DarkBlue}",
+    "Height": "{TableLineHeight}",
+    "StretchWidth": true,
+    "Items": [
+        {
+            "BlockType": "text",
+            "Source": "[Short {Item.Car.Vendor.Name}]",
+            "Style": "Session_Style",
+            "FontName": "{FontRaceNumber}",
+            "Width": 60,
+            "PaddingLeft": 20,
+            "Triggers": [
+                {
+                    "Trigger": "LeaderColorTeam"
+                },
+                {
+                    "Trigger": "LeaderColorCar"
+                }
+            ]
+        },
+        {
+            "BlockType": "text",
+            "Source": "[{Item.Driver.{NameConvention}, Converter=StringToUpperString}]",
+            "Style": "Session_Style",
+            "FontName": "{FontRaceNumber}",
+            "PaddingLeft": 20,
+            "Triggers": [
+                {
+                    "Trigger": "LeaderColorTeam"
+                },
+                {
+                    "Trigger": "LeaderColorCar"
+                }
+            ]
+        }
+    ],
+    "Triggers": [
+        {
+            "Trigger": "LeaderColorTeam"
+        },
+        {
+            "Trigger": "LeaderColorCar"
+        }
+    ]
+}

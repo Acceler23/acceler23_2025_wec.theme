@@ -81,20 +81,19 @@
         {
             "BlockType": "dock",
             "Width": 343,
-            "Height": 110,
             "PositionX": 0,
-            "PositionY": 610,
+            "PositionY": 620,
             "PositionZ": 3,
             "Items": [
                 {
                     "BlockType": "text",
                     "Source": "[<sessionLeader>]",
-                    "FontSize": "<FontSize>",
-                    "FontName": "{Druk_Medium_Italic}",
+                    "FontSize": "<fontSize>",
+                    "FontName": "{FontSessionHead}",
                     "Padding": "5",
                     "Foreground": "{LightBlue}",
                     "HorizontalAlignment": "Center",
-                    "VerticalAlignment": "Bottom"
+                    "VerticalAlignment": "Top"
                 }
             ]
         },
@@ -110,7 +109,7 @@
                     "BlockType": "text",
                     "Source": "[<sessionInfo>]",
                     "HorizontalAlignment": "Center",
-                    "FontName": "{Archivo_SemiBold_Italic}",
+                    "FontName": "{FontTiming}",
                     "Width": 343,
                     "Padding": "5,10,5,10",
                     "FontSize": 40,
@@ -192,7 +191,7 @@
                                             "FontSize": 80,
                                             "HorizontalAlignment": "Center",
                                             "VerticalAlignment": "Center",
-                                            "FontName": "{Druk_Condensed_Super}",
+                                            "FontName": "{FontNumeration}",
                                             "PaddingRight": 10,
                                             "MarginTop": 10,
                                             "Padding": "5"

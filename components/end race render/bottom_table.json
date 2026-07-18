@@ -22,13 +22,13 @@
                     "VerticalAlignment": "Center",
                     "Height": 22,
                     "MarginTop": 3,
-                    "FontName": "{Druk_Medium_Italic}"
+                    "FontName": "{FontSessionHead}"
                 },
                 {
                     "BlockType": "text",
                     "Source": "[{TVDescription}]",
                     "FontSize": 15,
-                    "FontName": "{Archivo_Expanded_SemiBold}",
+                    "FontName": "{FontTableBottom}",
                     "VerticalAlignment": "Center",
                     "Foreground": "{LightBlue}",
                     "Padding": "10,5,0,0"
@@ -51,8 +51,8 @@
                     "MarginLeft": 5,
                     "Source": "[{Instagram}]",
                     "VerticalAlignment": "Center",
-                    "FontName": "{Archivo_Expanded_SemiBold}",
-                    "FontSize": 15
+                    "FontName": "{FontTableBottom}",
+                    "FontSize": "{FontSizeSmall}"
                 },
                 {
                     "BlockType": "image",
@@ -66,8 +66,8 @@
                     "MarginLeft": 5,
                     "Source": "[{Youtube}]",
                     "VerticalAlignment": "Center",
-                    "FontName": "{Archivo_Expanded_SemiBold}",
-                    "FontSize": 15
+                    "FontName": "{FontTableBottom}",
+                    "FontSize": "{FontSizeSmall}"
                 },
                 {
                     "BlockType": "image",
@@ -81,8 +81,8 @@
                     "MarginLeft": 5,
                     "Source": "[{TikTok}]",
                     "VerticalAlignment": "Center",
-                    "FontName": "{Archivo_Expanded_SemiBold}",
-                    "FontSize": 15
+                    "FontName": "{FontTableBottom}",
+                    "FontSize": "{FontSizeSmall}"
                 }
             ]
         }

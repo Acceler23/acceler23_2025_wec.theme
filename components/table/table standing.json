@@ -1,0 +1,37 @@
+{
+    "ComponentName": "table_standing",
+    "BlockType": "dock",
+    "Background": "{DarkBlue}",
+    "Width": 160,
+    "Height": "{TableLineHeight}",
+    "Items": [
+        {
+            "BlockType": "text",
+            "Source": "{Item.Points}",
+            "Style": "Session_Style",
+            "HorizontalAlignment": "Right",
+            "FontName": "{FontTiming}",
+            "TextOptions": {
+                "TextAlignment": "End",
+                "HorizontalAlignment": "Right"
+            },
+            "MarginRight": 42,
+            "Triggers": [
+                {
+                    "Trigger": "LeaderColorTeam"
+                },
+                {
+                    "Trigger": "LeaderColorCar"
+                }
+            ]
+        }
+    ],
+    "Triggers": [
+        {
+            "Trigger": "LeaderColorTeam"
+        },
+        {
+            "Trigger": "LeaderColorCar"
+        }
+    ]
+}

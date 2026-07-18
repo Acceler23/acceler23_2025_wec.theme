@@ -4,13 +4,13 @@
         "Foreground": "{White}",
         "HorizontalAlignment": "Left",
         "VerticalAlignment": "Bottom",
-        "FontName": "{Archivo_SemiExp_Italic}",
+        "FontName": "{FontTableRegular}",
         "FontSize": 24,
         "Padding": "10,12"
     },
     {
         "StyleName": "FL_Stile",
-        "FontName": "{Archivo_SemiBold_Italic}",
+        "FontName": "{FontTiming}",
         "Foreground": "{White}",
         "Height": "{TableLineHeight}",
         "HorizontalAlignment": "Left",

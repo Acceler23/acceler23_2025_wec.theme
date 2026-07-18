@@ -7,7 +7,7 @@
             "BlockType": "text",
             "Source": "[{Season.Name, Converter=StringToUpperString}] [<type>]",
             "Foreground": "{DarkBlue}",
-            "FontName": "{Druk_Wide_Bold}",
+            "FontName": "{FontGrid}",
             "FontSize": 64,
             "Padding": "20",
             "HorizontalAlignment": "Center"
@@ -21,7 +21,7 @@
                     "BlockType": "text",
                     "Source": "[{Season.GridSize, Converter=StringToUpperString}] [DRIVERS]",
                     "Foreground": "{DarkBlue}",
-                    "FontName": "{Archivo_Expanded_SemiBold}",
+                    "FontName": "{FontLineups}",
                     "FontSize": 16,
                     "Padding": "24,{lineupSize}",
                     "VerticalAlignment": "Center"
@@ -39,7 +39,7 @@
                     "BlockType": "text",
                     "Source": "[{Season.SeasonOverallNumberEventsExcludingNonChampionship, Converter=StringToUpperString}] [RACES]",
                     "Foreground": "{DarkBlue}",
-                    "FontName": "{Archivo_Expanded_SemiBold}",
+                    "FontName": "{FontLineups}",
                     "FontSize": 16,
                     "Padding": "24,{lineupSize}",
                     "VerticalAlignment": "Center"
@@ -59,10 +59,10 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.<Lineups>}",
                         "CollectionPart": "1/{lineupSize}",
-                        "SortMember": "{Car.Vendor.Name}",
-                        "OrderByDescending": "{Car.CarClass.Name}",
-                        "OrderBy2": "{Car.Vendor.Name}",
-                        "OrderBy3": "{Driver.Name}",
+                        "SortMember": "Car.Vendor.Name",
+                        "OrderByDescending": "Car.CarClass.Name",
+                        "OrderBy2": "Car.Vendor.Name",
+                        "OrderBy3": "Driver.Name",
                         "ItemTemplate": {
                             "BlockType": "component",
                             "Component": "Livery_lineup"
@@ -82,10 +82,10 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.<Lineups>}",
                         "CollectionPart": "2/{lineupSize}",
-                        "SortMember": "{Car.Vendor.Name}",
-                        "OrderByDescending": "{Car.CarClass.Name}",
-                        "OrderBy2": "{Car.Vendor.Name}",
-                        "OrderBy3": "{Driver.Name}",
+                        "SortMember": "Car.Vendor.Name",
+                        "OrderByDescending": "Car.CarClass.Name",
+                        "OrderBy2": "Car.Vendor.Name",
+                        "OrderBy3": "Driver.Name",
                         "ItemTemplate": {
                             "BlockType": "component",
                             "Component": "Livery_lineup"
@@ -105,10 +105,10 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.<Lineups>}",
                         "CollectionPart": "3/{lineupSize}",
-                        "SortMember": "{Car.Vendor.Name}",
-                        "OrderByDescending": "{Car.CarClass.Name}",
-                        "OrderBy2": "{Car.Vendor.Name}",
-                        "OrderBy3": "{Driver.Name}",
+                        "SortMember": "Car.Vendor.Name",
+                        "OrderByDescending": "Car.CarClass.Name",
+                        "OrderBy2": "Car.Vendor.Name",
+                        "OrderBy3": "Driver.Name",
                         "ItemTemplate": {
                             "BlockType": "component",
                             "Component": "Livery_lineup"
@@ -128,10 +128,10 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.<Lineups>}",
                         "CollectionPart": "4/{lineupSize}",
-                        "SortMember": "{Car.Vendor.Name}",
-                        "OrderByDescending": "{Car.CarClass.Name}",
-                        "OrderBy2": "{Car.Vendor.Name}",
-                        "OrderBy3": "{Driver.Name}",
+                        "SortMember": "Car.Vendor.Name",
+                        "OrderByDescending": "Car.CarClass.Name",
+                        "OrderBy2": "Car.Vendor.Name",
+                        "OrderBy3": "Driver.Name",
                         "ItemTemplate": {
                             "BlockType": "component",
                             "Component": "Livery_lineup"
@@ -151,10 +151,10 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.<Lineups>}",
                         "CollectionPart": "5/{lineupSize}",
-                        "SortMember": "{Car.Vendor.Name}",
-                        "OrderByDescending": "{Car.CarClass.Name}",
-                        "OrderBy2": "{Car.Vendor.Name}",
-                        "OrderBy3": "{Driver.Name}",
+                        "SortMember": "Car.Vendor.Name",
+                        "OrderByDescending": "Car.CarClass.Name",
+                        "OrderBy2": "Car.Vendor.Name",
+                        "OrderBy3": "Driver.Name",
                         "ItemTemplate": {
                             "BlockType": "component",
                             "Component": "Livery_lineup"
@@ -174,10 +174,10 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.<Lineups>}",
                         "CollectionPart": "6/{lineupSize}",
-                        "SortMember": "{Car.Vendor.Name}",
-                        "OrderByDescending": "{Car.CarClass.Name}",
-                        "OrderBy2": "{Car.Vendor.Name}",
-                        "OrderBy3": "{Driver.Name}",
+                        "SortMember": "Car.Vendor.Name",
+                        "OrderByDescending": "Car.CarClass.Name",
+                        "OrderBy2": "Car.Vendor.Name",
+                        "OrderBy3": "Driver.Name",
                         "ItemTemplate": {
                             "BlockType": "component",
                             "Component": "Livery_lineup"
@@ -197,10 +197,10 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.<Lineups>}",
                         "CollectionPart": "7/{lineupSize}",
-                        "SortMember": "{Car.Vendor.Name}",
-                        "OrderByDescending": "{Car.CarClass.Name}",
-                        "OrderBy2": "{Car.Vendor.Name}",
-                        "OrderBy3": "{Driver.Name}",
+                        "SortMember": "Car.Vendor.Name",
+                        "OrderByDescending": "Car.CarClass.Name",
+                        "OrderBy2": "Car.Vendor.Name",
+                        "OrderBy3": "Driver.Name",
                         "ItemTemplate": {
                             "BlockType": "component",
                             "Component": "Livery_lineup"
@@ -220,10 +220,10 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.<Lineups>}",
                         "CollectionPart": "8/{lineupSize}",
-                        "SortMember": "{Car.Vendor.Name}",
-                        "OrderByDescending": "{Car.CarClass.Name}",
-                        "OrderBy2": "{Car.Vendor.Name}",
-                        "OrderBy3": "{Driver.Name}",
+                        "SortMember": "Car.Vendor.Name",
+                        "OrderByDescending": "Car.CarClass.Name",
+                        "OrderBy2": "Car.Vendor.Name",
+                        "OrderBy3": "Driver.Name",
                         "ItemTemplate": {
                             "BlockType": "component",
                             "Component": "Livery_lineup"
@@ -243,10 +243,10 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.<Lineups>}",
                         "CollectionPart": "9/{lineupSize}",
-                        "SortMember": "{Car.Vendor.Name}",
-                        "OrderByDescending": "{Car.CarClass.Name}",
-                        "OrderBy2": "{Car.Vendor.Name}",
-                        "OrderBy3": "{Driver.Name}",
+                        "SortMember": "Car.Vendor.Name",
+                        "OrderByDescending": "Car.CarClass.Name",
+                        "OrderBy2": "Car.Vendor.Name",
+                        "OrderBy3": "Driver.Name",
                         "ItemTemplate": {
                             "BlockType": "component",
                             "Component": "Livery_lineup"
@@ -266,10 +266,10 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.<Lineups>}",
                         "CollectionPart": "10/{lineupSize}",
-                        "SortMember": "{Car.Vendor.Name}",
-                        "OrderByDescending": "{Car.CarClass.Name}",
-                        "OrderBy2": "{Car.Vendor.Name}",
-                        "OrderBy3": "{Driver.Name}",
+                        "SortMember": "Car.Vendor.Name",
+                        "OrderByDescending": "Car.CarClass.Name",
+                        "OrderBy2": "Car.Vendor.Name",
+                        "OrderBy3": "Driver.Name",
                         "ItemTemplate": {
                             "BlockType": "component",
                             "Component": "Livery_lineup"

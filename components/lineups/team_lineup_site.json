@@ -7,7 +7,7 @@
             "BlockType": "text",
             "Source": "[{Season.Name, Converter=StringToUpperString}] [GRID]",
             "Foreground": "{DarkBlue}",
-            "FontName": "{Druk_Wide_Bold}",
+            "FontName": "{FontGrid}",
             "FontSize": 64,
             "Padding": "20",
             "HorizontalAlignment": "Center"
@@ -19,7 +19,7 @@
             "ItemStackOptions": {
                 "ItemSource": "{Lineups.Teams}",
                 "CollectionPart": "1/2",
-                "SortMember": "{Team.Name}",
+                "SortMember": "Team.Name",
                 "ItemTemplate": {
                     "BlockType": "stack",
                     "Orientation": "Horizontal",
@@ -28,7 +28,7 @@
                             "BlockType": "text",
                             "Source": "[{Item.Team.Name, Converter=StringToUpperString}]",
                             "Foreground": "{DarkBlue}",
-                            "FontName": "{Archivo_Expanded_SemiBold}",
+                            "FontName": "{FontLineups}",
                             "FontSize": 16,
                             "Padding": "24,8",
                             "VerticalAlignment": "Center"
@@ -53,7 +53,7 @@
             "ItemStackOptions": {
                 "ItemSource": "{Lineups.Teams}",
                 "CollectionPart": "2/2",
-                "SortMember": "{Team.Name}",
+                "SortMember": "Team.Name",
                 "ItemTemplate": {
                     "BlockType": "stack",
                     "Orientation": "Horizontal",
@@ -62,7 +62,7 @@
                             "BlockType": "text",
                             "Source": "[{Item.Team.Name, Converter=StringToUpperString}]",
                             "Foreground": "{DarkBlue}",
-                            "FontName": "{Archivo_Expanded_SemiBold}",
+                            "FontName": "{FontLineups}",
                             "FontSize": 16,
                             "Padding": "24,8",
                             "VerticalAlignment": "Center"
@@ -94,7 +94,7 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.Teams}",
                         "CollectionPart": "1/{lineupSize}",
-                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "SortMember": "Team.Car.Vendor.Name",
                         "ItemTemplate": {
                             "HorizontalAlignment": "Center",
                             "BlockType": "component",
@@ -115,7 +115,7 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.Teams}",
                         "CollectionPart": "2/{lineupSize}",
-                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "SortMember": "Team.Car.Vendor.Name",
                         "ItemTemplate": {
                             "HorizontalAlignment": "Center",
                             "BlockType": "component",
@@ -136,7 +136,7 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.Teams}",
                         "CollectionPart": "3/{lineupSize}",
-                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "SortMember": "Team.Car.Vendor.Name",
                         "ItemTemplate": {
                             "HorizontalAlignment": "Center",
                             "BlockType": "component",
@@ -157,7 +157,7 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.Teams}",
                         "CollectionPart": "4/{lineupSize}",
-                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "SortMember": "Team.Car.Vendor.Name",
                         "ItemTemplate": {
                             "HorizontalAlignment": "Center",
                             "BlockType": "component",
@@ -178,7 +178,7 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.Teams}",
                         "CollectionPart": "5/{lineupSize}",
-                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "SortMember": "Team.Car.Vendor.Name",
                         "ItemTemplate": {
                             "HorizontalAlignment": "Center",
                             "BlockType": "component",
@@ -199,7 +199,7 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.Teams}",
                         "CollectionPart": "6/{lineupSize}",
-                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "SortMember": "Team.Car.Vendor.Name",
                         "ItemTemplate": {
                             "HorizontalAlignment": "Center",
                             "BlockType": "component",
@@ -220,7 +220,7 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.Teams}",
                         "CollectionPart": "7/{lineupSize}",
-                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "SortMember": "Team.Car.Vendor.Name",
                         "ItemTemplate": {
                             "HorizontalAlignment": "Center",
                             "BlockType": "component",
@@ -241,7 +241,7 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.Teams}",
                         "CollectionPart": "8/{lineupSize}",
-                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "SortMember": "Team.Car.Vendor.Name",
                         "ItemTemplate": {
                             "HorizontalAlignment": "Center",
                             "BlockType": "component",
@@ -262,7 +262,7 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.Teams}",
                         "CollectionPart": "9/{lineupSize}",
-                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "SortMember": "Team.Car.Vendor.Name",
                         "ItemTemplate": {
                             "HorizontalAlignment": "Center",
                             "BlockType": "component",
@@ -283,7 +283,7 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Lineups.Teams}",
                         "CollectionPart": "10/{lineupSize}",
-                        "SortMember": "{Team.Car.Vendor.Name}",
+                        "SortMember": "Team.Car.Vendor.Name",
                         "ItemTemplate": {
                             "HorizontalAlignment": "Center",
                             "BlockType": "component",

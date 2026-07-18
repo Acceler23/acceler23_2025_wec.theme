@@ -47,7 +47,7 @@
                 {
                     "BlockType": "text",
                     "Source": "<pos>",
-                    "FontName": "{Druk_Condensed_Super}",
+                    "FontName": "{FontNumeration}",
                     "Padding": "10",
                     "FontSize": 75,
                     "PositionX": 50,
@@ -58,19 +58,19 @@
                     "Triggers": [
                         {
                             "Condition": "<isRace>",
-                            "ConditionAnd": "{Item.Time, Converter=StringEquals, Parameter=DNF}",
+                            "ConditionAnd": "{Item.IntervalRace, Converter=EnumEquals, Parameter=DNF}",
                             "Property": "Source",
                             "Value": "[DNF]"
                         },
                         {
                             "Condition": "<isRace>",
-                            "ConditionAnd": "{Item.Time, Converter=StringEquals, Parameter=DNS}",
+                            "ConditionAnd": "{Item.IntervalRace, Converter=EnumEquals, Parameter=DNS}",
                             "Property": "Source",
                             "Value": "[DNS]"
                         },
                         {
                             "Condition": "<isRace>",
-                            "ConditionAnd": "{Item.Time, Converter=StringEquals, Parameter=DSQ}",
+                            "ConditionAnd": "{Item.IntervalRace, Converter=EnumEquals, Parameter=DSQ}",
                             "Property": "Source",
                             "Value": "[DSQ]"
                         }
@@ -83,7 +83,7 @@
                     "Source": "N°",
                     "FontSize": 30,
                     "Padding": "5",
-                    "FontName": "{Archivo_Condensed_Light}",
+                    "FontName": "{FontNumberHolder}",
                     "Foreground": "{White}",
                     "Opacity": 50
                 },
@@ -93,7 +93,7 @@
                     "PositionY": 60,
                     "VerticalAlignment": "Bottom",
                     "Source": "[{Item.{CarNumber}}]",
-                    "FontName": "{Archivo_SemiBold_Italic}",
+                    "FontName": "{FontTiming}",
                     "FontSize": 40,
                     "Padding": "5"
                 },
@@ -107,7 +107,7 @@
                     "Items": [
                         {
                             "BlockType": "image",
-                            "Source": "{Item.Team.LightLogotypePath}",
+                            "Source": "{Item.Team.LogotypePath}",
                             "HorizontalAlignment": "Center",
                             "VerticalAlignment": "Center",
                             "Height": 90,
@@ -126,7 +126,7 @@
                                     "ConditionAnd": "{Item.Car.LiveryPath, Converter=EmptyObjectToTrue}",
                                     "ConditionAndValue": "{Item.Team.LogotypePath, Converter=EmptyObjectToTrue}",
                                     "Property": "Source",
-                                    "Value": "{Item.Team.Car.Vendor.LightLogotypePath}"
+                                    "Value": "{Item.Team.Car.Vendor.LogotypePath}"
                                 }
                             ]
                         }
@@ -146,7 +146,7 @@
                     "PositionX": 620,
                     "PositionY": 30,
                     "Source": "[{<nameSource>, Converter=StringToUpperString}]",
-                    "FontName": "{Archivo_SemiBold_Italic}",
+                    "FontName": "{FontTiming}",
                     "HorizontalAlignment": "Left",
                     "VerticalAlignment": "Center",
                     "FontSize": 25,
@@ -207,7 +207,7 @@
                             "Source": "{Item.Points}",
                             "PositionX": 20,
                             "PositionY": 15,
-                            "FontName": "{Druk_Wide_Bold_Italic}",
+                            "FontName": "{FontTrackName}",
                             "Padding": "10",
                             "FontSize": 30,
                             "TextOptions": {
@@ -221,7 +221,7 @@
                             "Source": "[PTS]",
                             "PositionX": 125,
                             "PositionY": 20,
-                            "FontName": "{Druk_Wide_Bold_Italic}",
+                            "FontName": "{FontTrackName}",
                             "Padding": "10",
                             "FontSize": 15,
                             "Foreground": "{DarkBlue}"

@@ -67,7 +67,7 @@
                 "RowSpacing": 12,
                 "HeaderTemplate": {
                   "BlockType": "text",
-                  "FontName": "{Archivo_SemiBold_Italic}",
+                  "FontName": "{FontTiming}",
                   "Height": 22,
                   "HorizontalAlignment": "Center",
                   "MarginLeft": 20,

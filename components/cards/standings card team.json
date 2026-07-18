@@ -155,7 +155,7 @@
                                 {
                                     "BlockType": "text",
                                     "Source": "[{Item.{CarNumber}, Converter=StringToUpperString}]",
-                                    "FontName": "{Druk_Condensed_Super}",
+                                    "FontName": "{FontNumeration}",
                                     "Foreground": "{White}",
                                     "FontSize": 70,
                                     "Padding": "5,0,10,0",
@@ -172,6 +172,7 @@
         },
         {
             "BlockType": "itemstack",
+            "Background": "#dddddd",
             "Width": 343,
             "PositionX": 0,
             "PositionY": 800,
@@ -184,15 +185,17 @@
                     "BlockType": "dock",
                     "VerticalAlignment": "Top",
                     "HorizontalAlignment": "Center",
+                    "Background": "#ff0000",
                     "Width": 343,
                     "Orientation": "Horizontal",
                     "Items": [
                         {
                             "BlockType": "text",
+                            "Background": "#00ff00",
                             "Source": "[{Item.Team.FullName, Converter=StringToUpperString}]",
                             "VerticalAlignment": "Top",
                             "HorizontalAlignment": "Center",
-                            "FontName": "{Archivo_SemiCond_BlackItalic}",
+                            "FontName": "{FontTeamName}",
                             "FontSize": 40,
                             "Width": 250,
                             "Padding": "5",

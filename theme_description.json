@@ -3,14 +3,11 @@
   "Name": "2025 WEC Theme",
   "Author": "Acceler23",
   "Description": "Theme Based on the second half 2025 season",
-  "Version": "1.5.3",
+  "Version": "1.5.1",
   "Links": [],
   "DefaultLocalizationId": "en-US",
   "ForceLiveriesLoading": true,
   "RequiredLogotypeVariants": {
-    "Championship":[
-      "Light"
-    ],
     "Team": 
     [
       "Dark",
@@ -49,13 +46,6 @@
       "UseFallbackSource": true,
       "UseFallbackVariant": true,
       "SetVariantByDefault": false
-    },
-    {
-      "Category": "Championship",
-      "Variant": "Light",
-      "UseFallbackSource": true,
-      "UseFallbackVariant": true,
-      "SetVariantByDefault": true
     }
   ]
 }

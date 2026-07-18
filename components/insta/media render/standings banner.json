@@ -40,14 +40,14 @@
                             "BlockType": "text",
                             "Source": "[LAST RACE]:",
                             "Padding": "5",
-                            "FontName": "{Archivo_SemiBold_Italic}"
+                            "FontName": "{FontTiming}"
                         },
                         {
                             "BlockType": "text",
                             "Source": "[{Standings.LastEvent.DateLocal, Converter=DateCustomFormat, Parameter=MMM}]. [{Standings.LastEvent.DateLocal, Converter=DateCustomFormat, Parameter=dd}]",
                             "Padding": "5",
                             "Foreground": "{LightBlue}",
-                            "FontName": "{Druk_Heavy_Italic}",
+                            "FontName": "{FontMediaRound}",
                             "FontSize": 40
                         }
                     ]
@@ -71,7 +71,7 @@
             "Foreground": "{DarkBlue}",
             "PositionX": 1092,
             "PositionY": 36,
-            "FontName": "{Archivo_SemiBold_Italic}"
+            "FontName": "{FontTiming}"
         }
     ]
 }

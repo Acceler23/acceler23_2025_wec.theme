@@ -62,7 +62,7 @@
                     "info1": "<infor4>",
                     "pgLimit": "<info5>",
                     "pgstart": "<info6>",
-                    "isRace": true,
+                    "isRace": "<raceIs>",
                     "nameSource": "<sourceName>"
                 }
             }
